@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EditText</string>
+    <string name="action_settings">Settings</string>
+    <string name="info_image">Android logo</string>
+    <string name="txt_btnGet">"Toast the user input "</string>
+    <string name="txt_btnCLear">Clear the Edittext</string>
+
+</resources>

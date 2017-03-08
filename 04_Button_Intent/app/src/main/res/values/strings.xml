@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Button Start Intent</string>
+    <string name="action_settings">Settings</string>
+    <string name="btn_text">Start Intent</string>
+    <string name="text_info">When you press the button below, a browser should open the page cqu.edu.cn</string>
+
+</resources>

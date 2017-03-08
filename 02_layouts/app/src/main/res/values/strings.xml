@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Layouts</string>
+    <string name="action_settings">Settings</string>
+    <string name="to">To</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
+    <string name="done">Done</string>
+    <string name="reminder">Reminder</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+</resources>

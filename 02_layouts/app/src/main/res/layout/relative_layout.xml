@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dodgerblue"
+    android:padding="16dp" >
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        android:hint="@string/reminder" />
+
+    <EditText
+        android:id="@+id/dates"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/name"
+        android:layout_toLeftOf="@+id/times"
+        android:background="@color/darkolivegreen"
+        android:hint="@string/date" />
+
+    <EditText
+        android:id="@id/times"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/name"
+        android:background="@color/beige"
+        android:hint="@string/time" />
+
+    <Button
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/times"
+        android:background="@color/greenyellow"
+        android:text="@string/done" />
+
+</RelativeLayout>
