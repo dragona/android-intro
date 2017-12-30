@@ -84,7 +84,7 @@ android.support.constraint.ConstraintLayout
 ```
 I prefer using a relative layout, I will change it.
 
-![Linear](display/activity_main.png)<!-- .element height="50%" width="50%" -->
+![Design](display/main.gif)
 
 #### activity_main.xml updated
 
