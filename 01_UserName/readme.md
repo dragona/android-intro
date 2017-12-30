@@ -1,8 +1,8 @@
-# Creating an application for getting a list of names and display them on a text view
-# Each name should be entered individually and a button should be pressed to balidate the input.
+# Creating an application for getting user inputs and diplaying the list of all inputsin a textView. Each name should be entered individually and a button should be pressed to balidate the input.
 
-Create a new andoid project. Here is the listed files I have right after creating a new project in Android Studio where the display of the project files if by default in Android view
-![Linear](display/new_project.png)
+Create a new andoid project. Here is the listed files I have right after creating a new project in Android Studio where the display of the project files if by default in Android view.
+
+![New project - Android View](display/new_project.png)
 
 There are 3 main files we are going to edit, and they are: manifest.xml, MainActivity,java and activity_main.xml
 
@@ -84,7 +84,7 @@ android.support.constraint.ConstraintLayout
 ```
 I prefer using a relative layout, I will change it.
 
-![Linear](display/activity_main.png)
+![Linear](display/activity_main.png){:class="img-responsive"}
 
 #### activity_main.xml updated
 
@@ -162,8 +162,7 @@ I prefer using a relative layout, I will change it.
 ```
 Now tha we have out layout ready, we can start updating the Java file. Notice all the ids diplay, btn, and et_name.
 
-<video src="display/insert.mp4" width="320" height="200" controls preload></video>
-
+![New project - Android View](display/insert.gif)
 
 ```Java
 package mg.studio.username;

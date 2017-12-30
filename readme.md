@@ -1,6 +1,6 @@
 Android resources
 
-## Buttons - Design and implementation
+## Getting user inputs (EditText, TextView and Button)
 [01_UserName](01_UserName/readme.md)
 
 ## Buttons - Design and implementation
