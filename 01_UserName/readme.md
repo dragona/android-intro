@@ -1,4 +1,4 @@
-# Creating an application for getting user inputs and diplaying the list of all inputsin a textView. Each name should be entered individually and a button should be pressed to balidate the input.
+Creating an application for getting user inputs and displaying the list of all inputs in a textView. Each name should be entered individually and a button should be pressed to balidate the input.
 
 Create a new andoid project. Here is the listed files I have right after creating a new project in Android Studio where the display of the project files if by default in Android view.
 
@@ -84,7 +84,7 @@ android.support.constraint.ConstraintLayout
 ```
 I prefer using a relative layout, I will change it.
 
-![Linear](display/activity_main.png){:class="img-responsive"}
+![Linear](display/activity_main.png)<!-- .element height="50%" width="50%" -->
 
 #### activity_main.xml updated
 
