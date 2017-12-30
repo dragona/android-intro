@@ -1,34 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebeaeb"
+    tools:context="mg.studio.username.MainActivity">
 
     <TextView
-        android:id="@+id/tvWhatisyourname"
+        android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="What is your name ?"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Enter the name"
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/eTuserInput"
+        android:id="@+id/et_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tvWhatisyourname"
-        android:layout_below="@+id/tvWhatisyourname"
-        android:ems="10"
-        android:inputType="textPersonName" >
-
-        <requestFocus />
-    </EditText>
+        android:layout_below="@+id/tv_title"
+        android:layout_margin="8dp"
+        android:background="@android:color/white"
+        android:inputType="text"
+        android:maxLength="50"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:textCursorDrawable="@android:color/darker_gray"
+        android:textSize="15sp" />
 
     <Button
-        android:id="@+id/btn01"
+        android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/eTuserInput"
-        android:layout_below="@+id/eTuserInput"
-        android:text="Send" />
+        android:layout_below="@+id/et_name"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="42dp"
+        android:background="@color/colorPrimary"
+        android:onClick="getText"
+        android:text="Proceed"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/btn"
+        android:layout_margin="16dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="54dp"
+        android:padding="8dp" />
 
 </RelativeLayout>

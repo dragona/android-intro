@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mg.studio.button.MainActivity">
+
+    <!--Default button with a layout margin-->
+    <Button
+        android:id="@+id/btn_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button simple"
+        android:layout_margin="8dp"/>
+
+    <!--Additional styling was added to the above button-->
+    <Button
+        android:id="@+id/btn_two"
+        android:layout_below="@+id/btn_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button two"
+        android:layout_margin="8dp"
+        android:elevation="24dp"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <!--This button uses the shape in the drawable folder-->
+    <Button
+        android:id="@+id/btn_three"
+        android:layout_below="@+id/btn_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button Three"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_shape"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <!--Button with a click listener-->
+    <Button
+        android:id="@+id/btn_four"
+        android:layout_below="@+id/btn_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button Four - click xml"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_shape"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:onClick="bntXml"/>
+
+    <!--Button - listener in explicit in the MainActivity-->
+    <Button
+        android:id="@+id/btn_five"
+        android:layout_below="@+id/btn_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button Five - explicit listener"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_shape"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"/>
+
+    <!--Button - listener in explicit in the MainActivity-->
+    <Button
+        android:id="@+id/btn_six"
+        android:layout_below="@+id/btn_five"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button Six - button selector"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_selector"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"/>
+</RelativeLayout>
