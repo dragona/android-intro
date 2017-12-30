@@ -12,5 +12,5 @@ here is the code
 
 See if you can is to implement an improved version of the above using a ConstraintLayout combined with a ScrollView, a RelativeLayout and a LinearLayout if all needed. You final result should look like this
 
-![Layouts](display/layout_final.gif) 
+![Try this](display/layout_final.gif) 
 
