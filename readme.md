@@ -4,7 +4,7 @@
 [01_UserName](01_UserName/readme.md)
 
 ### LinearLayout and RelativeLayout
-[02_layouts](02_layouts/readme.md)
+[02_Layouts](02_Layouts/readme.md)
 
 ### Buttons - Design and implementation
 [03_Button_Design](03_Button_Design/readme.md)
