@@ -8,7 +8,7 @@ Button four: clickable from the XML file
 button five: explicit onclick listener in the java file
 button six: adding selectors to change color when the button is pressed
 
-![Buttons](display/buttons.png)
+![Buttons](display/buttons.gif)
 
 
 ### Button simple: simple standard design
