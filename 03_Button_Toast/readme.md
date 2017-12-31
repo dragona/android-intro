@@ -2,7 +2,13 @@
 
 In the following, we will create a button to initiate a Toast.
 
-![Buttons](display/android_studio.gif)
+![Buttons](display/file1.gif)
+
+![Buttons](display/file2.gif)
+
+![Buttons](display/file3.gif)
+
+![Buttons](display/file4.gif)
 
 ```java
 package mg.studio.buttontoast;
