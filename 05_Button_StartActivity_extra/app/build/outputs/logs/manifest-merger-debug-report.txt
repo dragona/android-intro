@@ -1,61 +1,138 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:2:1-31:12
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:2:1-27:12
+MERGED from [com.android.support:appcompat-v7:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/4562ed1f03cb9a6e026a07431277a07c/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/f25dc922a6eb6b8d27a82c82f966517d/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2dd684e0dc7d311a06e493eff5dca7a6/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/52f191897bf2dad2a769a051795d4b9a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/59ef8a61d42b13844cd294aeca03e78e/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/f75742391277adf210a85885e91da3dd/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/5eb7c857a42e0c3d8cc3716caa4bedb1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/2a5a212281f9526c14bec6ce2053332b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/96578371896090ba5a15a4cd9f564d5a/AndroidManifest.xml:17:1-31:12
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:2:1-27:12
 	package
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:3:5-37
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:3:5-37
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:5:5-30
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
-	android:versionCode
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:4:5-28
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:2:11-69
-uses-sdk
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:19.1.0] /Users/feno/.android/build-cache/070a45025c006d0276cb5d095a27589471c6ff73/output/AndroidManifest.xml:18:5-42
-	android:targetSdkVersion
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:9:9-38
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
-	android:minSdkVersion
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:8:9-34
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:11:5-29:19
-MERGED from [com.android.support:appcompat-v7:19.1.0] /Users/feno/.android/build-cache/070a45025c006d0276cb5d095a27589471c6ff73/output/AndroidManifest.xml:19:5-20
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:7:5-25:19
+MERGED from [com.android.support:appcompat-v7:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/4562ed1f03cb9a6e026a07431277a07c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/4562ed1f03cb9a6e026a07431277a07c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/f25dc922a6eb6b8d27a82c82f966517d/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/f25dc922a6eb6b8d27a82c82f966517d/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2dd684e0dc7d311a06e493eff5dca7a6/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2dd684e0dc7d311a06e493eff5dca7a6/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/52f191897bf2dad2a769a051795d4b9a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/52f191897bf2dad2a769a051795d4b9a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/59ef8a61d42b13844cd294aeca03e78e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/59ef8a61d42b13844cd294aeca03e78e/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/f75742391277adf210a85885e91da3dd/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/f75742391277adf210a85885e91da3dd/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/5eb7c857a42e0c3d8cc3716caa4bedb1/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/5eb7c857a42e0c3d8cc3716caa4bedb1/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/2a5a212281f9526c14bec6ce2053332b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/2a5a212281f9526c14bec6ce2053332b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/96578371896090ba5a15a4cd9f564d5a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/96578371896090ba5a15a4cd9f564d5a/AndroidManifest.xml:25:5-29:19
 	android:label
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:14:9-41
-	android:allowBackup
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:10:9-41
 	android:icon
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:13:9-45
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:9:9-45
+	android:allowBackup
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:15:9-40
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:11:9-40
 activity#cn.edu.cqu.buttontoast.MainActivity
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:16:9-24:20
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:12:9-20:20
 	android:label
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:18:13-45
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:14:13-45
 	android:name
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:17:13-63
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:13:13-63
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:19:13-23:29
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:20:17-69
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:20:25-66
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:22:17-77
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:22:27-74
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:18:27-74
 activity#cn.edu.cqu.buttontoast.SecondActivity
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:25:9-28:20
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:21:9-24:20
 	android:label
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:27:13-45
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:23:13-45
 	android:name
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:26:13-65
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml:22:13-65
+uses-sdk
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/4562ed1f03cb9a6e026a07431277a07c/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/4562ed1f03cb9a6e026a07431277a07c/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/f25dc922a6eb6b8d27a82c82f966517d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/f25dc922a6eb6b8d27a82c82f966517d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2dd684e0dc7d311a06e493eff5dca7a6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2dd684e0dc7d311a06e493eff5dca7a6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/52f191897bf2dad2a769a051795d4b9a/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/52f191897bf2dad2a769a051795d4b9a/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/59ef8a61d42b13844cd294aeca03e78e/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/59ef8a61d42b13844cd294aeca03e78e/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/f75742391277adf210a85885e91da3dd/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/f75742391277adf210a85885e91da3dd/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/5eb7c857a42e0c3d8cc3716caa4bedb1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/5eb7c857a42e0c3d8cc3716caa4bedb1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/2a5a212281f9526c14bec6ce2053332b/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/2a5a212281f9526c14bec6ce2053332b/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/96578371896090ba5a15a4cd9f564d5a/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/96578371896090ba5a15a4cd9f564d5a/AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/4562ed1f03cb9a6e026a07431277a07c/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity_extra/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/4562ed1f03cb9a6e026a07431277a07c/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/f25dc922a6eb6b8d27a82c82f966517d/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/f25dc922a6eb6b8d27a82c82f966517d/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2dd684e0dc7d311a06e493eff5dca7a6/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2dd684e0dc7d311a06e493eff5dca7a6/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/52f191897bf2dad2a769a051795d4b9a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/52f191897bf2dad2a769a051795d4b9a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/59ef8a61d42b13844cd294aeca03e78e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/59ef8a61d42b13844cd294aeca03e78e/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/f75742391277adf210a85885e91da3dd/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/f75742391277adf210a85885e91da3dd/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/5eb7c857a42e0c3d8cc3716caa4bedb1/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/5eb7c857a42e0c3d8cc3716caa4bedb1/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/2a5a212281f9526c14bec6ce2053332b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/2a5a212281f9526c14bec6ce2053332b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/96578371896090ba5a15a4cd9f564d5a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/96578371896090ba5a15a4cd9f564d5a/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/4562ed1f03cb9a6e026a07431277a07c/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/4562ed1f03cb9a6e026a07431277a07c/AndroidManifest.xml:27:13-51
