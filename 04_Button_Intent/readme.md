@@ -10,8 +10,6 @@ data -- The data to operate on, such as a person record in the contacts database
 
 ![Part 1](display/file1.gif)
 
-![Part 2](display/file2.gif)
-
 
 ```java
 package mg.studio.buttonintent;
