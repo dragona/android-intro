@@ -1,10 +1,10 @@
-Creating an application for getting user inputs and displaying the list of all inputs in a textView. Each name should be entered individually and a button should be pressed to balidate the input.
+Creating an application for getting user inputs and displaying a list of all insertions in a textView. Each name should be entered individually, and a button should be pressed to validate the input.
 
-Create a new andoid project. Here is the listed files I have right after creating a new project in Android Studio where the display of the project files if by default in Android view.
+First, Create a new android project. Here are the listed files I have right after creating a new project in Android Studio where the display of the project files if by default in Android view.
 
 ![New project - Android View](display/new_project.png)
 
-There are 3 main files we are going to edit, and they are: manifest.xml, MainActivity,java and activity_main.xml
+There are three main files we are going to edit, and they are manifest.xml, MainActivity.java and activity_main.xml
 
 #### manifest.xml
 
@@ -82,7 +82,7 @@ Notice the main layout of our activity_main.xml is a
 ```
 android.support.constraint.ConstraintLayout
 ```
-I prefer using a relative layout, I will change it.
+I prefer using a relative layout so I will change the above accordingly.
 
 ![Design](display/main.gif)
 
@@ -160,7 +160,7 @@ I prefer using a relative layout, I will change it.
 
 
 ```
-Now tha we have out layout ready, we can start updating the Java file. Notice all the ids diplay, btn, and et_name.
+Now that we have our layout ready, we can start updating the Java file. Notice the ids display, btn, and et_name as we need to use them in the java file.
 
 ![New project - Android View](display/insert.gif)
 

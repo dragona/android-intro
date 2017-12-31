@@ -1,7 +1,10 @@
 # Android resources
 
-### Getting user inputs (EditText, TextView and Button)
+### Getting the user inputs using EditText, TextView and Button
 [01_UserName](01_UserName/readme.md)
+
+### Getting the user inputs (Your turn)
+[01_UserName_Final](01_UserName_Final/readme.md)
 
 ### LinearLayout and RelativeLayout
 [02_Layout](02_Layout/readme.md)

@@ -1,34 +1,40 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:padding="8dp">
 
     <TextView
-        android:id="@+id/tvWhatisyourname"
+        android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:text="What is your name ?"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/eTuserInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tvWhatisyourname"
-        android:layout_below="@+id/tvWhatisyourname"
-        android:ems="10"
-        android:inputType="textPersonName" >
+        android:layout_below="@+id/tv_title"
+        android:background="@android:color/white"
+        android:inputType="textPersonName"
+        android:padding="8dp">
 
         <requestFocus />
     </EditText>
 
     <Button
-        android:id="@+id/btn01"
+        android:id="@+id/mBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/eTuserInput"
         android:layout_below="@+id/eTuserInput"
-        android:text="Send" />
+        android:layout_marginTop="25dp"
+        android:background="@color/colorPrimary"
+        android:text="Send"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
 
 </RelativeLayout>
