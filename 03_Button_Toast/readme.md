@@ -2,13 +2,13 @@
 
 In the following, we will create a button to initiate a Toast.
 
-![Buttons](display/file1.gif)
+![Part 1](display/file1.gif)
 
-![Buttons](display/file2.gif)
+![Part 2](display/file2.gif)
 
-![Buttons](display/file3.gif)
+![Part 3](display/file3.gif)
 
-![Buttons](display/file4.gif)
+![Part 4](display/file4.gif)
 
 ```java
 package mg.studio.buttontoast;
