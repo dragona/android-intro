@@ -4,4 +4,4 @@ This is an updated version of the userName application. Let us use this version 
 Todo: Clone this repository and push your updated version. 
 
 
-![Updated version](display/updated.png)
+![Updated version](display/updated.gif)
