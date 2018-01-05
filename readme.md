@@ -18,6 +18,6 @@
 ## Gradient background
 [11_GradientBackground](11_GradientBackground/readme.md)
 
-##Implicit Intent
+## Implicit Intent
 [12_ImplicitIntent](12_ImplicitIntent/readme.md)
 

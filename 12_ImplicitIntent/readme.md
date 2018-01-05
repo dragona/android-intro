@@ -2,7 +2,6 @@
 
 Just like we have seen previously, given an application that has two activities, when the app starts, the first activity would be launched by default. By adding a button, we can start the second activity using an explicit intent.
 
-![Demo explicit intent](display/explicit_intent.gif)
 
 An implicit intent is an intent that can be sent to the operating system. Upon receiving that intent, the OS will search for the corresponding queried Activity and starts it. In case the OS fails to find the queried activity, an error would be thrown.
 
