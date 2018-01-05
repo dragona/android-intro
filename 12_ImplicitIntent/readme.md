@@ -92,6 +92,8 @@ Here what we need to add within the onclick listener of our first application.
                 startActivity(mIntent);
 ```
 
-###Read more about intents:
+### Read more about intents:
+
 [Intent filters](https://developer.android.com/guide/components/intents-filters.html)
+
 [Android intent](http://www.vogella.com/tutorials/AndroidIntent/article.html)
