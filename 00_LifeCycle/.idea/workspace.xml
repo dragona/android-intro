@@ -11,9 +11,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dc523f5-4d86-4ea4-932f-3b468ee22378" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
-    </list>
+    <list default="true" id="9dc523f5-4d86-4ea4-932f-3b468ee22378" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,26 +47,26 @@
       <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2337">
-              <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            <state relative-caret-position="323">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
-                <marker date="1515079069000" expanded="true" signature="2246:3005" ph="..." />
-                <marker date="1515079069000" expanded="true" signature="2307:2992" ph="..." />
-                <marker date="1515079069000" expanded="true" signature="2603:2827" ph="..." />
-                <marker date="1515079069000" expanded="true" signature="2631:2807" ph="..." />
-                <marker date="1515079069000" expanded="true" signature="2914:2973" ph="..." />
-                <marker date="1515079069000" expanded="true" signature="3201:3382" ph="..." />
-                <marker date="1515079069000" expanded="true" signature="3644:4409" ph="{...}" />
-                <marker date="1515079069000" expanded="true" signature="3926:4138" ph="{...}" />
-                <marker date="1515079069000" expanded="true" signature="3993:4128" ph="{...}" />
-                <marker date="1515079069000" expanded="true" signature="4232:4399" ph="{...}" />
-                <marker date="1515079069000" expanded="true" signature="4299:4389" ph="{...}" />
-                <marker date="1515079069000" expanded="true" signature="4456:4583" ph="{...}" />
-                <marker date="1515079069000" expanded="true" signature="4630:4760" ph="{...}" />
-                <marker date="1515079069000" expanded="true" signature="4805:4929" ph="{...}" />
-                <marker date="1515079069000" expanded="true" signature="4973:5095" ph="{...}" />
-                <marker date="1515079069000" expanded="true" signature="5142:5272" ph="{...}" />
-                <marker date="1515079069000" expanded="true" signature="5301:5493" ph="{...}" />
+                <marker date="1515120001000" expanded="true" signature="2327:3086" ph="..." />
+                <marker date="1515120001000" expanded="true" signature="2388:3073" ph="..." />
+                <marker date="1515120001000" expanded="true" signature="2684:2908" ph="..." />
+                <marker date="1515120001000" expanded="true" signature="2712:2888" ph="..." />
+                <marker date="1515120001000" expanded="true" signature="2995:3054" ph="..." />
+                <marker date="1515120001000" expanded="true" signature="3282:3463" ph="..." />
+                <marker date="1515120001000" expanded="true" signature="3725:4490" ph="{...}" />
+                <marker date="1515120001000" expanded="true" signature="4007:4219" ph="{...}" />
+                <marker date="1515120001000" expanded="true" signature="4074:4209" ph="{...}" />
+                <marker date="1515120001000" expanded="true" signature="4313:4480" ph="{...}" />
+                <marker date="1515120001000" expanded="true" signature="4380:4470" ph="{...}" />
+                <marker date="1515120001000" expanded="true" signature="4537:4664" ph="{...}" />
+                <marker date="1515120001000" expanded="true" signature="4711:4841" ph="{...}" />
+                <marker date="1515120001000" expanded="true" signature="4886:5010" ph="{...}" />
+                <marker date="1515120001000" expanded="true" signature="5054:5176" ph="{...}" />
+                <marker date="1515120001000" expanded="true" signature="5223:5353" ph="{...}" />
+                <marker date="1515120001000" expanded="true" signature="5382:5574" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -2192,7 +2190,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1515079069632" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1515120018745" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2240,7 +2238,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1515079069632" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1515120018745" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2402,7 +2400,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1515079069634" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1515120018747" />
       </method>
     </configuration>
     <list size="1">
@@ -2570,23 +2568,23 @@
         <state relative-caret-position="95">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <marker date="1515079069000" expanded="true" signature="2246:3005" ph="..." />
-            <marker date="1515079069000" expanded="true" signature="2307:2992" ph="..." />
-            <marker date="1515079069000" expanded="true" signature="2603:2827" ph="..." />
-            <marker date="1515079069000" expanded="true" signature="2631:2807" ph="..." />
-            <marker date="1515079069000" expanded="true" signature="2914:2973" ph="..." />
-            <marker date="1515079069000" expanded="true" signature="3201:3382" ph="..." />
-            <marker date="1515079069000" expanded="true" signature="3644:4409" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="3926:4138" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="3993:4128" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="4232:4399" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="4299:4389" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="4456:4583" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="4630:4760" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="4805:4929" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="4973:5095" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="5142:5272" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="5301:5493" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="2327:3086" ph="..." />
+            <marker date="1515120001000" expanded="true" signature="2388:3073" ph="..." />
+            <marker date="1515120001000" expanded="true" signature="2684:2908" ph="..." />
+            <marker date="1515120001000" expanded="true" signature="2712:2888" ph="..." />
+            <marker date="1515120001000" expanded="true" signature="2995:3054" ph="..." />
+            <marker date="1515120001000" expanded="true" signature="3282:3463" ph="..." />
+            <marker date="1515120001000" expanded="true" signature="3725:4490" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4007:4219" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4074:4209" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4313:4480" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4380:4470" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4537:4664" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4711:4841" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4886:5010" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="5054:5176" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="5223:5353" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="5382:5574" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2717,26 +2715,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2337">
-          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        <state relative-caret-position="323">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <marker date="1515079069000" expanded="true" signature="2246:3005" ph="..." />
-            <marker date="1515079069000" expanded="true" signature="2307:2992" ph="..." />
-            <marker date="1515079069000" expanded="true" signature="2603:2827" ph="..." />
-            <marker date="1515079069000" expanded="true" signature="2631:2807" ph="..." />
-            <marker date="1515079069000" expanded="true" signature="2914:2973" ph="..." />
-            <marker date="1515079069000" expanded="true" signature="3201:3382" ph="..." />
-            <marker date="1515079069000" expanded="true" signature="3644:4409" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="3926:4138" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="3993:4128" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="4232:4399" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="4299:4389" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="4456:4583" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="4630:4760" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="4805:4929" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="4973:5095" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="5142:5272" ph="{...}" />
-            <marker date="1515079069000" expanded="true" signature="5301:5493" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="2327:3086" ph="..." />
+            <marker date="1515120001000" expanded="true" signature="2388:3073" ph="..." />
+            <marker date="1515120001000" expanded="true" signature="2684:2908" ph="..." />
+            <marker date="1515120001000" expanded="true" signature="2712:2888" ph="..." />
+            <marker date="1515120001000" expanded="true" signature="2995:3054" ph="..." />
+            <marker date="1515120001000" expanded="true" signature="3282:3463" ph="..." />
+            <marker date="1515120001000" expanded="true" signature="3725:4490" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4007:4219" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4074:4209" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4313:4480" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4380:4470" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4537:4664" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4711:4841" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="4886:5010" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="5054:5176" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="5223:5353" ph="{...}" />
+            <marker date="1515120001000" expanded="true" signature="5382:5574" ph="{...}" />
           </folding>
         </state>
       </provider>

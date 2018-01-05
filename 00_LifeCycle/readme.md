@@ -12,11 +12,11 @@ This application shows a log output each time the main activity changes state.
 
 As you could notice, we have two buttons and here is how we set the onClick listener.
 
-(image)
+![LifeCycle Demo](display/connecting_buttons.gif)
 
 Now that we have the onClick listener on the button, we can use an Intent to connect this activity to start another activity.
 
-(image)
+![LifeCycle Demo](display/onClickListener.gif)
 
 #### The manifest file
 
