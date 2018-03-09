@@ -11,7 +11,7 @@ It comes handy to have sample button designs. Here are 6 core designs which I fi
 ![Buttons](display/buttons.gif)
 
 
-1. Button simple: simple standard design
+# Button simple: simple standard design
 
 
 ```xml
