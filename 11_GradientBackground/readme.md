@@ -1,6 +1,6 @@
 # Background gradient
 
-Before, when I needed a gradient effect (smooth transition between multiple colors) as a background of my acitivy, I always used and image and stretched it to fill parent on both height and width. It is good to know that you can create a drawable xml file to specify a shape with a linear, radial or sweep gradient effect.
+Before, when I needed a gradient effect (smooth transition between multiple colors) as a background of my acitivy, I always used and image and stretched it to fill parent on both height and width. It is good to know that you can create a drawable xml file to specify a shape with a (1)linear, (2)radial or (3)sweep gradient effect.
 
 For all the below implementation, just create a new android project and create a new file "background_gradient.xml" in your drawable folder. Use this as the backgound of your activity layout file
 
@@ -8,7 +8,7 @@ For all the below implementation, just create a new android project and create a
 android:background="@drawable/background_gradient_linear"
 ```
 
-### Linear
+1. Linear
 
 There are 4 parameters: angle, startColor, endColor and type.
 
@@ -27,7 +27,7 @@ There are 4 parameters: angle, startColor, endColor and type.
 
 ![Linear](display/linear_s.png)
 
-### Radial
+2. Radial
 
 There are 4 parameters: gradientRadius, startColor, endColor and type.
 
@@ -44,7 +44,7 @@ There are 4 parameters: gradientRadius, startColor, endColor and type.
 ```
 ![Radial](display/radial_s.png)
 
-### Sweep
+3. Sweep
 
 Specifying the type, endColor and startColor is yet enough.
 

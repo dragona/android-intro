@@ -1,17 +1,17 @@
 # Android button design
 
-It comes handy to have sample button designs. Here I present six core design which I find foundational to have:
-Button simple: simple standard design
-Button Two: with specific colors
-Button Tree: color and rounded corners
-Button four: clickable from the XML file
-button five: explicit onclick listener in the java file
-button six: adding selectors to change color when the button is pressed
+It comes handy to have sample button designs. Here are 6 core designs which I find foundational:
+1. [Button simple: simple standard design](#button-simple-simple-standard-design)
+2. [Button Two: with specific colors](#button-two-with-specific-colors)
+3. Button Three: color and rounded corners
+4. Button four: clickable from the XML file
+5. button five: explicit onclick listener in the java file
+6. button six: adding selectors to change color when the button is pressed
 
 ![Buttons](display/buttons.gif)
 
 
-### Button simple: simple standard design
+1. Button simple: simple standard design
 
 
 ```xml
@@ -23,7 +23,7 @@ button six: adding selectors to change color when the button is pressed
         android:layout_margin="8dp"/>
 ```
 
-### Button Two: with specific colors
+2. Button Two: with specific colors
 
 ```xml
     <Button
@@ -39,7 +39,7 @@ button six: adding selectors to change color when the button is pressed
 
 ```
 
-### Button Tree: color and rounded corners
+### Button Three: color and rounded corners
 
 Create button_shape.xml to specify the shape and color of the button. Save it to your drawable folder.
 
