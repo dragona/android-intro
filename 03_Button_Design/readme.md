@@ -3,10 +3,10 @@
 It comes handy to have sample button designs. Here are 6 core designs which I find foundational:
 1. [Button simple: simple standard design](#button-simple-simple-standard-design)
 2. [Button Two: with specific colors](#button-two-with-specific-colors)
-3. Button Three: color and rounded corners
-4. Button four: clickable from the XML file
-5. button five: explicit onclick listener in the java file
-6. button six: adding selectors to change color when the button is pressed
+3. [Button Three: color and rounded corners](#button-three-color-and-rounded-corners)
+4. [Button four: clickable from the XML file](#button-four-clickable-from-the-xml-ile)
+5. [button five: explicit onclick listener in the java file](#button-five-explicit-onclick-listener-in-the-java-file)
+6. [Button six: adding selectors to change color when the button is pressed](#button-six-adding-selectors-to-change-color-when-the-button-is-pressed)
 
 ![Buttons](display/buttons.gif)
 
@@ -23,7 +23,7 @@ It comes handy to have sample button designs. Here are 6 core designs which I fi
         android:layout_margin="8dp"/>
 ```
 
-2. Button Two: with specific colors
+# Button Two: with specific colors
 
 ```xml
     <Button
@@ -39,7 +39,7 @@ It comes handy to have sample button designs. Here are 6 core designs which I fi
 
 ```
 
-### Button Three: color and rounded corners
+# Button Three: color and rounded corners
 
 Create button_shape.xml to specify the shape and color of the button. Save it to your drawable folder.
 
@@ -66,7 +66,7 @@ Here is the button
         android:textStyle="bold" />
 ```
 
-### Button four: clickable from the xml file
+# Button four: clickable from the xml file
 
 ```xml
     <Button
@@ -90,7 +90,7 @@ Here is an example method we can use in the Java class
 ```
 
 
-### button five: explicit onclick listener in the java file
+# button five: explicit onclick listener in the java file
 
 ```xml
     <Button
@@ -126,7 +126,18 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
-### button six: adding selectors to change color when the button is pressed
+# Button six: adding selectors to change color when the button is pressed
+
+Create button_shape.xml to specify the shape and color of the button. Save it to your drawable folder.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/colorAccent" />
+    <corners android:radius="8dp" />
+</shape>
+```
 
 Create a button selector file to specify what to do when the button is pressed. 
 
