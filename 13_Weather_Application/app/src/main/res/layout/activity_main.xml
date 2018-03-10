@@ -51,9 +51,9 @@
             android:layout_gravity="center"
             android:background="@drawable/button_selector"
             android:gravity="center"
+            android:onClick="btnClick"
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
-            android:onClick="btnClick"
             android:text="Go to Calendar"
             android:textColor="#50ffffff" />
     </LinearLayout>
@@ -104,34 +104,37 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/tv_temperature"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="30dp"
                 android:layout_marginRight="30dp"
-                android:orientation="horizontal">
+                android:layout_toRightOf="@id/linearLayout"
+                android:gravity="right">
+
 
                 <TextView
                     android:id="@+id/temperature_of_the_day"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="18"
+                    android:gravity="right"
+                    android:text="28"
                     android:textColor="@android:color/white"
                     android:textSize="100sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"
+                    android:layout_alignRight="@id/temperature_of_the_day"
+                    android:layout_alignTop="@id/temperature_of_the_day"
+                    android:gravity="right"
                     android:text="°C"
                     android:textColor="@android:color/white"
                     android:textSize="22sp" />
-            </LinearLayout>
+
+
+            </RelativeLayout>
 
 
         </RelativeLayout>
@@ -229,6 +232,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
+
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"

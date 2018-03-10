@@ -34,7 +34,7 @@ My newly created project looks like this.
 
 ![Newly created project](display/new_project.gif)
 
-In order to check whether everything is working properly, I always run my application for testing as soon as I am done creating a new project. After major changes during my design and development process, I also proceed to a frequent testing by running the application.
+To check whether everything is working properly, I always run my application for testing as soon as I am done creating a new project. After major changes during my design and development process, I also proceed to a frequent testing by running the application.
 My AVD specication is: 
 
 - Device name: Galaxy Nexus API 23
@@ -92,7 +92,7 @@ For this project, I will choose to use a combination of [LinearLayout](https://d
 
 ```
 
-I still have the auto-generated 'TextView' inside my 'LinearLayout'. I will remove that in order to start clean. Notice the 'android:orientation="vertical"' which specifies the orientation of my 'LinearLayout'
+I still have the auto-generated 'TextView' inside my 'LinearLayout'. I will remove that to start clean. Notice the 'android:orientation="vertical"' which specifies the orientation of my 'LinearLayout'
 
 
 ```xml
@@ -369,12 +369,12 @@ To see the fidelity of the design in my AVD, here is the output when I run the a
 ![Primary design](display/design_version_01.gif)
 
 
-I will copy the images I created earlier and paste them inside my drawable folder. If you are following with me, there is something I would like to note here. By default, Android Studio displays your project files in the Android view. This view does not reflect the actual file hierarchy on disk, but is organized by modules and file types to simplify navigation between key source files of your project, hiding certain files or directories that are not commonly used. ([Read more](https://developer.android.com/studio/projects/index.html))
+I will copy the images I created earlier and paste them into my drawable folder. If you are following me, there is something I would like to note here. By default, Android Studio displays your project files in the Android view. This view does not reflect the actual file hierarchy on disk but is organized by modules and file types to simplify navigation between key source files of your project, hiding certain files or directories that are not commonly used. ([Read more](https://developer.android.com/studio/projects/index.html))
 
 ![The drawable folder](display/drawable.gif)
 
 
-To make sure, my images are placed in the folder I want it to be, I will paste them inside my drawable folder as shown below.
+To make sure, my images are placed in the folder I want it to be, I will paste them into my drawable folder as shown below.
 
 ![Paste the images in the drawable folder](display/paste_drawables.gif)
 
@@ -385,7 +385,7 @@ Next, I will remove the action bar, as I want the application to use the full sc
 
 See the impact of that small change with the image below showing the before at the left and the after at the right.
 
-![Before and the after remove action bar](display/toolbar_none.gif)
+![Before and after removing the action bar](display/toolbar_none.gif)
 
 I will now continue with the images I added to my project. I will replace all the paths currently pointing to 'app:srcCompat="@mipmap/ic_launcher' and that display the green image in my application, and use the correct path for each image to be used. 
 My images are inside the drawable folder, from the layout xml file, I can easily access them at 'app:srcCompat="@drawable/image_name_without_the_extension'
@@ -711,7 +711,7 @@ See the output difference now:
 
 The design is almost there, but there is something I would like to fix. Notice that I always design having in mind that the user will use the application in portrait mode. If I rotate the AVD while the application is running, see the result:
 
-![In Landscapre mode, the design does not look good](display/landscape.gif)
+![In Landscape mode, the design does not look good](display/landscape.gif)
 
 I can fix this temporarily by setting the layout screen orientation of the activity to be in portrait mode despite any phone rotation. For that, I can update that my android manifest file.
 
@@ -739,30 +739,27 @@ I can fix this temporarily by setting the layout screen orientation of the activ
 
 </manifest>
 ```
-So now, even if the phone is rotated in landscape mode, the activity of the application won`t rotate and the design won`t break.
+So now, even if the phone is rotated in landscape mode, the activity of the application won't rotate and the design won't break.
 
 # Connecting the application to the Internet and updating the content based on the weather forecast
 
-In order to connect the application to the internet, there are few things I should already know:
+To connect the application to the Internet, there are few things I should already know:
 
-1. How to listen to a button click?  This is a very basic question that is still very trivial. I already have a post on [how to display a toast when a button is clicked](https://github.com/dragona/Android_intro/tree/master/03_Button_Toast)
+1. How to listen to a button click?  This is a fundamental question that is still very trivial. I already have a post on [how to display a toast when a button is clicked](https://github.com/dragona/Android_intro/tree/master/03_Button_Toast)
 
-2. Permission: To protect the privacy of the device owner, Android has some set of permissions in place. Because of that, sometimes, the applications we create need to request permission to access certain features such as the Internet. If you have time, [read more](https://developer.android.com/guide/topics/permissions/overview.html) about the Android permission. For the puprose this weather application, I just need to add the explicit permission request inside my AndroidManifest file that the application need to access the Internet.
+2. Permission: To protect the privacy of the device owner, Android has some set of permissions in place. Because of that, sometimes, the applications we create need to request permission to access certain features such as the Internet. If you have time, [read more](https://developer.android.com/guide/topics/permissions/overview.html) about the Android permission. For this weather application, I just need to add the explicit permission request inside my AndroidManifest file that the application needs to access the Internet.
 
 ```xml
     <uses-permission android:name="android.permission.INTERNET"/>
 
 ```
 
-3. AsyncTask: This is a class added in the API level 3 that enables proper and easy use of the UI thread. In this weather applicaiton, I need to get some data from the Internet, this is an action that should not last more than few seconds (with a decent Internet access). I will use an [asynchronous task](https://developer.android.com/reference/android/os/AsyncTask.html) for that will process the download of the data in background to avoid a UI freezing.
+3. AsyncTask: This is a class added to the API level 3 that enables proper and easy use of the UI thread. In this weather applicaiton, I need to get some data from the Internet, this is an action that should not last more than few seconds (with a decent Internet access). I will use an [asynchronous task](https://developer.android.com/reference/android/os/AsyncTask.html) to process the download of the data in the background and to avoid a UI freezing.
 
 4. ConnectivityManager: I don`t need to query of an online data when my device does not have access to the Internet. That is a characteristic that the weather application should detect by itself. The [ConnectivityManager](https://developer.android.com/reference/android/net/ConnectivityManager.html) class was added to Android since the API 1 and I can use it to monitor network connections.
 
 
-Now that I have an understanding of the 4 points above, here is my plan on how I am going to finish this application
-
-- Add a listener to the Button so that when I press it, I can initiate the download of the latest weather forecast that will later be displayed on the application.
-- 
+Now that I have an understanding of the 4 points above, here is my plan on how I am going to finish this application: add a listener to the Button so that when I press it, I can initiate the download of the latest weather forecast that will later be displayed on the application.
 
 
 I designed the button from my xml file, in other words, I can set the onClick listener from there as well.
@@ -810,10 +807,10 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
-Following with my initial plan, I need to click on this button, the app will download the data from the Internet and display the latest weather forecast. For, I will implement the button click that will change the temperature default temperature on the application.
+Following with my initial plan, when I click on the button, the app will download the data from the Internet and the latest value of the temperature should be displayed. First, I will implement the button click that will change the temperature`s default value set from the XML.
 Here are what I need to do:
 
-- specify a name to the TextView that displays the temperature and needs to be updated dynamically. This name later be used for identifiying this TextView
+- specify a name for the TextView that displays the temperature and which needs to be updated dynamically when I click on the button. This name later will be used for identifying the TextView.
 - add the code to change the content of the TextView when the button is pressed
 
 ![Add an ID to the TextView that displays the temperature](display/textview_id.gif)
@@ -840,4 +837,78 @@ public void btnClick(View view) {
 
 ![Outcome when the button is pressed](display/change_txt_on_btn_clicked.gif)
 
+Now that button is working, I need to add the permission in my manifest file in order to access the internet and next, I need to implement the asynctask for downloading the lastest weather forecast from the server.
+
+As I already mentioned above, the following is the code I need to add into my manifest file for the explicit permission request for the Internet.
+
+```xml
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+
+I will use the following class in my MainActivity.java file for getting the latest weatherforcast from the server.
+
+```java
+
+    private class DownloadUpdate extends AsyncTask<String, Void, String> {
+
+
+        @Override
+        protected String doInBackground(String... strings) {
+            String stringUrl = "http://mpianatra.com/Courses/info.txt";
+            HttpURLConnection urlConnection = null;
+            BufferedReader reader;
+
+            try {
+                URL url = new URL(stringUrl);
+
+                // Create the request to get the information from the server, and open the connection
+                urlConnection = (HttpURLConnection) url.openConnection();
+
+                urlConnection.setRequestMethod("GET");
+                urlConnection.connect();
+
+                // Read the input stream into a String
+                InputStream inputStream = urlConnection.getInputStream();
+                StringBuffer buffer = new StringBuffer();
+                if (inputStream == null) {
+                    // Nothing to do.
+                    return null;
+                }
+                reader = new BufferedReader(new InputStreamReader(inputStream));
+
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    // Mainly needed for debugging
+                    buffer.append(line + "\n");
+                }
+
+                if (buffer.length() == 0) {
+                    // Stream was empty.  No point in parsing.
+                    return null;
+                }
+                //The temperature
+                return buffer.toString();
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (ProtocolException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String temperature) {
+            //Update the temperature displayed 
+            ((TextView) findViewById(R.id.temperature_of_the_day)).setText(temperature);
+        }
+    }
+```
+
+It is important to note here that the information retrieved from the server based on the testing link above is just the string 27. Further parsing might be required if the return from the server was of a different format.
+
+So far, I can to download the latest weather temperature from the server as long as I have Internet access. What will happen if the device does not have access to the Internet?
 
