@@ -910,5 +910,5 @@ I will use the following class in my MainActivity.java file for getting the late
 
 It is important to note here that the information retrieved from the server based on the testing link above is just the string 27. Further parsing might be required if the return from the server was of a different format.
 
-So far, I can to download the latest weather temperature from the server as long as I have Internet access. What will happen if the device does not have access to the Internet?
+So far, I can download the latest weather temperature from the server as long as I have Internet access. What will happen if the device does not have access to the Internet?
 
