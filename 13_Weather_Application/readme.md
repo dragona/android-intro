@@ -743,4 +743,101 @@ So now, even if the phone is rotated in landscape mode, the activity of the appl
 
 # Connecting the application to the Internet and updating the content based on the weather forecast
 
+In order to connect the application to the internet, there are few things I should already know:
+
+1. How to listen to a button click?  This is a very basic question that is still very trivial. I already have a post on [how to display a toast when a button is clicked](https://github.com/dragona/Android_intro/tree/master/03_Button_Toast)
+
+2. Permission: To protect the privacy of the device owner, Android has some set of permissions in place. Because of that, sometimes, the applications we create need to request permission to access certain features such as the Internet. If you have time, [read more](https://developer.android.com/guide/topics/permissions/overview.html) about the Android permission. For the puprose this weather application, I just need to add the explicit permission request inside my AndroidManifest file that the application need to access the Internet.
+
+```xml
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+```
+
+3. AsyncTask: This is a class added in the API level 3 that enables proper and easy use of the UI thread. In this weather applicaiton, I need to get some data from the Internet, this is an action that should not last more than few seconds (with a decent Internet access). I will use an [asynchronous task](https://developer.android.com/reference/android/os/AsyncTask.html) for that will process the download of the data in background to avoid a UI freezing.
+
+4. ConnectivityManager: I don`t need to query of an online data when my device does not have access to the Internet. That is a characteristic that the weather application should detect by itself. The [ConnectivityManager](https://developer.android.com/reference/android/net/ConnectivityManager.html) class was added to Android since the API 1 and I can use it to monitor network connections.
+
+
+Now that I have an understanding of the 4 points above, here is my plan on how I am going to finish this application
+
+- Add a listener to the Button so that when I press it, I can initiate the download of the latest weather forecast that will later be displayed on the application.
+- 
+
+
+I designed the button from my xml file, in other words, I can set the onClick listener from there as well.
+
+![Add listener to a button from the xml](display/btn_click.gif)
+
+Now, the description of my button in my xml file looks like this:
+
+```xml
+ <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:onClick="btnClick"
+            android:text="Go to Calendar"
+            android:textColor="#50ffffff" />
+
+```
+
+My MainActivity.java file has finally been updated. 
+
+```java
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void btnClick(View view) {
+        //to do when the button is clicked
+
+    }
+}
+
+```
+
+Following with my initial plan, I need to click on this button, the app will download the data from the Internet and display the latest weather forecast. For, I will implement the button click that will change the temperature default temperature on the application.
+Here are what I need to do:
+
+- specify a name to the TextView that displays the temperature and needs to be updated dynamically. This name later be used for identifiying this TextView
+- add the code to change the content of the TextView when the button is pressed
+
+![Add an ID to the TextView that displays the temperature](display/textview_id.gif)
+
+```xml
+
+    <TextView
+        android:id="@+id/temperature_of_the_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18"
+        android:textColor="@android:color/white"
+        android:textSize="100sp"
+        android:textStyle="bold" />
+
+```
+
+```java
+public void btnClick(View view) {
+        ((TextView)findViewById(R.id.temperature_of_the_day)).setText("27");
+    }
+```
+
+
+![Outcome when the button is pressed](display/change_txt_on_btn_clicked.gif)
+
 

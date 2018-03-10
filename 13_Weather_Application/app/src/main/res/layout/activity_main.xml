@@ -53,6 +53,7 @@
             android:gravity="center"
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
+            android:onClick="btnClick"
             android:text="Go to Calendar"
             android:textColor="#50ffffff" />
     </LinearLayout>
@@ -115,6 +116,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/temperature_of_the_day"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="18"
