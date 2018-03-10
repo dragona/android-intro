@@ -7,5 +7,5 @@
 5. [Buttons - Toast](03_Button_Toast/readme.md)
 6. [Gradient background](11_GradientBackground/readme.md)
 7. [Implicit Intent](12_ImplicitIntent/readme.md)
-8. [Weather Application- Design]()
+8. [Weather Application- Design](https://github.com/dragona/Android_intro/tree/master/13_Weather_Application)
 

@@ -1,34 +1,37 @@
 # Weather application
 
-For our first Android application, let us design a Weather application. We will first complete the application, then convers the details after all. We will learn by doing.
-If we need to have specify what we will be doing, and here is the list:
+For our first Android application, let us design a Weather application. We will first complete the application, then discuss the details later. We will learn by doing.
+If we need to specify what we will be doing, here is the list:
 - [Designing the application in Android Studio](#designing-the-application-in-android-studio)
-- [Connect the applcation to the Internet and update the content based on the weather forecast](#connect-the-applcation-to-the-internet-and-update-the-content-based-on-the-weather-forecast)
+- [Connecting the application to the Internet and updating the content based on the weather forecast](#connecting-the-application-to-the-internet-and-updating-the-content-based-on-the-weather-forecast)
 
 
 # Designing the application in Android Studio
 
-Here are my steps:
+Here are the steps:
 1. Redraw and slice needed images for the application
 2. Create a new Android project and complete the core design
 3. Refine the design and refactor the code
 
 Here is the design we need to achieve.
+
 ![Weather application - Design](display/need_to_achieve_weather_app.gif)
 
 Looking at this design, there are images which I need to re-draw: the weather conditions (windy, sunny, etc), the bell, the zigzag looking like stalactite.
-First I will re-draw everything using adobe illustator, this way I can have vectorized and high quality images. Next, I just need to slice the parts that I need.
+First I will redraw everything using adobe illustator, this way I can have vectorized and high quality images. Next, I just need to slice the parts that I need.
 
-![Weather app design re-draw](display/re_draw.gif)
+![Weather app design redraw](display/re_draw.gif)
 
-For the inatial design, I only need the following 5 slices.
+For the initial design, I only need the following 5 slices.
 
 ![Image slices](display/slices.gif)
 
 It is now time to create a new android project with an empty Activity.
+
 ![Creating a new project with an empty Activity](display/create_a_new_project.gif)
 
 My newly created project looks like this. 
+
 ![Newly created project](display/new_project.gif)
 
 In order to check whether everything is working properly, I always run my application for testing as soon as I am done creating a new project. After major changes during my design and development process, I also proceed to a frequent testing by running the application.
@@ -384,7 +387,7 @@ See the impact of that small change with the image below showing the before at t
 
 ![Before and the after remove action bar](display/toolbar_none.gif)
 
-I will now continue with the images I added to my project. I will replace all the paths currently pointing to 'app:srcCompat="@mipmap/ic_launcher' and that displays the green image in my application, and use the correct path for each image to be used. 
+I will now continue with the images I added to my project. I will replace all the paths currently pointing to 'app:srcCompat="@mipmap/ic_launcher' and that display the green image in my application, and use the correct path for each image to be used. 
 My images are inside the drawable folder, from the layout xml file, I can easily access them at 'app:srcCompat="@drawable/image_name_without_the_extension'
 
 The good thing is, Android Studio will help me get the correct names with the auto-complete function.
@@ -641,7 +644,7 @@ The good thing is, Android Studio will help me get the correct names with the au
 
 ![After adding the images to the design](display/design_version_02.gif)
 
-So far so good, but I still need to update my button. I could use an image for this batton as well, but I know I can achieve this desired design by using shapes.
+So far so good, but I still need to update my button. I could use an image for this button as well, but I know I can achieve this desired design by using shapes.
 
 In Android, we can intercept the states of a given button: normal position or pressed. I can then specify the design to be used for each given state.
 I will create 3 new files and will place them in my drawable folder. A selector and two other files for shape definitions.
@@ -663,8 +666,7 @@ Here is the content of my button_selector file
 
 ```
 
-For the shape definitions
-
+For the shape definitions:
 button_shape:
 
 ```xml
@@ -676,7 +678,7 @@ button_shape:
 </shape>
 ```
 
-button_shape_pressed
+button_shape_pressed:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -687,7 +689,7 @@ button_shape_pressed
 </shape>
 ```
 
-Next, I just need to used the selector (button_selector.xml) as the background of my button.
+Next, I just need to use the selector (button_selector.xml) as the background of my button.
 
 Before: 
 
@@ -707,10 +709,11 @@ See the output difference now:
 
 ![Button before and after using the selector](display/button.gif)
 
-The design is almost there, but there is something I would look to fix. Notice that I always designed having in mind that the used will use the application on portrait mode. If I rotate the avd while the application is running, see the result.
+The design is almost there, but there is something I would like to fix. Notice that I always design having in mind that the user will use the application in portrait mode. If I rotate the AVD while the application is running, see the result:
+
 ![In Landscapre mode, the design does not look good](display/landscape.gif)
 
-I can fix this temporarly by setting the layout screen orientation of the activity to be in portrait mode despite any phone rotation. I need to update that inside my android manifest file.
+I can fix this temporarily by setting the layout screen orientation of the activity to be in portrait mode despite any phone rotation. For that, I can update that my android manifest file.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -738,6 +741,6 @@ I can fix this temporarly by setting the layout screen orientation of the activi
 ```
 So now, even if the phone is rotated in landscape mode, the activity of the application won`t rotate and the design won`t break.
 
-# Connect the application to the Internet and update the content based on the weather forecast
+# Connecting the application to the Internet and updating the content based on the weather forecast
 
 
