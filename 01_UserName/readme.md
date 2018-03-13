@@ -1,10 +1,16 @@
 Creating an application for getting user inputs and displaying a list of all insertions in a textView. Each name should be entered individually, and a button should be pressed to validate the input.
 
-First, Create a new android project. Here are the listed files I have right after creating a new project in Android Studio where the display of the project files if by default in Android view.
+![Getting the user input](display/Intro_Getting_user_Input.gif)
+
+First, Create a new android project. When you start a new project, Android Studio creates the necessary structure for all your files and makes them visible in the Project window on the left side of the IDE. Listed below are the files I have right after creating a new project in Android Studio. Android Studio displays your project files in the Android view. This view does not reflect the actual file hierarchy on disk, but is organized by modules and file types to simplify navigation between key source files of your project, hiding certain files or directories that are not commonly used. 
+
 
 ![New project - Android View](display/new_project.png)
 
-There are three main files we are going to edit, and they are manifest.xml, MainActivity.java and activity_main.xml
+There are three main files we are going to edit, and they are: 
+- manifest.xml, 
+- MainActivity.java
+- activity_main.xml
 
 #### manifest.xml
 
@@ -76,17 +82,17 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
-To start with, let us create an editText and a button for getting the user input.
+To start with, let us create an EditText and a Button for getting the user input.
 
 Notice the main layout of our activity_main.xml is a 
 ```
 android.support.constraint.ConstraintLayout
 ```
-I prefer using a relative layout so I will change the above accordingly.
+I prefer using a RelativeLayout so I will change the above accordingly.
 
 ![Design](display/main.gif)
 
-#### activity_main.xml updated
+#### activity_main.xml updated (now using a RelativeLayout)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -183,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Todo 1: get the user input if any and print all inputs in the editText display
+     * Get the user input if any and show all inputs in the EditText display
      *
      * @param view
      */
