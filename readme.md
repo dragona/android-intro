@@ -6,8 +6,7 @@
 4. [Buttons - Design and implementation](03_Button_Design/readme.md)
 3. [Buttons - Toast](03_Button_Toast/readme.md)
 11. [Gradient background](11_GradientBackground/readme.md)
-
 12. [Implicit Intent](12_ImplicitIntent/readme.md)
-13.[Weather app design](13_Weather_App_Design/)
+13. [Weather app design](13_Weather_App_Design/)
 
 
