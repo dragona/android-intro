@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
          */
         StudentArrayAdapter studentArrayAdapter =
                 new StudentArrayAdapter(
-                        getBaseContext(), // Current content
+                        getBaseContext(), // Current context
                         R.layout.item_layout, // the layout for each item in the list
                         studentsList); // the arrayList to feed the arrayAdapter
 

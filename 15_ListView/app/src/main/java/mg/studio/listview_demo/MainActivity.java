@@ -11,9 +11,12 @@ import android.widget.ListView;
 /**
  * Create a layout for the item list (each item in the list)
  * Create a layout that will contain the listview
- * Create an array which will be used to populate the listview: a dummy content would do
- * create an array adapter, to place the array (the dummy content) in the listview
- * Connect the listView with the Java class and populate the listview using the array adapter
+ * Create an array which will be used to populate the listview:
+ * a dummy content would do
+ * create an array adapter, to place the array (the dummy content)
+ * in the listview
+ * Connect the listView with the Java class and populate the
+ * listview using the array adapter
  * set the onclick listener to the listview
  */
 
