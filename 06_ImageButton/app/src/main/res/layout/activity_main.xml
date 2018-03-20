@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent">
 
     <ImageButton
         android:id="@+id/imageButton1"
@@ -9,7 +9,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="134dp"
-        android:contentDescription="@string/info_image" 
+        android:contentDescription="@string/info_image"
         android:src="@drawable/ic_launcher" />
 
 </RelativeLayout>

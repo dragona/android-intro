@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml",
+            "outputFile": "/Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml",
             "map": [
                 {
                     "source": "/Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7db6ebe1467f4c858a0d5715fbcc355f/res/values-zh-rHK/values-zh-rHK.xml",

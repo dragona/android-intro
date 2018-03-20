@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
+            "outputFile": "/Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity/app/src/main/res/values-w820dp/dimens.xml",
+                    "source": "/Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/res/values-w820dp/dimens.xml",
                     "from": {
                         "startLines": "7",
                         "startColumns": "4",

@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Sun Dec 31 15:05:15 CST 2017
-0.baseType=DIRECTORY
-0.base=/Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity/app/build/intermediates/transforms/dexMerger/debug/0
-0.path=classes.dex
-0.set=DEX
-count=1

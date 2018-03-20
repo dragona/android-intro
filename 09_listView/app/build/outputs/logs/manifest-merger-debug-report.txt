@@ -1,53 +1,130 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:2:1-27:12
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:2:1-26:12
+MERGED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:17:1-30:12
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:2:1-26:12
 	package
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:3:5-35
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:3:5-35
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:5:5-30
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml
-	android:versionCode
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:4:5-28
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:2:11-69
-uses-sdk
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:7:5-9:41
-	android:targetSdkVersion
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:9:9-38
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml
-	android:minSdkVersion
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:8:9-35
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:7:5-71
+	android:name
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:7:22-69
+uses-permission#android.permission.WRITE_CONTACTS
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:8:5-72
+	android:name
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:8:22-70
 application
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:11:5-25:19
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:10:5-24:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:24:5-28:19
 	android:label
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:14:9-41
-	android:allowBackup
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:13:9-41
 	android:icon
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:13:9-45
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:12:9-45
+	android:allowBackup
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:15:9-40
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:14:9-40
 activity#com.example.listView.MainActivity
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:16:9-24:20
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:15:9-23:20
 	android:label
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:18:13-45
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:17:13-45
 	android:name
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:17:13-61
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:16:13-61
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:19:13-23:29
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:20:17-69
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:20:25-66
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:22:17-77
+ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from /Users/feno/Desktop/Assign01_checked/20141814/09_listView/app/src/main/AndroidManifest.xml:22:27-74
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml:21:27-74
+uses-sdk
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:23:9-51
+	android:targetSdkVersion
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:26:13-58

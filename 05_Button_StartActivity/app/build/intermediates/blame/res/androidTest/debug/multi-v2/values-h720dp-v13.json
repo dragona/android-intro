@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub/05_Button_StartActivity/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "/Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.2.aar/3df69c89b6693cb428b3b6b5c7944ed8/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "source": "/Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7db6ebe1467f4c858a0d5715fbcc355f/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Sat Mar 17 23:32:45 CST 2018
+0.baseType=DIRECTORY
+0.base=/Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/08_RadioButtons_listener/app/build/intermediates/transforms/dexMerger/debug/0
+0.path=classes.dex
+0.set=DEX
+count=1
