@@ -1,4 +1,13 @@
 /**
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+ * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+ *
  * Goal:
  * Display the content of the an Array into a ListView
  * Steps:
@@ -8,6 +17,7 @@
  * 4-Create an ArrayAdapter mAdapter to display the dummy data
  * 5-Create an instance of the ListView (which is inside the main_activity.xml) and set the adapter mAdapter to it by using setAdapter()
  */
+
 package com.example.listView;
 
 import android.app.Activity;
