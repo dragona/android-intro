@@ -1,37 +1,14 @@
-package mg.studio.prototyping;
-
-/**
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
- * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- */
-
-import android.app.ProgressDialog;
-import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-
-public class MainActivity extends AppCompatActivity {
-
-    private ProgressDialog progressDialog;
-    private WebView webView;
+# Webview
 
 
-    @Override
+![Webview](display/webview.gif)
+
+```java
+
+@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //Hide nav bar and status bar
-        hideSystemUI();
 
         progressDialog = ProgressDialog.show(this, "Loading","Please wait...", true);
         progressDialog.setCancelable(false);
@@ -56,14 +33,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         webView.getSettings().setDomStorageEnabled(true);
-        webView.loadUrl("https://projects.invisionapp.com/share/...");
+        
+        webView.loadUrl("https://example.com");
 
     }
 
+```
 
+![Webview hide UI system](display/webview_hideSystemUi.gif)
 
-
-    private void hideSystemUI() {
+```java
+private void hideSystemUI() {
         // Set the IMMERSIVE flag.
         // Set the content to appear under the system bars so that the content
         // doesn't resize when the system bars hide and show.
@@ -77,6 +57,4 @@ public class MainActivity extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_IMMERSIVE);
         }
     }
-
-
-}
+```
