@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/09_listView/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/res/values-v21/values-v21.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/res/values-v21/values-v21.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/2275f46539845bfe2e8533eaa1d3581c/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
