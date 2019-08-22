@@ -1,13 +1,47 @@
-Creating an application for getting user inputs and displaying a list of all insertions in a textView. Each name should be entered individually, and a button should be pressed to validate the input.
+# Getting user input in Android (Java)
+
+This Android application allows to user to input text in a text field. When the text field is field, and the button pressed, the app will retrieve the text and print it in a textview, which is placed below the button.
+
+## Problem decomposition
+
+### Get to know: 
+The components of the application: TextView, EditText, Button and View
 
 ![Getting the user input](display/Intro_Getting_user_Input.gif)
 
-First, Create a new android project. When you start a new project, Android Studio creates the necessary structure for all your files and makes them visible in the Project window on the left side of the IDE. Listed below are the files I have right after creating a new project in Android Studio. Android Studio displays your project files in the Android view. This view does not reflect the actual file hierarchy on disk, but is organized by modules and file types to simplify navigation between key source files of your project, hiding certain files or directories that are not commonly used. 
+### Feature selection
+We will complete this application in two versions.
+
+- [ ] Features version 1
+    - [ ] the application has a single activity.
+    - [ ] the application has a text view that displays "Enter the name"
+    - [ ] the application has an editText that will be used to retrieve the user input.
+    - [ ] the application has a button named "Proceed". When this button is pressed, the text from the editText is retrieved and displayed in a textview below the button
+    - [ ] the application has a textview below the button to show the text inserted by the user
+    - [ ] a view (line) separates the button and the textview below it
+ 
+- [ ] Features version 2
+    - [ ] all the features of version 1
+    - [ ] validate user input
+        - [ ] display a toast if the edit text is empty but the user presses the button
+        - [ ] remove trailing spaces form the user input
+    - [ ] clear the edit text after the user presses the button
+        
+
+
+### Finished application:
+
+
+The completed application (Vesrion 2) looks like this:
+
+## Building the application version 1:
+
+Using android studio, create a new application with one activity.   
 
 
 ![New project - Android View](display/new_project.png)
 
-There are three main files we are going to edit, and they are: 
+We will edit the following files: 
 - manifest.xml, 
 - MainActivity.java
 - activity_main.xml
@@ -43,8 +77,9 @@ There are three main files we are going to edit, and they are:
 ```Java
 package mg.studio.username;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,8 +88,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-}
 
+
+}
 ```
 
 #### activity_main.xml
@@ -82,17 +118,96 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
-To start with, let us create an EditText and a Button for getting the user input.
-
 Notice the main layout of our activity_main.xml is a 
+
 ```
 android.support.constraint.ConstraintLayout
 ```
+
+Let' s track our progress, we just completed the project creation with a single activity.
+
+- [ ] Features version 1
+    - [x] the application has a single activity.
+    - [ ] the application has a text view that displays "Enter the name"
+    - [ ] the application has an editText that will be used to retrieve the user input.
+    - [ ] the application has a button named "Proceed". When this button is pressed, the text from the editText is retrieved and displayed in a textview below the button
+    - [ ] the application has a textview below the button to show the text inserted by the user
+    - [ ] a view (line) separates the button and the textview below it
+ 
+
 I prefer using a RelativeLayout so I will change the above accordingly.
 
-![Design](display/main.gif)
+To add a textview to the application, let's open the ```activity_main.xml``` file and add the following:
+Remove the ```android.support.constraint.ConstraintLayout``` form the top and bottom line and replace them with ```RelativeLayout```
 
-#### activity_main.xml updated (now using a RelativeLayout)
+
+```xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebeaeb"
+    tools:context="mg.studio.username.MainActivity">
+
+
+</RelativeLayout>
+
+```
+
+no, to add the ```textView```, add the following inside your ```RelativeLayout``` 
+
+```xml
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Enter the name"
+        android:textStyle="bold" />
+```
+
+
+So far, your ```activity_main.xml``` should be similar to this:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebeaeb"
+    tools:context="mg.studio.username.MainActivity">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Enter the name"
+        android:textStyle="bold" />
+</RelativeLayout>
+
+```
+
+except this ```tools:context="mg.studio.username.MainActivity"```, where you should have the inverse domain name you used when you created the project.
+
+Test your application, you should have something that looks like this
+
+We just finished adding the textview, it is now time to add the edittext, a button, a view (line) and the second textview for getting hte user input.
+
+- [ ] Features version 1
+    - [x] the application has a single activity.
+    - [x] the application has a text view that displays "Enter the name"
+    - [ ] the application has an editText that will be used to retrieve the user input.
+    - [ ] the application has a button named "Proceed". When this button is pressed, the text from the editText is retrieved and displayed in a textview below the button
+    - [ ] the application has a textview below the button to show the text inserted by the user
+    - [ ] a view (line) separates the button and the textview below it
+ 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -164,21 +279,27 @@ I prefer using a RelativeLayout so I will change the above accordingly.
 
 </RelativeLayout>
 
-
 ```
-Now that we have our layout ready, we can start updating the Java file. Notice the ids display, btn, and et_name as we need to use them in the java file.
+Now that we have our layout ready, you can run the application and test it, how does it look like?
 
-![New project - Android View](display/insert.gif)
+- [ ] Features version 1
+    - [x] the application has a single activity.
+    - [x] the application has a text view that displays "Enter the name"
+    - [x] the application has an editText that will be used to retrieve the user input.
+    - [ ] the application has a button named "Proceed". When this button is pressed, the text from the editText is retrieved and displayed in a textview below the button
+    - [x] the application has a textview below the button to show the text inserted by the user
+    - [x] a view (line) separates the button and the textview below it
+ 
+
+
+Time to work on our java file. Notice the ids ```display```, ```btn```, and ```et_name``` as we need to use them in the java file to refer to the views.
 
 ```Java
 package mg.studio.username;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -188,28 +309,43 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /**
-     * Get the user input if any and show all inputs in the EditText display
-     *
-     * @param view
-     */
-    public void getText(View view) {
-        if (((EditText) findViewById(R.id.et_name)).getText().toString().length() < 1) {
-            Toast.makeText(this, "No user input!", Toast.LENGTH_LONG).show();
-        } else {
-            TextView mDisplay = findViewById(R.id.display);
-            EditText mEditText = findViewById(R.id.et_name);
-            String mTextPrevious = mDisplay.getText().toString();
-            if (mTextPrevious.length() > 0) {
-                mDisplay.setText(mTextPrevious.concat("\n" + mEditText.getText().toString()));
-            } else {
-                mDisplay.setText(mTextPrevious.concat(mEditText.getText().toString()));
-            }
-            mEditText.setText("");
 
-
-        }
-    }
 }
+```
+
+To connect your button view with you java file, you can go back to you ```activity_main.xml``` and over the ```onClick``` under your button, you should bet something that looks like this
+
+![get text](display/onclick.png)
+
+and this will create a method inside your ```MainActivity.java```
+
+```java
+    /** your previous code */    
+    public void getText(View view) {
+    
+    }
 
 ```
+
+You can write your code logic that needs to be executed inside that getText.
+
+```Java
+            TextView mDisplay = findViewById(R.id.display);
+            EditText mEditText = findViewById(R.id.et_name);
+            mDisplay.setText(mEditText.getText().toString());
+```
+
+Now, your complete MainActivity.java file should look like [this](app/src/main/java/mg/studio/username/MainActivity.java)
+
+- [ ] Features version 1
+    - [x] the application has a single activity.
+    - [x] the application has a text view that displays "Enter the name"
+    - [x] the application has an editText that will be used to retrieve the user input.
+    - [x] the application has a button named "Proceed". When this button is pressed, the text from the editText is retrieved and displayed in a textview below the button
+    - [x] the application has a textview below the button to show the text inserted by the user
+    - [x] a view (line) separates the button and the textview below it
+
+
+We completed version 1
+
+![New project - Android View](display/insert.gif)

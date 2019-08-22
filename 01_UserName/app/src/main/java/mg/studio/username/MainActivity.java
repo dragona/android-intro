@@ -8,15 +8,14 @@ package mg.studio.username;
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
  */
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,25 +26,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Todo 1: get the user input if any and print all inputs in the editText display
+     * Todo 1: get the user input from the edittext and set the text to the textview display
      *
      * @param view
      */
     public void getText(View view) {
-        if (((EditText) findViewById(R.id.et_name)).getText().toString().length() < 1) {
-            Toast.makeText(this, "No user input!", Toast.LENGTH_LONG).show();
-        } else {
-            TextView mDisplay = findViewById(R.id.display);
-            EditText mEditText = findViewById(R.id.et_name);
-            String mTextPrevious = mDisplay.getText().toString();
-            if (mTextPrevious.length() > 0) {
-                mDisplay.setText(mTextPrevious.concat("\n" + mEditText.getText().toString()));
-            } else {
-                mDisplay.setText(mTextPrevious.concat(mEditText.getText().toString()));
-            }
-            mEditText.setText("");
-
-
-        }
+        TextView mDisplay = findViewById(R.id.display);
+        EditText mEditText = findViewById(R.id.et_name);
+        mDisplay.setText(mEditText.getText().toString());
     }
+
+
 }
+
+
+
