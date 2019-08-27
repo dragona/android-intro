@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context="mg.studio.layouts.MainActivity">
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:background="@android:color/white"
+        android:hint="To"
+        android:inputType="textPostalAddress"
+        android:singleLine="true"
+        android:textCursorDrawable="@color/colorPrimaryDark" />
+
+    <EditText
+        android:id="@+id/et_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_name"
+        android:layout_margin="16dp"
+        android:background="@android:color/white"
+        android:hint="Subject"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textCursorDrawable="@color/colorPrimaryDark" />
+
+    <EditText
+        android:id="@+id/et_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_address"
+        android:layout_margin="16dp"
+        android:background="@android:color/white"
+        android:gravity="top"
+        android:hint="Message"
+        android:inputType="text"
+        android:maxLines="10"
+        android:minHeight="100dp"
+        android:padding="8dp"
+        android:textCursorDrawable="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_message"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:background="@color/colorPrimary"
+        android:text="Send"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:typeface="monospace" />
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:onClick="btn_back"
+        android:text="Back" />
+
+
+</RelativeLayout>
+
+

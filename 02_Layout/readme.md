@@ -1,4 +1,4 @@
-## Practicing LinearLayout and RelativeLayout
+##  LinearLayout and RelativeLayout
 
 You are provided two layout files, one using LinearLayout and the other using RelativeLayout.
 
@@ -12,7 +12,9 @@ here is the code
 
 ![Layouts](display/code_linearLayout.gif)
 
-See if you can implement an improved version of the above design but this time, using a ConstraintLayout combined with a ScrollView, a RelativeLayout, and a LinearLayout if all needed. Your final result should look like this
+See if you can implement an improved version of the above design but this time, 
+using a ConstraintLayout combined with a ScrollView, a RelativeLayout, and a LinearLayout if all needed. 
+Your final result should look like this
 
 ![Try this](display/layout_final.gif) 
 

@@ -11,9 +11,12 @@ package mg.studio.usernamefinal;
  *
  */
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -27,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Connect the button
         Button btnSend = findViewById(R.id.mBtn);
-        //Connect the Edittext
+        //Connect the EditText
         final EditText userInput = findViewById(R.id.eTuserInput);
 
         //Set the onclick listener
@@ -48,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
                     //if the user wrote her name.
                     Toast.makeText(getBaseContext(), "The user`s name is : \n   " + theUserInput, Toast.LENGTH_LONG).show();
                 }
+
+                // Hide button keyboard after hte button is pressed
+                InputMethodManager inputManager = (InputMethodManager)
+                        getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputManager.hideSoftInputFromWindow((null == getCurrentFocus()) ? null : getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 
 
             }

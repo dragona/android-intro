@@ -8,17 +8,34 @@ package mg.studio.layouts;
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
  */
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout);
+        setContentView(R.layout.chooser);
+    }
+
+    public void btn_relative(View view) {
+        setContentView(R.layout.relative_layout);
+    }
+
+    public void btn_linear(View view) {
+        setContentView(R.layout.linear_layout);
+    }
+
+    public void btn_constraint(View view) {
+        setContentView(R.layout.contraint_layout);
+    }
+
+    public void btn_back(View view) {
+        setContentView(R.layout.chooser);
     }
 }
