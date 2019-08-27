@@ -12,7 +12,7 @@ package mg.studio.buttontoast;
  */
 
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void mBtn(View view) {
-        Toast.makeText(this, " You clicked the button", Toast.LENGTH_LONG).show();
+    public void btn_toast(View view) {
+        Toast.makeText(this, "You clicked the button, this is a Toast.", Toast.LENGTH_LONG).show();
     }
 }
