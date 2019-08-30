@@ -8,9 +8,8 @@ package mg.studio.buttonintent;
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
  */
- 
+
 
 import android.content.Intent;
 import android.net.Uri;
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void btn(View view) {
 
-        Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://cqu.edu.cn"));
+        Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https:studio.mg"));
         startActivity(mIntent);
     }
 }

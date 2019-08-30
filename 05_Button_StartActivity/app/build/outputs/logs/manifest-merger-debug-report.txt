@@ -1,149 +1,153 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-31:12
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7db6ebe1467f4c858a0d5715fbcc355f/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ed8d6f690953e17d635e8244d4d3e83e/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0031051b839bbb7ee011a2853ca789c9/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:17:1-31:12
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:17:1-30:12
-INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-31:12
+ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-29:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/studio/.gradle/caches/transforms-2/files-2.1/f6a183f8595ca34f3d5cc99d1f8bc322/appcompat-1.0.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/4f37a040d795d0eef135b10b20545e3f/fragment-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/d382ba9b8c9ea9d7b43a9cfaea0ecdf4/vectordrawable-animated-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/abc680e55824c418c024460e31034ed4/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/ba2af06f417607d7ef1ca9f201a0d139/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/studio/.gradle/caches/transforms-2/files-2.1/324a702de98e8e0560de88ae82ee3427/vectordrawable-1.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/331f61861c2d3a925f2252286afb1f53/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/f3997ce16a5c00ae84a772d300d0e1e8/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/04087833f388d5ffa97a080d757646c2/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/34085af895daa23049fd0af188e6a001/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/eb11c4797d5d5b24d5dcbbebe26babf4/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/740a70a0c89c8c085b6e012b4bd7790e/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/31dc29ba3158cee4b1ca2bf2f6ff141b/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/435f1166e6a428a0025d9cd273cb35a2/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] /Users/studio/.gradle/caches/transforms-2/files-2.1/72b2b92ec4ab73ff21fb9bc348de3b22/core-1.0.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/07608d1ce0a2b5e25216bbe877b06158/versionedparcelable-1.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/aa91d8d2653c363bbd5da9d9892260d3/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/684c19030ab34291fff8f6b761838da8/lifecycle-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/9d52be8c254a228a91eaf05f51d52923/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/9093771a98b01557e81860f4122d7892/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/7ec682ca46f5c90ea9a9e0cba0c0310a/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/85b59553d84ac8d04663d7d81848664c/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/420f294924962582b4c42c622af43461/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/66e997bde0b6ece28f7fd36f5f4a1584/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/8787729f29cf7add1bc29c81caccddfd/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/d4ef17d609918d2a5f5a86d1ea02678f/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:1-29:12
 	package
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:3:5-37
-		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:3:5-37
+		INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:5:5-30
-		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:4:5-28
-		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml
 uses-sdk
-ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:7:5-9:41
-INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:7:5-9:41
-INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7db6ebe1467f4c858a0d5715fbcc355f/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7db6ebe1467f4c858a0d5715fbcc355f/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ed8d6f690953e17d635e8244d4d3e83e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ed8d6f690953e17d635e8244d4d3e83e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0031051b839bbb7ee011a2853ca789c9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0031051b839bbb7ee011a2853ca789c9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:21:5-23:58
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:20:5-22:41
-INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:7:5-9:41
-INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:7:5-9:41
-	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7db6ebe1467f4c858a0d5715fbcc355f/AndroidManifest.xml:23:9-75
+ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:7:5-47
+INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:7:5-47
+INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:7:5-47
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/studio/.gradle/caches/transforms-2/files-2.1/f6a183f8595ca34f3d5cc99d1f8bc322/appcompat-1.0.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/studio/.gradle/caches/transforms-2/files-2.1/f6a183f8595ca34f3d5cc99d1f8bc322/appcompat-1.0.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/4f37a040d795d0eef135b10b20545e3f/fragment-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/4f37a040d795d0eef135b10b20545e3f/fragment-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/d382ba9b8c9ea9d7b43a9cfaea0ecdf4/vectordrawable-animated-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/d382ba9b8c9ea9d7b43a9cfaea0ecdf4/vectordrawable-animated-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/abc680e55824c418c024460e31034ed4/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/abc680e55824c418c024460e31034ed4/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/ba2af06f417607d7ef1ca9f201a0d139/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/ba2af06f417607d7ef1ca9f201a0d139/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/studio/.gradle/caches/transforms-2/files-2.1/324a702de98e8e0560de88ae82ee3427/vectordrawable-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/studio/.gradle/caches/transforms-2/files-2.1/324a702de98e8e0560de88ae82ee3427/vectordrawable-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/331f61861c2d3a925f2252286afb1f53/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/331f61861c2d3a925f2252286afb1f53/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/f3997ce16a5c00ae84a772d300d0e1e8/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/f3997ce16a5c00ae84a772d300d0e1e8/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/04087833f388d5ffa97a080d757646c2/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/04087833f388d5ffa97a080d757646c2/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/34085af895daa23049fd0af188e6a001/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/34085af895daa23049fd0af188e6a001/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/eb11c4797d5d5b24d5dcbbebe26babf4/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/eb11c4797d5d5b24d5dcbbebe26babf4/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/740a70a0c89c8c085b6e012b4bd7790e/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/740a70a0c89c8c085b6e012b4bd7790e/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/31dc29ba3158cee4b1ca2bf2f6ff141b/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/31dc29ba3158cee4b1ca2bf2f6ff141b/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/435f1166e6a428a0025d9cd273cb35a2/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/435f1166e6a428a0025d9cd273cb35a2/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /Users/studio/.gradle/caches/transforms-2/files-2.1/72b2b92ec4ab73ff21fb9bc348de3b22/core-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /Users/studio/.gradle/caches/transforms-2/files-2.1/72b2b92ec4ab73ff21fb9bc348de3b22/core-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/07608d1ce0a2b5e25216bbe877b06158/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/07608d1ce0a2b5e25216bbe877b06158/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/aa91d8d2653c363bbd5da9d9892260d3/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/aa91d8d2653c363bbd5da9d9892260d3/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/684c19030ab34291fff8f6b761838da8/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/684c19030ab34291fff8f6b761838da8/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/9d52be8c254a228a91eaf05f51d52923/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/9d52be8c254a228a91eaf05f51d52923/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/9093771a98b01557e81860f4122d7892/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/9093771a98b01557e81860f4122d7892/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/7ec682ca46f5c90ea9a9e0cba0c0310a/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/7ec682ca46f5c90ea9a9e0cba0c0310a/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/85b59553d84ac8d04663d7d81848664c/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/85b59553d84ac8d04663d7d81848664c/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/420f294924962582b4c42c622af43461/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/420f294924962582b4c42c622af43461/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/66e997bde0b6ece28f7fd36f5f4a1584/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/66e997bde0b6ece28f7fd36f5f4a1584/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/8787729f29cf7add1bc29c81caccddfd/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/8787729f29cf7add1bc29c81caccddfd/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/d4ef17d609918d2a5f5a86d1ea02678f/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/d4ef17d609918d2a5f5a86d1ea02678f/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:7:5-47
+INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:7:5-47
 	android:targetSdkVersion
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:9:9-38
-		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:7:15-44
+		INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:8:9-34
-		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:7:5-47
+		INJECTED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:11:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7db6ebe1467f4c858a0d5715fbcc355f/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7db6ebe1467f4c858a0d5715fbcc355f/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ed8d6f690953e17d635e8244d4d3e83e/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ed8d6f690953e17d635e8244d4d3e83e/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0031051b839bbb7ee011a2853ca789c9/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0031051b839bbb7ee011a2853ca789c9/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:25:5-29:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:24:5-28:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:24:5-28:19
+ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:9:5-27:19
+MERGED from [androidx.core:core:1.0.1] /Users/studio/.gradle/caches/transforms-2/files-2.1/72b2b92ec4ab73ff21fb9bc348de3b22/core-1.0.1/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] /Users/studio/.gradle/caches/transforms-2/files-2.1/72b2b92ec4ab73ff21fb9bc348de3b22/core-1.0.1/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/07608d1ce0a2b5e25216bbe877b06158/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/studio/.gradle/caches/transforms-2/files-2.1/07608d1ce0a2b5e25216bbe877b06158/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.1] /Users/studio/.gradle/caches/transforms-2/files-2.1/72b2b92ec4ab73ff21fb9bc348de3b22/core-1.0.1/AndroidManifest.xml:22:18-86
 	android:label
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:14:9-41
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:12:9-41
 	android:icon
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:13:9-45
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:11:9-45
 	android:allowBackup
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:15:9-40
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:13:9-40
 activity#cn.edu.cqu.buttontoast.MainActivity
-ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:16:9-24:20
+ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:14:9-22:20
 	android:label
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:18:13-45
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:16:13-45
 	android:name
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:17:13-63
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:19:13-23:29
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:15:13-63
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:20:17-69
+ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:20:25-66
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:22:17-77
+ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:22:27-74
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:20:27-74
 activity#cn.edu.cqu.buttontoast.SecondActivity
-ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:25:9-28:20
+ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:23:9-26:20
 	android:label
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:27:13-45
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:25:13-45
 	android:name
-		ADDED from /Users/feno/Documents/Project_Classes/02_MMA_Android/2018_MMA/GitHub_Android/05_Button_StartActivity/app/src/main/AndroidManifest.xml:26:13-65
-meta-data#android.support.VERSION
-ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7db6ebe1467f4c858a0d5715fbcc355f/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ed8d6f690953e17d635e8244d4d3e83e/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/ed8d6f690953e17d635e8244d4d3e83e/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0031051b839bbb7ee011a2853ca789c9/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/0031051b839bbb7ee011a2853ca789c9/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/88447a5a5f9eef82ea74c4b9ec13f211/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/26255f2bf3215eb1503fb6c0b8c9249b/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/16a2e3183b41a338dc04b9f96a26df3f/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/151ed0357b6af21bb66d1668ff9ef032/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/fe18d589ff91b384acfde3fdd138869d/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/5bf8587090f8d7e95b351e4970ead745/AndroidManifest.xml:26:9-28:38
-	android:value
-		ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7db6ebe1467f4c858a0d5715fbcc355f/AndroidManifest.xml:28:13-35
-	android:name
-		ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7db6ebe1467f4c858a0d5715fbcc355f/AndroidManifest.xml:27:13-51
-meta-data#android.arch.lifecycle.VERSION
-ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:25:9-27:47
-	android:value
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:27:13-44
-	android:name
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/feno/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/70f54a7258ac33e91a12da82776bf9c0/AndroidManifest.xml:26:13-58
+		ADDED from /Users/studio/Documents/Android_intro/05_Button_StartActivity/app/src/main/AndroidManifest.xml:24:13-65

@@ -8,21 +8,20 @@ package cn.edu.cqu.buttontoast;
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
  */
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class SecondActivity extends Activity{
-	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		//Connect this java file with the xml layout
-		setContentView(R.layout.second_layout);
-		
-		
-	}
+public class SecondActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //Connect this java file with the xml layout
+        setContentView(R.layout.second_layout);
+
+
+    }
 
 }

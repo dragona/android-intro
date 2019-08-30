@@ -1,0 +1,45 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.edittext"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+7-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:7:5-47
+8        android:minSdkVersion="14"
+8-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:7:5-47
+9        android:targetSdkVersion="19" />
+9-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:7:15-44
+10
+11    <application
+11-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:9:5-23:19
+12        android:allowBackup="true"
+12-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:10:9-35
+13        android:debuggable="true"
+14        android:icon="@drawable/ic_launcher"
+14-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:11:9-45
+15        android:label="@string/app_name"
+15-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:12:9-41
+16        android:testOnly="true"
+17        android:theme="@style/AppTheme" >
+17-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:13:9-40
+18        <activity
+18-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:14:9-22:20
+19            android:name="com.example.edittext.MainActivity"
+19-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:15:13-61
+20            android:label="@string/app_name" >
+20-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:16:13-45
+21            <intent-filter>
+21-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:17:13-21:29
+22                <action android:name="android.intent.action.MAIN" />
+22-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:18:17-69
+22-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:18:25-66
+23
+24                <category android:name="android.intent.category.LAUNCHER" />
+24-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:20:17-77
+24-->/Users/studio/Documents/Android_intro/07_EditText/app/src/main/AndroidManifest.xml:20:27-74
+25            </intent-filter>
+26        </activity>
+27    </application>
+28
+29</manifest>
