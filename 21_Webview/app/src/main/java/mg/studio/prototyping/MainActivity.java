@@ -13,7 +13,7 @@ package mg.studio.prototyping;
 
 import android.app.ProgressDialog;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         webView.getSettings().setDomStorageEnabled(true);
-        webView.loadUrl("https://projects.invisionapp.com/share/...");
+        webView.loadUrl("https://studio.mg");
 
     }
 
