@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
             "map": [
                 {
-                    "source": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/src/main/res/values-v11/styles.xml",
+                    "source": "/Users/studio/Documents/Android_intro/09_listView/app/src/main/res/values-v11/styles.xml",
                     "from": {
                         "startLines": "6",
                         "startColumns": "4",

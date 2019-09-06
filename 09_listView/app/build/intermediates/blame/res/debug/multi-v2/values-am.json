@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-am/values-am.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-am/values-am.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

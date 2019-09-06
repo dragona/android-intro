@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-hi_values-hi.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-be_values-be.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-hi/values-hi.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-be/values-be.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,104 +16,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values_values.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-da_values-da.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "4,3,11,9,7,10,8,6,12,5",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "102,56,399,315,233,353,277,189,437,155",
-                        "endColumns": "52,45,37,37,43,45,37,43,37,33",
-                        "endOffsets": "150,97,432,348,272,394,310,228,470,184"
-                    },
-                    "to": {
-                        "startLines": "40,41,42,43,44,45,46,48,49,50",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2437,2490,2536,2574,2612,2656,2702,2811,2855,2893",
-                        "endColumns": "52,45,37,37,43,45,37,43,37,33",
-                        "endOffsets": "2485,2531,2569,2607,2651,2697,2735,2850,2888,2922"
-                    }
-                },
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/2275f46539845bfe2e8533eaa1d3581c/res/values/values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,144,215,288,348,414,536,597,663",
-                        "endColumns": "88,70,72,59,65,121,60,65,66",
-                        "endOffsets": "139,210,283,343,409,531,592,658,725"
-                    },
-                    "to": {
-                        "startLines": "4,5,7,38,66,68,69,74,76",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "187,276,405,2307,3696,3872,3994,4256,4451",
-                        "endColumns": "88,70,72,59,65,121,60,65,66",
-                        "endOffsets": "271,342,473,2362,3757,3989,4050,4317,4513"
-                    }
-                },
-                {
-                    "source": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "6,15",
-                        "startColumns": "4,4",
-                        "startOffsets": "186,510",
-                        "endLines": "12,17",
-                        "endColumns": "12,12",
-                        "endOffsets": "472,665"
-                    },
-                    "to": {
-                        "startLines": "51,58",
-                        "startColumns": "4,4",
-                        "startOffsets": "2927,3218",
-                        "endLines": "57,60",
-                        "endColumns": "12,12",
-                        "endOffsets": "3213,3373"
-                    }
-                },
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values/values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,53,54,58,59,60,6,15",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,187,245,1153,1223,1291,1363,1433,1494,1555,1616,1678,1742,1804,1865,1933,2033,2093,2159,2232,2301,2358,2410,2472,2544,2620,2655,2690,2724,2759,2794,2864,2935,3052,3253,3363,3564,3693,3765,319,880",
-                        "endLines": "2,3,4,5,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,52,53,57,58,59,60,14,18",
-                        "endColumns": "68,62,57,73,69,67,71,69,60,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,33,34,34,69,70,116,12,109,12,128,71,66,35,115",
-                        "endOffsets": "119,182,240,314,1218,1286,1358,1428,1489,1550,1611,1673,1737,1799,1860,1928,2028,2088,2154,2227,2296,2353,2405,2467,2539,2615,2650,2685,2719,2754,2789,2859,2930,3047,3248,3358,3559,3688,3760,3827,875,1148"
-                    },
-                    "to": {
-                        "startLines": "2,3,6,8,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,39,47,61,62,67,70,75,77,78,79,88",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,347,478,666,736,804,876,946,1007,1068,1129,1191,1255,1317,1378,1446,1546,1606,1672,1745,1814,1871,1923,1985,2057,2133,2168,2203,2237,2272,2367,2740,3378,3495,3762,4055,4322,4518,4590,4657,5218",
-                        "endLines": "2,3,6,8,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,39,47,61,65,67,73,75,77,78,87,91",
-                        "endColumns": "68,62,57,73,69,67,71,69,60,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,33,34,34,69,70,116,12,109,12,128,71,66,35,115",
-                        "endOffsets": "119,182,400,547,731,799,871,941,1002,1063,1124,1186,1250,1312,1373,1441,1541,1601,1667,1740,1809,1866,1918,1980,2052,2128,2163,2198,2232,2267,2302,2432,2806,3490,3691,3867,4251,4446,4585,4652,5213,5486"
-                    }
-                },
-                {
-                    "source": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/src/main/res/values/dimens.xml",
-                    "from": {
-                        "startLines": "3,4",
-                        "startColumns": "4,4",
-                        "startOffsets": "89,147",
-                        "endColumns": "57,55",
-                        "endOffsets": "142,198"
-                    },
-                    "to": {
-                        "startLines": "9,10",
-                        "startColumns": "4,4",
-                        "startOffsets": "552,610",
-                        "endColumns": "57,55",
-                        "endOffsets": "605,661"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-kn_values-kn.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-kn/values-kn.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-da/values-da.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -125,10 +31,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-te_values-te.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ml_values-ml.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-te/values-te.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-ml/values-ml.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -140,10 +46,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-bn_values-bn.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-it_values-it.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-bn/values-bn.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-it/values-it.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -155,10 +61,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-sw_values-sw.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-es_values-es.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-sw/values-sw.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-es/values-es.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -170,10 +76,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-en-rIN_values-en-rIN.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-en-rAU_values-en-rAU.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-en-rIN/values-en-rIN.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -185,10 +91,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ka_values-ka.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-tr_values-tr.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-ka/values-ka.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-tr/values-tr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -200,685 +106,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-in_values-in.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-v14_values-v14.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-in/values-in.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-sr_values-sr.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-sr/values-sr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ky_values-ky.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-ky/values-ky.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-da_values-da.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-da/values-da.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-pt_values-pt.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-pt/values-pt.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-bs_values-bs.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-bs/values-bs.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ca_values-ca.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-ca/values-ca.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-it_values-it.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-it/values-it.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ja_values-ja.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-ja/values-ja.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-cs_values-cs.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-cs/values-cs.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-fr_values-fr.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-fr/values-fr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-et_values-et.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-et/values-et.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-sk_values-sk.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-sk/values-sk.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-nb_values-nb.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-nb/values-nb.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-mn_values-mn.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-mn/values-mn.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-tr_values-tr.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-tr/values-tr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-bg_values-bg.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-bg/values-bg.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-sv_values-sv.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-sv/values-sv.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ml_values-ml.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-ml/values-ml.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-th_values-th.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-th/values-th.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-en-rAU_values-en-rAU.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-en-rAU/values-en-rAU.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-hy_values-hy.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-hy/values-hy.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-fa_values-fa.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-fa/values-fa.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ur_values-ur.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-ur/values-ur.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "102",
-                        "endOffsets": "153"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-hr_values-hr.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-hr/values-hr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-iw_values-iw.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-iw/values-iw.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "102",
-                        "endOffsets": "153"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ms_values-ms.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-ms/values-ms.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ro_values-ro.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-ro/values-ro.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-be_values-be.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-be/values-be.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "108",
-                        "endOffsets": "159"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-nl_values-nl.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-nl/values-nl.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ta_values-ta.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-ta/values-ta.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-port_values-port.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-port/values-port.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "55",
-                        "endOffsets": "106"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-zu_values-zu.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-zu/values-zu.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-pt-rBR_values-pt-rBR.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-pt-rBR/values-pt-rBR.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-mr_values-mr.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-mr/values-mr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-zh-rCN_values-zh-rCN.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-zh-rCN/values-zh-rCN.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-km_values-km.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-km/values-km.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-gu_values-gu.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-gu/values-gu.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-vi_values-vi.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-vi/values-vi.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-v16_values-v16.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-lv_values-lv.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-lv/values-lv.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-uk_values-uk.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-uk/values-uk.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-am_values-am.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-am/values-am.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ne_values-ne.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-ne/values-ne.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-pl_values-pl.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-pl/values-pl.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-v14_values-v14.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/src/main/res/values-v14/styles.xml",
+                    "source": "/Users/studio/Documents/Android_intro/09_listView/app/src/main/res/values-v14/styles.xml",
                     "from": {
                         "startLines": "7",
                         "startColumns": "4",
@@ -899,10 +130,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-fr-rCA_values-fr-rCA.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-sk_values-sk.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-fr-rCA/values-fr-rCA.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-sk/values-sk.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -914,10 +145,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-de_values-de.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-bn_values-bn.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-de/values-de.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-bn/values-bn.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -929,10 +160,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-mk_values-mk.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ar_values-ar.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-mk/values-mk.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-ar/values-ar.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -944,10 +175,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-hu_values-hu.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-nl_values-nl.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-hu/values-hu.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-nl/values-nl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -959,10 +190,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-kk_values-kk.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-fr-rCA_values-fr-rCA.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-kk/values-kk.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-fr-rCA/values-fr-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -974,10 +205,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-el_values-el.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-eu_values-eu.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-el/values-el.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-eu/values-eu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -989,10 +220,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-is_values-is.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-mn_values-mn.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-is/values-is.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-mn/values-mn.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1004,10 +235,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-az_values-az.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-sv_values-sv.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-az/values-az.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-sv/values-sv.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1019,10 +250,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-sq_values-sq.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-zh-rTW_values-zh-rTW.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-sq/values-sq.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-zh-rTW/values-zh-rTW.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1034,10 +265,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-pa_values-pa.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-bg_values-bg.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-pa/values-pa.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-bg/values-bg.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1049,10 +280,92 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-v21_values-v21.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-de_values-de.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-v21/values-v21.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-de/values-de.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-w820dp-v13_values-w820dp-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/Documents/Android_intro/09_listView/app/src/main/res/values-w820dp/dimens.xml",
+                    "from": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "305",
+                        "endColumns": "57",
+                        "endOffsets": "358"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-si_values-si.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-si/values-si.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-zh-rCN_values-zh-rCN.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-zh-rCN/values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-tl_values-tl.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-tl/values-tl.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-v21_values-v21.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -1071,7 +384,7 @@
                     }
                 },
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/2275f46539845bfe2e8533eaa1d3581c/res/values-v21/values-v21.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/a6ce3afbff3f1ae3fa1fe13048b173d9/media-1.0.0/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
@@ -1092,10 +405,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ar_values-ar.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-kk_values-kk.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-ar/values-ar.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-kk/values-kk.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1107,10 +420,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-uz_values-uz.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-bs_values-bs.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-uz/values-uz.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-bs/values-bs.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1122,10 +435,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-lo_values-lo.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-cs_values-cs.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-lo/values-lo.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-cs/values-cs.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1137,10 +450,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-eu_values-eu.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-zh-rHK_values-zh-rHK.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-eu/values-eu.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-zh-rHK/values-zh-rHK.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1152,25 +465,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-zh-rTW_values-zh-rTW.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-v24_values-v24.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-zh-rTW/values-zh-rTW.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-v24_values-v24.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/2275f46539845bfe2e8533eaa1d3581c/res/values-v24/values-v24.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/a6ce3afbff3f1ae3fa1fe13048b173d9/media-1.0.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -1182,10 +480,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-sl_values-sl.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-my_values-my.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-sl/values-sl.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-my/values-my.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1197,10 +495,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-es_values-es.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-lt_values-lt.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-es/values-es.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-lt/values-lt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1212,32 +510,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-w820dp-v13_values-w820dp-v13.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-sl_values-sl.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/src/main/res/values-w820dp/dimens.xml",
-                    "from": {
-                        "startLines": "7",
-                        "startColumns": "4",
-                        "startOffsets": "305",
-                        "endColumns": "57",
-                        "endOffsets": "358"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "57",
-                        "endOffsets": "108"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-fi_values-fi.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-fi/values-fi.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-sl/values-sl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1249,10 +525,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ko_values-ko.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-es-rUS_values-es-rUS.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-ko/values-ko.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-es-rUS/values-es-rUS.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1264,10 +540,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-en-rGB_values-en-rGB.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-sq_values-sq.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-en-rGB/values-en-rGB.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-sq/values-sq.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1279,10 +555,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-si_values-si.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ja_values-ja.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-si/values-si.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-ja/values-ja.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1294,10 +570,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-af_values-af.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-gl_values-gl.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-af/values-af.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-gl/values-gl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1309,10 +585,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-tl_values-tl.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-te_values-te.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-tl/values-tl.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-te/values-te.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1324,10 +600,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-es-rUS_values-es-rUS.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-el_values-el.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-es-rUS/values-es-rUS.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-el/values-el.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1339,40 +615,25 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-zh-rHK_values-zh-rHK.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-en-rXC_values-en-rXC.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-zh-rHK/values-zh-rHK.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-en-rXC/values-en-rXC.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "101",
-                        "endOffsets": "152"
+                        "endColumns": "202",
+                        "endOffsets": "253"
                     }
                 }
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-b+sr+Latn_values-b+sr+Latn.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-en-rGB_values-en-rGB.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-b+sr+Latn/values-b+sr+Latn.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-pt-rPT_values-pt-rPT.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-pt-rPT/values-pt-rPT.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-en-rGB/values-en-rGB.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1384,10 +645,100 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-v11_values-v11.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-mk_values-mk.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/src/main/res/values-v11/styles.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-mk/values-mk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-pt-rPT_values-pt-rPT.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-pt-rPT/values-pt-rPT.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-mr_values-mr.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-mr/values-mr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-km_values-km.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-km/values-km.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ky_values-ky.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-ky/values-ky.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ka_values-ka.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-ka/values-ka.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-v11_values-v11.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/Documents/Android_intro/09_listView/app/src/main/res/values-v11/styles.xml",
                     "from": {
                         "startLines": "6",
                         "startColumns": "4",
@@ -1408,10 +759,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-gl_values-gl.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ru_values-ru.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-gl/values-gl.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-ru/values-ru.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1423,10 +774,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-my_values-my.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-th_values-th.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-my/values-my.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-th/values-th.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1438,10 +789,10 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ru_values-ru.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-az_values-az.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-ru/values-ru.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-az/values-az.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1453,10 +804,723 @@
             ]
         },
         {
-            "outputFile": "/Users/studio/Documents/Teaching_CQU/02_MMA_Android/LAB_all_time/2017_MMA/00_Presentations/Week03/Class05/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-lt_values-lt.arsc.flat",
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-or_values-or.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/studio/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a55c64e8da7ab6235cf0ff501ec68153/res/values-lt/values-lt.xml",
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-or/values-or.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-hu_values-hu.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-hu/values-hu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-is_values-is.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-is/values-is.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-et_values-et.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-et/values-et.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ko_values-ko.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-ko/values-ko.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-af_values-af.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-af/values-af.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-fi_values-fi.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-fi/values-fi.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-iw_values-iw.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-iw/values-iw.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-lv_values-lv.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-lv/values-lv.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/Documents/Android_intro/09_listView/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "6,15",
+                        "startColumns": "4,4",
+                        "startOffsets": "186,510",
+                        "endLines": "12,17",
+                        "endColumns": "12,12",
+                        "endOffsets": "472,665"
+                    },
+                    "to": {
+                        "startLines": "61,68",
+                        "startColumns": "4,4",
+                        "startOffsets": "3515,3806",
+                        "endLines": "67,70",
+                        "endColumns": "12,12",
+                        "endOffsets": "3801,3961"
+                    }
+                },
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/04087833f388d5ffa97a080d757646c2/coordinatorlayout-1.0.0/res/values/values.xml",
+                    "from": {
+                        "startLines": "2,102,3,13",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,5935,116,724",
+                        "endLines": "2,104,12,101",
+                        "endColumns": "60,12,24,24",
+                        "endOffsets": "111,6075,719,5930"
+                    },
+                    "to": {
+                        "startLines": "2,89,99,109",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,5245,5688,6296",
+                        "endLines": "2,91,108,197",
+                        "endColumns": "60,12,24,24",
+                        "endOffsets": "111,5385,6291,11502"
+                    }
+                },
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/a6ce3afbff3f1ae3fa1fe13048b173d9/media-1.0.0/res/values/values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,144,215,288,341,394,447,500,560,626,748,809,875",
+                        "endColumns": "88,70,72,52,52,52,52,59,65,121,60,65,66",
+                        "endOffsets": "139,210,283,336,389,442,495,555,621,743,804,870,937"
+                    },
+                    "to": {
+                        "startLines": "5,6,8,34,35,36,37,48,76,78,79,84,86",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "248,337,466,2193,2246,2299,2352,2895,4284,4460,4582,4844,5039",
+                        "endColumns": "88,70,72,52,52,52,52,59,65,121,60,65,66",
+                        "endOffsets": "332,403,534,2241,2294,2347,2400,2950,4345,4577,4638,4905,5101"
+                    }
+                },
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values/values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,171,172,176,177,178,6,13,56,88,125",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,187,245,7725,7795,7863,7935,8005,8066,8140,8213,8274,8335,8397,8461,8523,8584,8652,8752,8812,8878,8951,9020,9077,9129,9191,9263,9339,9374,9409,9459,9520,9577,9611,9646,9681,9751,9822,9939,10140,10250,10451,10580,10652,319,617,3523,5588,7348",
+                        "endLines": "2,3,4,5,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,170,171,175,176,177,178,12,55,87,124,131",
+                        "endColumns": "68,62,57,73,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24",
+                        "endOffsets": "119,182,240,314,7790,7858,7930,8000,8061,8135,8208,8269,8330,8392,8456,8518,8579,8647,8747,8807,8873,8946,9015,9072,9124,9186,9258,9334,9369,9404,9454,9515,9572,9606,9641,9676,9746,9817,9934,10135,10245,10446,10575,10647,10714,612,3518,5583,7343,7720"
+                    },
+                    "to": {
+                        "startLines": "3,4,7,9,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,38,39,40,41,42,43,44,45,46,47,49,57,71,72,77,80,85,87,88,92,198,241,273,310",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "116,185,408,539,727,797,865,937,1007,1068,1142,1215,1276,1337,1399,1463,1525,1586,1654,1754,1814,1880,1953,2022,2079,2131,2405,2477,2553,2588,2623,2673,2734,2791,2825,2860,2955,3328,3966,4083,4350,4643,4910,5106,5178,5390,11507,14413,16478,18238",
+                        "endLines": "3,4,7,9,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,38,39,40,41,42,43,44,45,46,47,49,57,71,75,77,83,85,87,88,98,240,272,309,316",
+                        "endColumns": "68,62,57,73,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24",
+                        "endOffsets": "180,243,461,608,792,860,932,1002,1063,1137,1210,1271,1332,1394,1458,1520,1581,1649,1749,1809,1875,1948,2017,2074,2126,2188,2472,2548,2583,2618,2668,2729,2786,2820,2855,2890,3020,3394,4078,4279,4455,4839,5034,5173,5240,5683,14408,16473,18233,18610"
+                    }
+                },
+                {
+                    "source": "/Users/studio/Documents/Android_intro/09_listView/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "4,3,11,9,7,10,8,6,12,5",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "102,56,399,315,233,353,277,189,437,155",
+                        "endColumns": "52,45,37,37,43,45,37,43,37,33",
+                        "endOffsets": "150,97,432,348,272,394,310,228,470,184"
+                    },
+                    "to": {
+                        "startLines": "50,51,52,53,54,55,56,58,59,60",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3025,3078,3124,3162,3200,3244,3290,3399,3443,3481",
+                        "endColumns": "52,45,37,37,43,45,37,43,37,33",
+                        "endOffsets": "3073,3119,3157,3195,3239,3285,3323,3438,3476,3510"
+                    }
+                },
+                {
+                    "source": "/Users/studio/Documents/Android_intro/09_listView/app/src/main/res/values/dimens.xml",
+                    "from": {
+                        "startLines": "3,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "89,147",
+                        "endColumns": "57,55",
+                        "endOffsets": "142,198"
+                    },
+                    "to": {
+                        "startLines": "10,11",
+                        "startColumns": "4,4",
+                        "startOffsets": "613,671",
+                        "endColumns": "57,55",
+                        "endOffsets": "666,722"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-pl_values-pl.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-pl/values-pl.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-zu_values-zu.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-zu/values-zu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-lo_values-lo.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-lo/values-lo.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-uz_values-uz.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-uz/values-uz.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-nb_values-nb.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-nb/values-nb.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-en-rIN_values-en-rIN.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-en-rIN/values-en-rIN.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-as_values-as.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-as/values-as.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-am_values-am.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-am/values-am.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-hy_values-hy.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-hy/values-hy.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ne_values-ne.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-ne/values-ne.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-en-rCA_values-en-rCA.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-en-rCA/values-en-rCA.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-pt-rBR_values-pt-rBR.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-pt-rBR/values-pt-rBR.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-pa_values-pa.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-pa/values-pa.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-hr_values-hr.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-hr/values-hr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-uk_values-uk.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-uk/values-uk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-vi_values-vi.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-vi/values-vi.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-pt_values-pt.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-pt/values-pt.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-hi_values-hi.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-hi/values-hi.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-fa_values-fa.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-fa/values-fa.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-sw_values-sw.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-sw/values-sw.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ro_values-ro.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-ro/values-ro.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-in_values-in.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-in/values-in.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-gu_values-gu.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-gu/values-gu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ta_values-ta.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-ta/values-ta.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-b+sr+Latn_values-b+sr+Latn.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-b+sr+Latn/values-b+sr+Latn.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ms_values-ms.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-ms/values-ms.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ur_values-ur.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-ur/values-ur.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-ca_values-ca.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-ca/values-ca.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-v16_values-v16.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-kn_values-kn.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-kn/values-kn.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-fr_values-fr.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-fr/values-fr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/studio/Documents/Android_intro/09_listView/app/build/intermediates/res/merged/debug/values-sr_values-sr.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/studio/.gradle/caches/transforms-2/files-2.1/2ffb88316df49107418be0872d7babe4/core-1.0.0/res/values-sr/values-sr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
