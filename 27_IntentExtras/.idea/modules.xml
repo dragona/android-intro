@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/IntentExtras.iml" filepath="$PROJECT_DIR$/IntentExtras.iml" />
+      <module fileurl="file://$PROJECT_DIR$/27_IntentExtras.iml" filepath="$PROJECT_DIR$/27_IntentExtras.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
