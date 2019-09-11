@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d055f309-4147-4fbd-8089-9b42bf447c4b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/.cproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/build.gradle.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/gradle/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/jni/Android.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/jni/Application.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/jni/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/jni/DetectionBasedTracker_jni.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/jni/DetectionBasedTracker_jni.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/res/drawable/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/res/layout/face_detect_surface_view.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/res/raw/lbpcascade_frontalface.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/src/org/opencv/samples/facedetect/DetectionBasedTracker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../samples/android/face-detection/src/org/opencv/samples/facedetect/FdActivity.java" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="827" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d055f309-4147-4fbd-8089-9b42bf447c4b" name="Default Changelist" comment="" />
+      <created>1568221733919</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568221733919</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="827" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.33476394" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Build Variants" side_tool="true" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Logcat" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" visible="true" weight="0.3292517" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+</project>

@@ -21,8 +21,8 @@ import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private ProgressDialog progressDialog;
-    private WebView webView;
 
 
     @Override
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         progressDialog = ProgressDialog.show(this, "Loading","Please wait...", true);
         progressDialog.setCancelable(false);
 
-        webView = findViewById(R.id.web_view);
+        WebView webView = findViewById(R.id.web_view);
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadWithOverviewMode(true);
