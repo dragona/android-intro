@@ -1,11 +1,10 @@
 
-# From auto centered
+# The form is auto centered (Android Layout)
 
 ![Updated version](display/layout.gif)
  
 
-
-## The following were implemented
+Notice the trick in using a ```ScrollView```.
 
 
 
