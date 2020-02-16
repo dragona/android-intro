@@ -1,6 +1,6 @@
 # Password visibility toggling (android)
 
-![Password visibility toggling](pass_visibility_toggle.gif)
+![Password visibility toggling](/pass_visibility_toggle.gif)
 
 
 Add this line to your gradle file
