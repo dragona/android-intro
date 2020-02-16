@@ -362,4 +362,7 @@ Not, it is up to you to update this application and complete the version 2.
     - [ ] clear the edit text after the user presses the button
     - [ ] hide the keyboard when the text is shown on the textview
     
+Feel free to check [this](https://github.com/dragona/android-intro/tree/master/01_UserName_Final)
+![Hiding keyboard, validate user input](display/empty.gif)
+
     

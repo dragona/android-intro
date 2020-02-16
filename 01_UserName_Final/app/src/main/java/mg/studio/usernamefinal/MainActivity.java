@@ -8,7 +8,6 @@ package mg.studio.usernamefinal;
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
  */
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
         final EditText userInput = findViewById(R.id.eTuserInput);
 
         //Set the onclick listener
+        /*
+         * Display a toast when the button is pressed
+         * Toast to be display should not be the same
+         * if the user did not write her name
+         * */
         btnSend.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -41,9 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 //Get the user input from the edit text
                 String theUserInput = userInput.getText().toString();
 
-                /**Display a toast when the button is pressed
-                 Toast to be display should not be the same
-                 if the user did not write her name*/
+
 
                 if (theUserInput.isEmpty()) {
                     Toast.makeText(getBaseContext(), "The user did not input anything", Toast.LENGTH_LONG).show();
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "The user`s name is : \n   " + theUserInput, Toast.LENGTH_LONG).show();
                 }
 
-                // Hide button keyboard after hte button is pressed
+                // Hide the keyboard after when the button is pressed
                 InputMethodManager inputManager = (InputMethodManager)
                         getSystemService(Context.INPUT_METHOD_SERVICE);
                 inputManager.hideSoftInputFromWindow((null == getCurrentFocus()) ? null : getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
