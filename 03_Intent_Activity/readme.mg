@@ -2,7 +2,7 @@
 
 # Intent used for starting a second activity
 
-Here the code:
+Here is the code:
 
 ```java
     Intent intent = new Intent(this, Activity_Two.class);
