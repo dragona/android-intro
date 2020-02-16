@@ -23,8 +23,8 @@ We will complete this application in two versions.
 - [ ] Features version 2
     - [ ] all the features of version 1
     - [ ] validate user input
-        - [ ] display a toast if the edit text is empty but the user presses the button
-        - [ ] remove trailing spaces form the user input
+        - [ ] display an informative toast if user presses the button Process but the edit text is empty.
+        - [ ] remove the trailing spaces form the user input
     - [ ] clear the edit text after the user presses the button
         
 
@@ -156,7 +156,7 @@ Remove the ```android.support.constraint.ConstraintLayout``` form the top and bo
 
 ```
 
-no, to add the ```textView```, add the following inside your ```RelativeLayout``` 
+now, to add the ```textView```, add the following inside your ```RelativeLayout``` 
 
 ```xml
     <TextView
@@ -198,7 +198,7 @@ except this ```tools:context="mg.studio.username.MainActivity"```, where you sho
 
 Test your application, you should have something that looks like this
 
-We just finished adding the textview, it is now time to add the edittext, a button, a view (line) and the second textview for getting hte user input.
+We just finished adding the textview, it is now time to add the edittext, a button, a view (line) and the second textview for getting the user input.
 
 - [ ] Features version 1
     - [x] the application has a single activity.
@@ -349,3 +349,17 @@ Now, your complete MainActivity.java file should look like [this](app/src/main/j
 We completed version 1
 
 ![New project - Android View](display/insert.gif)
+
+Not, it is up to you to update this application and complete the version 2.
+
+
+
+- [ ] Features version 2
+    - [ ] all the features of version 1
+    - [ ] validate the user input
+        - [ ] display an informative toast if user presses the button Process but the edit text is empty.
+        - [ ] remove the trailing spaces form the user input
+    - [ ] clear the edit text after the user presses the button
+    - [ ] hide the keyboard when the text is shown on the textview
+    
+    

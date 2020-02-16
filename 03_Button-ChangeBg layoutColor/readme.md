@@ -10,7 +10,7 @@ Steps:
 - ```.setBackgroundColor(Color.YELLOW)``` set the color to Yellow
 
 
-Here the Java code for the demo shown in the image above
+Here is the Java code for the demo shown in the image above
 
 ```java
 public class MainActivity extends AppCompatActivity {
