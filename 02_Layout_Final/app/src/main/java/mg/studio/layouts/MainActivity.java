@@ -24,15 +24,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btn_relative(View view) {
-        setContentView(R.layout.relative_layout);
+        setContentView(R.layout.layout_relative);
     }
 
     public void btn_linear(View view) {
-        setContentView(R.layout.linear_layout);
+        setContentView(R.layout.layout_linear);
     }
 
     public void btn_constraint(View view) {
-        setContentView(R.layout.contraint_layout);
+        setContentView(R.layout.layout_contraint);
     }
 
     public void btn_back(View view) {
