@@ -1,4 +1,6 @@
-# Two ways of handling clicks (taps) on buttons
+# Android click listener
+
+Here we present two ways of handling clicks (taps) on buttons
 
 
 ![Button onclick](display/intent.gif)
@@ -20,6 +22,7 @@ See the code for the implementation:
 
             @Override
             public void onClick(View v) {
+                // Your code here
                 startActivity(new Intent(getBaseContext(), SecondActivity.class));
             }
         });
@@ -30,13 +33,14 @@ See the code for the implementation:
 
 ```java
   // Button two
-    public void btn_two(View view) {
+    public void btnTwo(View view) {
+        // Your code here
         startActivity(new Intent(getBaseContext(), SecondActivity.class));
 
     }
 ```
 
-for this latter, you need to add ```android:onClick="btn_two"``` to the xml layout.
+for this latter, you need set the button clickable ```android:onClick="btnTwo"```
 
 ```xml
 
@@ -45,7 +49,7 @@ for this latter, you need to add ```android:onClick="btn_two"``` to the xml layo
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:onClick="btn_two"
+        android:onClick="btnTwo"
         android:text="Button two" />
 
 ```
