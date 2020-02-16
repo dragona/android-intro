@@ -11,7 +11,7 @@ It comes handy to have sample button designs. Here are 6 core designs which I fi
 ![Buttons](display/buttons.gif)
 
 
-# Button simple: simple standard design
+# Button 1: simple standard design
 
 
 ```xml
@@ -23,7 +23,7 @@ It comes handy to have sample button designs. Here are 6 core designs which I fi
         android:layout_margin="8dp"/>
 ```
 
-# Button Two: with specific colors
+# Button 2: with specific color
 
 ```xml
     <Button
@@ -39,9 +39,9 @@ It comes handy to have sample button designs. Here are 6 core designs which I fi
 
 ```
 
-# Button Three: color and rounded corners
+# Button 3: color and rounded corners
 
-Create button_shape.xml to specify the shape and color of the button. Save it to your drawable folder.
+Create a ```button_shape.xml``` to specify the shape and color of the button. Save it to the project's drawable folder.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -51,7 +51,8 @@ Create button_shape.xml to specify the shape and color of the button. Save it to
     <corners android:radius="8dp" />
 </shape>
 ```
-Here is the button
+
+in the ```Button```, specify the use of a ```android:background="@drawable/button_shape"``` 
 
 ```xml
     <Button
@@ -66,7 +67,11 @@ Here is the button
         android:textStyle="bold" />
 ```
 
-# Button four: clickable from the xml file
+# Button 4: clickable from the xml file
+
+You can set the conclick listener of button directly in the Java file, but one easy way is to set the ```Button``` clickable from the
+ xml file by adding ```android:onClick="bntXml"```. If you are using Android Studio, just over that line and you 
+ will be prompted whether you want to create the public function that connects to that button. 
 
 ```xml
     <Button
@@ -81,16 +86,24 @@ Here is the button
         android:onClick="bntXml"/>
 ```
 
-Here is an example method we can use in the Java class
+the Java file would be added with something that looks like this
 
 ```java
     public void bntXml(View view) {
-        Toast.makeText(this, ((Button)findViewById(R.id.btn_four)).getText(),Toast.LENGTH_LONG).show();
+        // Add your code here
     }
 ```
 
+Just for illustration, we will add a toast so when the button is clicked, the toast should show. Thus, the above java code becomes
 
-# button five: explicit onclick listener in the java file
+```java
+public void bntXml(View view) {
+        Toast.makeText(this, ((Button)findViewById(R.id.btn_four)).getText(),Toast.LENGTH_LONG).show();
+    }
+
+```
+
+# button 5: explicit onclick listener in the java file
 
 ```xml
     <Button
@@ -126,9 +139,10 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
-# Button six: adding selectors to change color when the button is pressed
+# Button 6: adding selectors to change the button's color when it is pressed
 
-Create button_shape.xml to specify the shape and color of the button. Save it to your drawable folder.
+Just like for the ```Button 5```, create the xml file which you can name ```button_shape.xml``` 
+to define the default shape and the color of the button. Save it to your drawable folder.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -139,8 +153,20 @@ Create button_shape.xml to specify the shape and color of the button. Save it to
 </shape>
 ```
 
-Create a button selector file to specify what to do when the button is pressed. 
+Now, create another file that defines the color and shape of the button when it is pressed. You can name the button 
+```button_shape_pressed.xml``` and save it to the drawable folder, just like the first file.
 
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/colorPrimaryDark" />
+    <corners android:radius="8dp" />
+</shape>
+```
+
+Next, create a third file, which is a selector. The selector specifies which of the files ```button_shape``` and ```button_shape_pressed``` to use depending the the button state.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
@@ -152,18 +178,11 @@ Create a button selector file to specify what to do when the button is pressed.
 </selector>
 
 ```
-Notice that I have also created button_shape_pressed which specifies the shape and color of the button when pressed.
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <solid android:color="@color/colorPrimaryDark" />
-    <corners android:radius="8dp" />
-</shape>
-```
+Time to create you button in the layout xml file and to use the ```button_selector.xml ``` as the button's background.
+```android:background="@drawable/button_selector"```
 
-here is the button
+in real, the xml code for the button should look like this:
 
 ```xml
  <Button
