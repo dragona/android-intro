@@ -117,8 +117,12 @@
 
 ```
  
-## Compare how the same design can be achieved in LinearLayout, RelativeLayout and ConstraintLayout
-![Relative, Linear and Constraint layouts](display.layout_3.gif)
+
+
+Compare how the same design can be achieved in LinearLayout, RelativeLayout and ConstraintLayout
+
+
+![Relative, Linear and Constraint layouts](display/layout_3.gif)
 
 
 
