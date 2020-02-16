@@ -8,11 +8,12 @@ package mg.studio.activitylifecycle;
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
  */
 
 import android.content.Intent;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,7 +22,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private final String TAG = getClass().getSimpleName();
-    private String previousContent;
     private String currentState = null;
 
     @Override
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setText() {
-        previousContent = ((TextView) findViewById(R.id.display)).getText().toString();
+        String previousContent = ((TextView) findViewById(R.id.display)).getText().toString();
 
         ((TextView) findViewById(R.id.display)).setText(previousContent + "\n" + currentState);
     }
