@@ -1,9 +1,9 @@
 ![Dragona](uninstaller.gif)
 
 
--[x]print logcat in a TextView and initiate Uninstall within app
--[x]initiate Uninstall within app
--[x]save file in external storage using GetExternalFilesDir
+-[x] print logcat in a TextView and initiate Uninstall within app
+-[x] initiate Uninstall within app
+-[x] save file in external storage using GetExternalFilesDir
 
 ## snippet:
 
