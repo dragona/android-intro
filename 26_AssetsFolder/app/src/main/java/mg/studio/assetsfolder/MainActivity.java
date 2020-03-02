@@ -168,6 +168,8 @@ public class MainActivity extends AppCompatActivity {
 
         //The location for saving the file
         File sdCard = Environment.getExternalStorageDirectory();
+        // The external storage
+        Log.d(TAG_LOG, "Environment.getExternalStorageDirectory():" + sdCard);
         File directoryDestination = new File(sdCard.getAbsolutePath() + "/backupAssets");
 
         if (!directoryDestination.exists() || !directoryDestination.isDirectory()) {
