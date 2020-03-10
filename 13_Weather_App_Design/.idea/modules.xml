@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/13_Weather_App_Design.iml" filepath="$PROJECT_DIR$/13_Weather_App_Design.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/13_Weather_App_Design-app.iml" filepath="$PROJECT_DIR$/app/13_Weather_App_Design-app.iml" group="13_Weather_App_Design/app" />
+      <module fileurl="file://$PROJECT_DIR$/Android_intro-13_Weather_App_Design.iml" filepath="$PROJECT_DIR$/Android_intro-13_Weather_App_Design.iml" group="13_Weather_App_Design" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
