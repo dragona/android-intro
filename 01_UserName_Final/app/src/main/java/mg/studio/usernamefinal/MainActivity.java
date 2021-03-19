@@ -52,6 +52,17 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     //if the user wrote her name.
                     Toast.makeText(getBaseContext(), "The user`s name is : \n   " + theUserInput, Toast.LENGTH_LONG).show();
+
+                    /***
+                     * Student number:
+                     * Name (Chinese):
+                     * Name (English):
+                     */
+                    //TODO 1: clear the content
+
+                    //TODO 2: Start a new activity that shows the user input in a TextView
+                    // the class file name for the second activity should be DisplayActivity.java
+
                 }
 
                 // Hide the keyboard after when the button is pressed
