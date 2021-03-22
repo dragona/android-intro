@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--When the button is pressed-->
+    <item android:drawable="@drawable/button_shape_pressed" android:state_pressed="true" />
+
+    <!--This is the default attribute for the button,
+    it is important to declare it last, else the
+    other possible attribute won`t be considered-->
+    <item android:drawable="@drawable/button_shape" />
+</selector>

@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         mBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getBaseContext(), mBtn.getText(),Toast.LENGTH_LONG).show();
+//                Toast.makeText(getBaseContext(), mBtn.getText(),Toast.LENGTH_LONG).show();
             }
         });
     }
