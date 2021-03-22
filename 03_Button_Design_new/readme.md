@@ -2,8 +2,14 @@
 
 ![Buttons](display/button.gif)
 
-If you have checked the [button design](https://github.com/dragona/android-intro/blob/master/03_Button_Design/readme.md) and tried
-adding selectors to change color when the button is pressed using
+If you have a project that makes use of
+
+```xml
+    implementation 'com.google.android.material:material:x.x.x'
+```
+
+and after checking the [button design](https://github.com/dragona/android-intro/blob/master/03_Button_Design/readme.md) and you tried
+adding selectors to change the button's color when it is pressed using like this
 
 ```xml
  <Button
@@ -16,19 +22,14 @@ adding selectors to change color when the button is pressed using
         android:textColor="@android:color/white"
         android:textStyle="bold"/>
 ```
-if your project uses
 
-```xml
-    implementation 'com.google.android.material:material:x.x.x'
-```
-
-you need to add
+You should consider adding
 
 ```xml
     app:backgroundTint="@null"
 ```
 
-the ```Button``` would then be something like this
+to see the effect of the background change. Thus the ```Button``` would then be something like this
 
 ```xml
     <Button
@@ -48,9 +49,10 @@ the ```Button``` would then be something like this
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 ```
 
-To recap, there 4 files that require changes to get the selector work in this example:
+To recap, there 4 files that require change to get the selector work in this example are:
 
-1- Make the button use the drawable button_selector and add a backgroundTint ```@null```
+1- The layout that contains the button:
+ - should use the drawable ```button_selector.xml``` and set the backgroundTint to ```@null```
 ```xml
         android:background="@drawable/button_selector"
         app:backgroundTint="@null"
