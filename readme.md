@@ -25,7 +25,7 @@ Most of the demo projects are in Java.
 - [02 Layouts: LinearLayout, RelativeLayout and ConstraintLayout](02_Layout_Final/readme.md)
 - [02 Layout centered](02_LayoutCentered/readme.md)
 - [03 Button_Design](03_Button_Design/readme.md)
-- [03 Button_Design_new](https://github.com/dragona/android-intro/tree/master/03_Button_Design)
+- [03 Button_Design_new](https://github.com/dragona/android-intro/tree/master/03_Button_Design_new)
 - [03 Button_Toast](03_Button_Toast/readme.md)
 - [04 Button_Intent](04_Button_Intent/readme.md)
 - [05 Button_StartActivity](05_Button_StartActivity/readme.md)
