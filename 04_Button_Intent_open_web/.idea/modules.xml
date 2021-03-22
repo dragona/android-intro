@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/04_Button_Intent.iml" filepath="$PROJECT_DIR$/04_Button_Intent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/04_Button_Intent_open_web.iml" filepath="$PROJECT_DIR$/.idea/modules/04_Button_Intent_open_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/04_Button_Intent_open_web.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/04_Button_Intent_open_web.app.iml" />
     </modules>
   </component>
 </project>

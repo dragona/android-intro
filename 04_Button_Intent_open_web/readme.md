@@ -1,10 +1,13 @@
 ![intent is used for opening a website in a browser](display/intent.gif)
 # An intent for opening a website in a browser
 
+![Using and intent](display/showcase.gif)
+
+
 An intent is an abstract description of an operation to be performed. 
 It can be used with startActivity to launch an Activity: Intent starts an activity
 
-An Intent is mainly used for launching of activities, where it can be thought of as 
+An Intent is mainly used for the launching of activities, where it can be thought of as
 the connector between activities. [source](https://developer.android.com/reference/android/content/Intent.html)
 
 The primary pieces of information in an intent are:

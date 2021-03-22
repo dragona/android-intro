@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void btn(View view) {
 
-        Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https:studio.mg"));
+        Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://studio.mg"));
         startActivity(mIntent);
     }
 }
