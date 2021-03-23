@@ -3,19 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/item_image"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:layout_margin="8dp"
-        android:src="@mipmap/ic_launcher" />
-
-    <TextView
-        android:id="@+id/item_text"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="8dp"
-        android:text="lorem"
-        android:textSize="18sp" />
+    <!-- TODO: add an image view and a textview. This will be the core design for each item-->
 
 </LinearLayout>

@@ -8,8 +8,8 @@ If you have a project that makes use of
     implementation 'com.google.android.material:material:x.x.x'
 ```
 
-and after checking the [button design](https://github.com/dragona/android-intro/blob/master/03_Button_Design/readme.md) and you tried
-adding selectors to change the button's color when it is pressed using like this
+and after checking the [button design](https://github.com/dragona/android-intro/blob/master/03_Button_Design/readme.md) you tried
+adding selectors to change the button's color when it is pressed like this
 
 ```xml
  <Button
@@ -23,7 +23,7 @@ adding selectors to change the button's color when it is pressed using like this
         android:textStyle="bold"/>
 ```
 
-You should consider adding
+You need to consider adding
 
 ```xml
     app:backgroundTint="@null"

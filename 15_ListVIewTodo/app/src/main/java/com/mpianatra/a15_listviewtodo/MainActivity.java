@@ -2,11 +2,8 @@ package com.mpianatra.a15_listviewtodo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,26 +58,16 @@ public class MainActivity extends AppCompatActivity {
                 "20012008John",
                 "20012036ELI"};
 
-        // the array adapter
-        ArrayAdapter arrayAdapter = new ArrayAdapter(
-                this,
-                R.layout.layout,
-                R.id.item_text,
-                arrayDemo);
+        // Todo 1: create the array adapter
 
-        // Connect the listView and the java class
-        ListView listView = findViewById(R.id.list_view);
 
-        // Attach the adapter to the list_view
-        listView.setAdapter(arrayAdapter);
+        // Todo 2: Connect the listView and the java class (findviewbyid)
 
-        // Handle the item clicks
-        listView.setOnItemClickListener((adapterView, view, i, l) -> {
-            Intent intent = new Intent(getBaseContext(), Display.class);
-            intent.putExtra("name_selected", arrayDemo[i]);
-            startActivity(intent);
-            Log.d(getLocalClassName(), arrayDemo[i]);
-        });
+
+        // Todo 3: Attach the adapter to the list_view (setadaper)
+
+
+        // Todo 4:  Handle the item clicks
 
 
     }

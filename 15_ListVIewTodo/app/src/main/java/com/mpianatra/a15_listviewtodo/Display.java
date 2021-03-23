@@ -1,8 +1,8 @@
 package com.mpianatra.a15_listviewtodo;
 
-import android.content.Intent;
+
 import android.os.Bundle;
-import android.widget.TextView;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,9 @@ public class Display extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display);
-        String data = getIntent().getExtras().getString("name_selected", "None");
-        ((TextView) findViewById(R.id.tv_display)).setText(data);
+        /** Todo: get the string from the MainActivity and use the textview
+         *  in the layout display to display it in the app.
+         */
+
     }
 }
