@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mpianatra.a21_webview_todo">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <!--  TODO: you need to request the correct permission here  -->
 
     <application
         android:allowBackup="true"

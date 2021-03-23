@@ -2,10 +2,7 @@ package com.mpianatra.a21_webview_todo;
 
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
-import android.webkit.WebView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -15,8 +12,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        WebView myWebView = findViewById(R.id.webview);
-        myWebView.getSettings().setJavaScriptEnabled(true);
-        myWebView.loadUrl("https://studio.mg");
+        /**
+         *  Student number
+         *  Name (in Chinese)
+         *  Name (in English)
+         */
+
+
+        //TODO: use a webview to load this page  https://studio.mg
     }
 }
