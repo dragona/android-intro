@@ -58,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
                 "20012008John",
                 "20012036ELI"};
 
+        /**
+         * Student ID:
+         * Name (Chinese):
+         * Name (English):
+         */
+
         // Todo 1: create the array adapter
 
 
