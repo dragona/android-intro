@@ -11,7 +11,11 @@ A list view is a view group that holds one or multiple views in one item and whi
 - Prepare the data for populating the listView, most of the time it is in the form of an array.
 - Create an array adapter to place the array in the listView
 - The last step is to connect the listView and the Java class and to populate the list View using the ArrayAdapter
-- Optionally, we can listen to the clicks on each item of the listView by adding  the onclick item listener to the listView item. 
+- Optionally, we can listen to the clicks on each item of the listView by adding  the onclick item listener to the listView item.
+
+
+Extra:
+- we make use of a list divider to change the color of the line below each item in the list
 
 
 
