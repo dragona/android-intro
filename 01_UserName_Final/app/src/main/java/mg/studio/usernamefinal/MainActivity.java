@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
                 String theUserInput = userInput.getText().toString();
 
 
-
                 if (theUserInput.isEmpty()) {
                     Toast.makeText(getBaseContext(), "The user did not input anything", Toast.LENGTH_LONG).show();
                 } else {
