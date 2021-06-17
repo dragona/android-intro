@@ -8,10 +8,10 @@ package mg.studio.button;
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
  */
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_five).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getBaseContext(), ((Button)findViewById(R.id.btn_five)).getText(),Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), ((Button) findViewById(R.id.btn_five)).getText(), Toast.LENGTH_LONG).show();
             }
         });
 
@@ -39,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
     //Button Four
     public void bntXml(View view) {
-        Toast.makeText(this, ((Button)findViewById(R.id.btn_four)).getText(),Toast.LENGTH_LONG).show();
+        Toast.makeText(this, ((Button) findViewById(R.id.btn_four)).getText(), Toast.LENGTH_LONG).show();
     }
 
 
     //Handling the clicks, given a Button
-    private void onClick(final Button mBtn){
+    private void onClick(final Button mBtn) {
         mBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
