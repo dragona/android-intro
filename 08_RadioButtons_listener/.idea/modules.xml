@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/08_RadioButtons_listener.iml" filepath="$PROJECT_DIR$/08_RadioButtons_listener.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/08_RadioButtons_listener.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/08_RadioButtons_listener.app.iml" />
     </modules>
   </component>
 </project>
