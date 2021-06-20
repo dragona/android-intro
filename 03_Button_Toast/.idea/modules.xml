@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/03_Button_Toast.iml" filepath="$PROJECT_DIR$/03_Button_Toast.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/03_Button_Toast.iml" filepath="$PROJECT_DIR$/.idea/modules/03_Button_Toast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/03_Button_Toast.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/03_Button_Toast.app.iml" />
     </modules>
   </component>
 </project>
