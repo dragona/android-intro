@@ -62,13 +62,11 @@ When contributing to this repository, please first discuss the change you wish t
 Feilong
 
 ## License
-
 Some of the project's demos, although listed above, have their specific license. Please refer to them.
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* [Udacity](udacity)
 * [Contributor Covenant](http://contributor-covenant.org)
 
 
