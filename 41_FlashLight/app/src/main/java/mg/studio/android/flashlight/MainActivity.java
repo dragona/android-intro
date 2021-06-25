@@ -1,16 +1,15 @@
 package mg.studio.android.flashlight;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         // use the ImageButton as a Switch
         btnSwitch = findViewById(R.id.btnSwitch);
 
-        /**
+        /*
          * Check whether the device has a flashlight
          */
 
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        /**
+        /*
          * Require for permission at runtime
          */
 
@@ -66,17 +65,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Switch button click event to toggle flash on/off
-        btnSwitch.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (isFlashOn) {
-                    // turn off flash
-                    turnOffFlash();
-                } else {
-                    // turn on flash
-                    turnOnFlash();
-                }
+        btnSwitch.setOnClickListener(v -> {
+            if (isFlashOn) {
+                // turn off flash
+                turnOffFlash();
+            } else {
+                // turn on flash
+                turnOnFlash();
             }
         });
 
@@ -86,14 +81,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case CAMERA_PERMISSION_REQUEST_CODE:
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //Start your camera handling here
-                } else {
-                    Toast.makeText(this, "You declined to allow the app to access your camera.", Toast.LENGTH_LONG).show();
-                }
+        if (requestCode == CAMERA_PERMISSION_REQUEST_CODE) {
+            // If request is cancelled, the result arrays are empty.
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                //todo: Start your camera handling here
+            } else {
+                Toast.makeText(this, "You declined to allow the app to access your camera.", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -117,8 +111,6 @@ public class MainActivity extends AppCompatActivity {
             if (camera == null || params == null) {
                 return;
             }
-
-
             params = camera.getParameters();
             params.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
             camera.setParameters(params);
@@ -160,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -169,7 +160,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-
         // on pause turn off the flash
         turnOffFlash();
 
@@ -198,7 +188,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-
         // on stop release the camera
         if (camera != null) {
             camera.release();

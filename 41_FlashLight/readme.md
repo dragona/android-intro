@@ -1,0 +1,1 @@
+![Flash light](button_flashlight.png)
