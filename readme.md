@@ -52,6 +52,8 @@ Most of the demo projects are in Java.
 - [26 AssetsFolder](starter/26_AssetsFolder/readme.md)
 - [27 IntentExtras](starter/27_IntentExtras/readme.md)
 - [28 Android Design for Developers](https://github.com/dragona/ud862-samples)
+- [29 Architecture Components Samples](https://github.com/android/architecture-components-samples)
+
 
 ## Contributing
 
