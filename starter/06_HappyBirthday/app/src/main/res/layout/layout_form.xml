@@ -18,6 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:backgroundTint="@color/purple_700"
         android:ems="10"
         android:hint="@string/txt_write_name_here"
         android:inputType="textPersonName"
@@ -25,6 +26,7 @@
         android:padding="8dp"
         android:singleLine="true"
         android:text=""
+        android:textCursorDrawable="@color/purple_700"
         android:textSize="36sp" />
 
     <Button

@@ -20,70 +20,50 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    /**
-     * Gets the name from the user input
-     */
+
+
     fun btnCreateCard(view: View) {
-        lateinit var userName: String
-        if (userInput.text.trim().isNotEmpty()) {
-            // generate the card
-            setContentView(R.layout.activity_main)
-            //Show the menu
-            mMenu.findItem(R.id.action_save).setVisible(true)
-            // Update the message on the Card
-            val tvWishes: TextView = findViewById(R.id.tvTo)
-            userName = userInput.text.trim().toString()
-            if (false) {
-                // Method 1
-                tvWishes.text = baseContext.getString(R.string.txt_wishes).plus(", ")
-                    .plus(userName.replaceFirstChar { it.uppercase() })
-            } else {
-                tvWishes.text = greetingsBuilder(userName)
-            }
-
-        }
-
+        // TODO 4: Update the function btnCreateCard:
+        //          4.1 : when the user input from userInput is not empty,
+        //              and the button Create is pressed, the  layout activity_main should be used
+        //          4.2 : the action_save (menu save icon) should be visible
+        //          4.3 : update the textview that holds the greeting message on the card by using the string returned by the function  greetingsBuilder
     }
 
     /**
      * Inflate the menu
      */
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.screenshot, menu)
-        mMenu = menu
-        var itemView: MenuItem = mMenu.findItem(R.id.action_save)
-        itemView.isVisible = false
+        // TODO 1:  Inflate the menu save icon which is used for generating the screenshot
+        //          1.1 : However, the menu save icon should only be visible when the layout activity_main is used
         return true
     }
 
     /**
      * Handle action bar item clicks here.
      */
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.action_save) {
-            android.widget.Toast.makeText(
-                this,
-                " Saving your card!",
-                android.widget.Toast.LENGTH_SHORT
-            )
-                .show()
-            val helperScreenShot = mg.x261.happybirthday.HelperScreenShot()
-            helperScreenShot.process(findViewById(mg.x261.happybirthday.R.id.mainLayout), this)
-            return true
-        }
+        // TODO 2:  override the onOptionsItemSelected to handle the save icon clicks
+        //          2.1 : Show a Toast with the message "Saving your card!" when the save icon is pressed.
+        //          2.2 : Use the HelperScreenShot class to generate a screen shot of the outer most
+        //          layout of the layout activity_main
+
         return super.onOptionsItemSelected(item)
     }
 
-    /**
-     * Format the new lines that comes with the
-     * birthday wishes text
-     */
+
+
+
     private fun greetingsBuilder(name: String): String {
-        val wishes = { separator: String ->
-            baseContext.getString(R.string.txt_wishes).plus(separator)
-                .plus(name.trim().replaceFirstChar { it.uppercase() })
-        }
-        return if (name.length > 4) wishes("\n") else wishes(",")
+        // TODO 3: Update the function greetingsBuilder
+        //         so that when the name length is greater than 4,
+        //         it should take a new line.
+        //         3.1 : The return should be a string that is composed of the
+        //         greeting message and the name formatted as described above.
+        //         3.2 : The first char of the name should be in uppercase and the rest in lowercase.
+        //         e.g. "Happy Birthday Demo"
+        return name
     }
 
 
