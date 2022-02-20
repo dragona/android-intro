@@ -30,6 +30,7 @@ Most of the demo projects are in Java.
 - [04 Button_Intent](starter/04_Button_Intent/readme.md)
 - [05 Button_StartActivity](starter/05_Button_StartActivity/readme.md)
 - [   Button_StartActivity_extra](starter/05_Button_StartActivity_extra/readme.md)
+- [Happy Birthday](starter/06_HappyBirthday/readme.md)
 - [06 ImageButton](starter/06_ImageButton/readme.md)
 - [07 EditText](starter/07_EditText/readme.md)
 - [08 RadioButtons_listener](starter/08_RadioButtons_listener/readme.md)

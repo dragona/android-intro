@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">生日快乐</string>
+    <string name="txt_from">Xin 送的.</string>
+    <string name="txt_wishes">生日快乐</string>
+    <string name="txt_write_name_here">名字</string>
+
+</resources>
