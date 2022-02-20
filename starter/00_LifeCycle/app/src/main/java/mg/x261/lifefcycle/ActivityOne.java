@@ -1,27 +1,16 @@
-package mg.studio.activitylifecycle;
-
-/**
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
- * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
+package mg.x261.lifefcycle;
 
 import android.content.Intent;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
 
-    private final String TAG = getClass().getSimpleName();
+public class ActivityOne extends AppCompatActivity {
+
+    private final String TAG = "TAG_"+getClass().getSimpleName();
     private String currentState = null;
 
     @Override
@@ -37,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_start_activity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mIntent = new Intent(getBaseContext(), Activity.class);
+                Intent mIntent = new Intent(getBaseContext(), ActivitySecond.class);
                 startActivity(mIntent);
 
             }
