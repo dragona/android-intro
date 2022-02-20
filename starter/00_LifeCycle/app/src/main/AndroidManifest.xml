@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LifefCycle">
-        <activity
-            android:name=".ActivitySecond"
-            android:exported="false" />
+
         <activity
             android:name=".ActivityOne"
             android:exported="true">
@@ -21,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".ActivitySecond"
+            android:exported="false" />
         <activity
             android:name=".Dialog"
             android:theme="@style/Theme.AppCompat.Dialog" />

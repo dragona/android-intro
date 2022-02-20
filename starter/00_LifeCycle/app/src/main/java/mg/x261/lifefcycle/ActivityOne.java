@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityOne extends AppCompatActivity {
 
-    private final String TAG = "TAG_"+getClass().getSimpleName();
+    private final String TAG = "TAG_" + getClass().getSimpleName();
     private String currentState = null;
 
     @Override

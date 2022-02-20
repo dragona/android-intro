@@ -2,15 +2,15 @@
 
 ![LifeCycle](display/display.gif)
 
-An activity serves as the entry point for an app's interaction with the user.  It is a crucial component of an Android application, and the way activities are launched and put together is a fundamental part of the platform's application model [[1](https://developer.android.com/guide/components/activities/intro-activities.html)].
-In a given app, most of the time, a user will have to navigate through different activities. During such interaction, the Activity instances in the app transition through various states in their lifecycle[ [2](https://developer.android.com/guide/components/activities/activity-lifecycle.html)].
-We, as a developer can intervene during this different states using the six (6)callbacks that the Activity class provides:  onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy().
+An activity serves as the entry point for an app's interaction with the user. It is a crucial component of an Android application, and the way activities are launched and put together is a fundamental part of the platform's application model [[1](https://developer.android.com/guide/components/activities/intro-activities.html)].
+In a given app, a user will have to navigate through different activities most of the time. During such interaction, the Activity instances in the app transition through various stages  (states) in their lifecycle[ [2](https://developer.android.com/guide/components/activities/activity-lifecycle.html)].
+As a developer, we can intervene during these different states using the six (6)callbacks that the Activity class provides:  onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy().
 
-This application shows a log output each time the main activity changes state. 
+This demo application shows a log output each time the main activity changes state.
 
 ![LifeCycle Demo](display/demo.gif)
 
-As you could notice, we have two buttons and here is how we set the onClick listener.
+As you can notice, we have two buttons, and here is how we set the onClick listener.
 
 ![LifeCycle Demo](display/connecting_buttons.gif)
 
@@ -20,23 +20,22 @@ Now that we have the onClick listener on the button, we can use an Intent to con
 
 #### The manifest file
 
-Every Android application must have an AndroidManifest.xml file in its root directory. 
+Every Android application must have an AndroidManifest.xml file in its root directory.
 The manifest file provides essential information about your app to the Android operating system (OS). The information contained in the Manifest file is a pre-requisite before the OS can run any of the application`s code.
 
 The manifest file contains the following among others:
-The application package name
-The application components: activities, services, broadcast receivers, and content providers.
-The list of permissions required by the application
+- The application package name
+- The application components: activities, services, broadcast receivers, and content providers.
+- The list of permissions required by the application
 
-It is important to note that all visible activities of the application should explicitly be declared in the manifest file.
-For example, in this application, we have three activities namely, Activity, Dialog, and MainActivity; and they are all explicitly declared in the manifest file.
+It is important to note that all visible activities of the application should explicitly be declared in the manifest file. For example, in this application, we have three activities: ActivityOne, Dialog, and ActivityTwo; and they are all explicitly declared in the manifest file.
 
 ![LifeCycle Demo](display/manifest.gif)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mg.studio.activitylifecycle">
+    package="mg.x261.lifefcycle">
 
     <application
         android:allowBackup="true"
@@ -44,40 +43,46 @@ For example, in this application, we have three activities namely, Activity, Dia
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.LifefCycle">
+
+        <activity
+            android:name=".ActivityOne"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity"/>
-        <activity android:name=".Dialog"
-            android:theme="@style/Theme.AppCompat.Dialog"/>
+        <activity
+            android:name=".ActivitySecond"
+            android:exported="false" />
+        <activity
+            android:name=".Dialog"
+            android:theme="@style/Theme.AppCompat.Dialog" />
     </application>
 
 </manifest>
 
 ```
 
-Here is the complete java code for the MainActivity class where we can find all the overrides for the different lifecycle callbacks.
+Here is the complete java code for the ```ActivityOne``` class where we can find all the overrides for the different lifecycle callbacks.
 
 
 ```java
-package mg.studio.activitylifecycle;
+package mg.x261.lifefcycle;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
 
-    private final String TAG = getClass().getSimpleName();
-    private String previousContent;
+public class ActivityOne extends AppCompatActivity {
+
+    private final String TAG = "TAG_" + getClass().getSimpleName();
     private String currentState = null;
 
     @Override
@@ -93,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_start_activity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mIntent = new Intent(getBaseContext(), Activity.class);
+                Intent mIntent = new Intent(getBaseContext(), ActivitySecond.class);
                 startActivity(mIntent);
 
             }
@@ -152,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setText() {
-        previousContent = ((TextView) findViewById(R.id.display)).getText().toString();
+        String previousContent = ((TextView) findViewById(R.id.display)).getText().toString();
 
         ((TextView) findViewById(R.id.display)).setText(previousContent + "\n" + currentState);
     }
