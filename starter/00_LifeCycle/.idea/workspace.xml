@@ -6,6 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="tag" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
@@ -91,12 +92,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="cidr.known.project.marker" value="true" />
+    <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
     <property name="device.picker.selection" value="Nexus_One_API_26" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -106,7 +108,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="LifefCycle.app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -179,20 +181,6 @@
       <updated>1565812259857</updated>
     </task>
     <servers />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="401" y="37" key="#app" timestamp="1616108421544">
-      <screen x="0" y="25" width="1440" height="826" />
-    </state>
-    <state x="401" y="37" key="#app/0.25.1440.826/-949.-1055.1920.1055/971.-743.1024.743@0.25.1440.826" timestamp="1616108421544" />
-    <state x="34" y="208" width="1240" height="619" key="AVDManager" timestamp="1623724016481">
-      <screen x="0" y="25" width="1440" height="819" />
-    </state>
-    <state x="34" y="208" width="1240" height="619" key="AVDManager/0.25.1440.819/-949.-1055.1920.1055/971.-743.1024.743@0.25.1440.819" timestamp="1623724016481" />
-    <state x="229" y="70" key="SettingsEditor" timestamp="1623723849878">
-      <screen x="0" y="25" width="1440" height="819" />
-    </state>
-    <state x="229" y="70" key="SettingsEditor/0.25.1440.819/-949.-1055.1920.1055/971.-743.1024.743@0.25.1440.819" timestamp="1623723849878" />
   </component>
   <component name="masterDetails">
     <states>

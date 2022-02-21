@@ -22,7 +22,6 @@ public class ActivityOne extends AppCompatActivity {
         currentState = "onCreate";
         setText();
 
-
         findViewById(R.id.btn_start_activity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,15 +30,12 @@ public class ActivityOne extends AppCompatActivity {
 
             }
         });
-
         findViewById(R.id.btn_start_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getBaseContext(), Dialog.class));
             }
         });
-
-
     }
 
 
