@@ -1,13 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
 
     <ImageButton
-        android:id="@+id/imageButton1"
+        android:id="@+id/imageButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_centerInParent="true"
-        android:contentDescription="@string/info_image"
-        android:src="@drawable/ic_launcher" />
+        tools:srcCompat="@tools:sample/avatars" />
 
+    <ImageButton
+        android:id="@+id/imageButtonSecond"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/imageButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <ImageButton
+        android:id="@+id/imageButtonThree"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/imageButtonSecond"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:src="@drawable/ic_launcher_foreground" />
 </RelativeLayout>
