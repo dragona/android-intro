@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Activities</string>
+    <string name="txt_about">Android Trivia ill help remind you of important concepts you have learned and will learn in Android development.\n\nConsier modifying questions an graphics to make this game your own!</string>
+</resources>

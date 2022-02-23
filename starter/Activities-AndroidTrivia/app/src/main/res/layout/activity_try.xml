@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_pink">
+
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/android_robot" />
+
+    <ImageButton
+        android:id="@+id/btn_try_again"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_refresh_icon"
+        android:background="@null"
+        app:backgroundTint="@null" />
+    <TextView
+        android:id="@+id/tv_try_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewLogo"
+        android:layout_centerHorizontal="true"
+        android:text="Try again"
+        android:textColor="@color/my_light_grey"
+        android:textSize="36sp" />
+
+</RelativeLayout>
