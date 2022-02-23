@@ -45,7 +45,7 @@ Most of the demo projects are in Java.
 - [16 ListViewCustomAdapter](starter/16_ListViewCustomAdapter/readme.md)
 - [17 AudioRecorder](starter/17_AudioRecorder/readme.md)
 - [19 DataBase](starter/19_DataBase/readme.md)
-- [20 FragmentOne](starter/20_FragmentOne/readme.md)
+- [20 FragmentOne](starter/20_FragmentOne)
 - [21 Webview](starter/21_Webview/readme.md)
 - [22 ServiceDemo](starter/22_ServiceDemo/readme.md)
 - [23 Service](starter/23_Service/readme.md)
