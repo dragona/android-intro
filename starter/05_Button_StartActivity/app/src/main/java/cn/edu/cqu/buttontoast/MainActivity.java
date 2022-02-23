@@ -28,7 +28,6 @@ public class MainActivity extends Activity {
 
         // Button One
         (findViewById(R.id.btn)).setOnClickListener(new OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), SecondActivity.class));

@@ -1,4 +1,0 @@
-#Sun Feb 16 16:51:37 CST 2020
-base.0=/Users/studio/Documents/Android_intro/05_Button_StartActivity/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

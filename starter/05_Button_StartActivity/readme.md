@@ -1,16 +1,13 @@
 # Android click listener
 
-Here we present two ways of handling clicks (taps) on buttons
+Here we present two ways of handling clicks (taps) on buttons.
 
 
 ![Button onclick](display/intent.gif)
 
-
-
-- Using the xml layout to set the ```onClick```
+- Using the XML layout to set the ```onClick```
 
 - Adding the on ```setOnClickListener``` in the java file.
-
 See the code for the implementation:
 
 

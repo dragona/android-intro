@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/05_Button_StartActivity.iml" filepath="$PROJECT_DIR$/05_Button_StartActivity.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/05_Button_StartActivity.iml" filepath="$PROJECT_DIR$/.idea/modules/05_Button_StartActivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/05_Button_StartActivity.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/05_Button_StartActivity.app.iml" />
     </modules>
   </component>
 </project>
