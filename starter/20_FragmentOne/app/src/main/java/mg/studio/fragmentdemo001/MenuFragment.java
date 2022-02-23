@@ -37,7 +37,7 @@ public class MenuFragment extends Fragment {
 
         //Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_menu, container,false);
-        //Handle the click listeners on the buttons
+        //Handle the clicks  on the buttons
         ImageButton app = view.findViewById(R.id.btn_app);
         app.setOnClickListener(new View.OnClickListener() {
             @Override

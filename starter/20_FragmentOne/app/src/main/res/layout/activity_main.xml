@@ -4,23 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="mg.studio.fragmentdemo001.MainActivity"
-    android:background="@android:color/darker_gray">
+    android:background="@color/colorPrimaryDark"
+    tools:context="mg.studio.fragmentdemo001.MainActivity">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Activity_main"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:background="@android:color/white"
+        android:text="This is a text" />
 
     <fragment
         android:id="@+id/fragment_menu"
         android:name="mg.studio.fragmentdemo001.MenuFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout="@layout/fragment_menu"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        tools:layout="@layout/fragment_menu" />
 
 
 </RelativeLayout>

@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     android:background="@color/colorAccent"
+    android:orientation="horizontal"
     android:weightSum="4"
     tools:context=".MenuFragment">
 
