@@ -2,7 +2,7 @@
 
 An intent can be used for starting another activity. At the same time, it can be used for passing data between activities.
 
-In this demo app, we have two activities where the first activity has an Edittext to receive the user input, a button to trigger the extraction of the user input from the edittext and which is also used for initiating the
+In this demo app, we have two activities; where the first activity has an Edittext to receive the user input, a button to trigger the extraction of the user input from the edittext, and which is also used for initiating the
 use of intent to pass data from the current activity to the second.
 
 ![Demo](display/demo.gif)
