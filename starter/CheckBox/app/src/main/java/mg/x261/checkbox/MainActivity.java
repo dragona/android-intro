@@ -1,5 +1,10 @@
 package mg.x261.checkbox;
 
+
+/**
+ * Source : https://developer.android.com/guide/topics/ui/controls/checkbox
+ */
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
