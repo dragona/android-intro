@@ -27,7 +27,7 @@ Most of the demo projects are in Java.
 - [03 Button_Design](starter/03_Button_Design/readme.md)
 - [03 Button_Design_new](starter/03_Button_Design_new)
 - [03 Button_Toast](starter/03_Button_Toast/readme.md)
-- [04 Button_Intent](starter/04_Button_Intent/readme.md)
+- [04 Implicit Intent](starter/04_ImplicitIntent/readme.md)
 - [05 Button_StartActivity](starter/05_Button_StartActivity/readme.md)
 - [05 Button_StartActivity_extra](starter/05_Button_StartActivity_extra/readme.md)
 - [Happy Birthday](starter/06_HappyBirthday/readme.md)
