@@ -38,7 +38,7 @@ Most of the demo projects are in Java.
 - [CheckBox](starter/CheckBox/readme.md)
 - [Activities-AndroidTrivia](starter/Activities-AndroidTrivia)
 - [TableLayout](starter/TableLayout/readme.md)
-- [09 listView](starter/09_listView/readme.md)
+- [ListView](starter/ListView/readme.md)
 - [10 GetColor](starter/10_GetColor/readme.md)
 - [11 GradientBackground](starter/11_GradientBackground/readme.md)
 - [12 ImplicitIntent](starter/12_ImplicitIntent/readme.md)

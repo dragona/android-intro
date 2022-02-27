@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-
             case R.id.checkbox_cheese:
                 if (checked) {
                     Toast.makeText(this, "Cheese", Toast.LENGTH_LONG).show();
