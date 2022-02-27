@@ -35,6 +35,7 @@ Most of the demo projects are in Java.
 - [07 EditText](starter/07_EditText/readme.md)
 - [08 RadioButtons_listener](starter/08_RadioButtons_listener/readme.md)
 - [-- RadioButtons_onclick](starter/08_RadioButtons_onclick/readme.md)
+- [CheckBox](starter/CheckBox/readme.md)
 - [Activities-AndroidTrivia](starter/Activities-AndroidTrivia)
 - [TableLayout](starter/TableLayout/readme.md)
 - [09 listView](starter/09_listView/readme.md)
