@@ -6,6 +6,4 @@
         android:centerColor="@android:color/white"
         android:endColor="@color/colorPrimaryDark"
         android:startColor="@android:color/white" />
-
-
 </shape>

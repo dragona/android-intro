@@ -39,6 +39,8 @@ Most of the demo projects are in Java.
 - [Activities-AndroidTrivia](starter/Activities-AndroidTrivia)
 - [TableLayout](starter/TableLayout/readme.md)
 - [ListView](starter/ListView/readme.md)
+- [ListView_Image_and_text](starter/ListView_Image_and_text)
+- [Custom dialog](starter/Dialog)
 - [10 GetColor](starter/10_GetColor/readme.md)
 - [11 GradientBackground](starter/11_GradientBackground/readme.md)
 - [12 ImplicitIntent](starter/12_ImplicitIntent/readme.md)

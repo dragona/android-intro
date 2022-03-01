@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_outer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/content_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:minWidth="400dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:text="Limpsum"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxWidth="250dp"
+                android:gravity="center"
+                android:text="s simply dummy text of the printing and typ."
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frmOk"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignEnd="@id/content_area"
+        android:layout_alignBottom="@id/content_area"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contextClickable="true"
+            android:onClick="closeDialog"
+            android:src="@android:color/transparent"
+            app:backgroundTint="@color/purple_500" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:elevation="6dp"
+            android:focusable="true"
+            android:onClick="closeDialog"
+            android:text="Ok"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</RelativeLayout>
