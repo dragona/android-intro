@@ -12,12 +12,14 @@ package mg.studio.database;
 
 import android.database.Cursor;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void btnAdd(View view) {
-        String firstName = ((TextView) findViewById(R.id.first_name)).getText().toString();
-        String lastName = ((TextView) findViewById(R.id.last_name)).getText().toString();
-        String marks = ((TextView) findViewById(R.id.marks)).getText().toString();
+        String firstName = ((EditText) findViewById(R.id.first_name)).getText().toString();
+        String lastName = ((EditText) findViewById(R.id.last_name)).getText().toString();
+        String marks = ((EditText) findViewById(R.id.marks)).getText().toString();
 
         boolean dataInserted = databaseHelper.insertData(firstName, lastName, marks);
         if (dataInserted) { // is True
@@ -48,10 +50,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Clear the edit text
-        ((TextView) findViewById(R.id.first_name)).setText("");
-        ((TextView) findViewById(R.id.last_name)).setText("");
-        ((TextView) findViewById(R.id.marks)).setText("");
-
+        ((EditText) findViewById(R.id.first_name)).setText("");
+        ((EditText) findViewById(R.id.last_name)).setText("");
+        ((EditText) findViewById(R.id.marks)).setText("");
     }
 
     public void btnReadDb(View view) {

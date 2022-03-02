@@ -23,6 +23,7 @@
             android:id="@+id/first_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLength="20"
             android:singleLine="true" />
 
     </LinearLayout>
@@ -42,6 +43,7 @@
             android:id="@+id/last_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLength="20"
             android:singleLine="true" />
 
     </LinearLayout>
@@ -62,6 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
+            android:maxLength="3"
             android:singleLine="true" />
 
     </LinearLayout>
