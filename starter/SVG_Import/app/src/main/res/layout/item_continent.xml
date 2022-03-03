@@ -6,7 +6,7 @@
     android:background="@drawable/item_border"
     android:gravity="center"
     android:orientation="vertical"
-    android:text="Country"
+    android:text="Continent"
     android:textSize="36sp">
 
 </TextView>

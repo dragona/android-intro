@@ -2,12 +2,9 @@ package mg.x261.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.view.View.VISIBLE
 import android.widget.Button
-import android.widget.RadioButton
 import android.widget.RadioGroup
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -36,10 +33,8 @@ class Question : AppCompatActivity() {
         button.setOnClickListener() {
             val intent = Intent(this, EndGame::class.java)
             intent.putExtra(KEY_EXTRA_MESSAGE, result)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK) // finish all previous activities
             startActivity(intent)
-            finish()
-
-
         }
     }
 

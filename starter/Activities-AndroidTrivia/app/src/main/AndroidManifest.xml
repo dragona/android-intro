@@ -21,12 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".TryAgain"
-            android:exported="false" />
-        <activity
-            android:name=".Congrats"
-            android:exported="false" />
+
         <activity
             android:name=".Question"
             android:exported="false" />

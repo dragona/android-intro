@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class EndGame : AppCompatActivity() {
-    // TODO: Handle the button click based on the layout used
+
     val KEY_EXTRA_MESSAGE = BuildConfig.APPLICATION_ID
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
