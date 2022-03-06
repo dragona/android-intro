@@ -3,20 +3,18 @@ package mg.x261.svg_import;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -30,6 +28,7 @@ public class GameActivity extends AppCompatActivity {
     CustomDialog alert;
     List<Integer> flagsToLearnImageResources;
     ArrayAdapter<String> mAdapter;
+    private int numberOfFlagsToRecognize;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -74,6 +73,16 @@ public class GameActivity extends AppCompatActivity {
          */
 
         int tracker_current_correct_answer = 0;
+
+        //得到启动这个activity的intent对象
+         Intent intent = getIntent();
+        //取值
+        numberOfFlagsToRecognize = intent.getIntExtra("numberOfFlagsToRecognize", 0);
+        TextView textView = findViewById(R.id.tvStatusGame);
+        textView.setText(numberOfFlagsToRecognize + "/10");
+        tracker_current_correct_answer = intent.getIntExtra("tracker_current_correct_answer", 0);
+
+
         ((ImageView) findViewById(R.id.imageViewFlag)).setImageResource(flagsToLearnImageResources.get(tracker_current_correct_answer));
         // Load the possible answers
         String text_answer = flagsToLearn.get(tracker_current_correct_answer).replace("flag_", "");
@@ -87,6 +96,7 @@ public class GameActivity extends AppCompatActivity {
 
         ListView myListView = findViewById(R.id.listFlagGameQuestion);
         myListView.setAdapter(mAdapter);
+        int finalTracker_current_correct_answer = tracker_current_correct_answer;
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int itemPosition, long l) {
@@ -101,8 +111,13 @@ public class GameActivity extends AppCompatActivity {
 
                 } else {
                     //TODO: Continue the game
-                    startActivity(new Intent(GameActivity.this, GameReport.class));
-                    finish();
+//                    startActivity(new Intent(GameActivity.this, GameReport.class));
+//                    finish();
+
+                    Intent intent = new Intent(GameActivity.this, GameActivity.class);
+                    intent.putExtra("numberOfFlagsToRecognize", numberOfFlagsToRecognize);
+                    intent.putExtra("tracker_current_correct_answer", finalTracker_current_correct_answer);
+                    startActivity(intent);
 
                 }
             }

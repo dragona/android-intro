@@ -40,6 +40,8 @@ Most of the demo projects are in Java.
 - [TableLayout](starter/TableLayout/readme.md)
 - [ListView](starter/ListView/readme.md)
 - [ListView_Image_and_text](starter/ListView_Image_and_text)
+- [ListViewRefreshList](starter/ListViewRefreshList)
+- [ListViewPullRefresh](starter/ListViewPullRefresh)
 - [Custom dialog](starter/Dialog)
 - [10 GetColor](starter/10_GetColor/readme.md)
 - [11 GradientBackground](starter/11_GradientBackground/readme.md)
