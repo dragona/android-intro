@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/flag_niger.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/flag_nigeria.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/item_border.xml" value="0.328" />
         <entry key="app/src/main/res/layout/activity_continent.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/layout/activity_game.xml" value="0.3255208333333333" />

@@ -98,6 +98,19 @@
             android:onClick="btnReadDb"
             android:text="Read"
             android:textColor="@android:color/white" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:elevation="26dp"
+            android:onClick="btnDelete"
+            android:text="Clean DB"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
     <ScrollView

@@ -15,6 +15,7 @@ public class World {
     private final String[] northAmerica;
     private final String[] oceania;
     private final String[] southAmerica;
+    private String[] continents = {"Africa", "Asia", "Australia", "Europe", "North America", "South America"};
 
     World() {
         this.africa = new String[]{
@@ -205,6 +206,33 @@ public class World {
                 "flag_venezuela"};
     }
 
+    public String[] getContinents() {
+        return continents;
+    }
+
+    public String[] getCountries(String continent) {
+        switch (continent) {
+            case "Africa":
+                return getAfricanFlags();
+            case "Asia":
+                return getAsianFlags();
+            case "Australia":
+                return getOceaniaFlags();
+            case "Europe":
+                return getEuropeanFlags();
+            case "North America":
+                return getNorthAmericanFlags();
+            case "South America":
+                return getSouthAmericanFlags();
+        }
+        return null;
+    }
+
+    public int getContinentsSize() {
+        return continents.length;
+    }
+
+
     public String[] getAfricanFlags() {
         return africa;
     }
@@ -229,6 +257,31 @@ public class World {
         return oceania;
     }
 
+    /* number of countries given a continent */
+    public int getAfricanCountriesCount() {
+        return africa.length;
+    }
+
+    public int getAsianCountriesCount() {
+        return asia.length;
+    }
+
+    public int getEuropeanCountriesCount() {
+        return europe.length;
+    }
+
+    public int getSouthAmericanCountriesCount() {
+        return southAmerica.length;
+    }
+
+    public int getNorthAmericanCountriesCount() {
+        return northAmerica.length;
+    }
+
+    public int getOceaniaCountriesCount() {
+        return oceania.length;
+    }
+
     // Get the continent flag at a given index
     public String getAfricanFlagAtIndex(int index) {
         return africa[index];
@@ -243,9 +296,9 @@ public class World {
         return countries.toArray(new String[0]);
     }
 
-    private String toCountryName(String resourceFlag) {
+    public String toCountryName(String resourceFlag) {
         String name = resourceFlag.replace("flag_", "");
-        return capitalize(resourceFlag.replace("_", " "));
+        return capitalize(name.replace("_", " "));
     }
 
     private String capitalize(String text) {

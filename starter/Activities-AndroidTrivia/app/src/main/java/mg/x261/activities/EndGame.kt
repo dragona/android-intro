@@ -35,15 +35,11 @@ class EndGame : AppCompatActivity() {
                 restartGame()
             }
         }
-
     }
-
-
     private fun restartGame() {
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
-
     fun btnRestart(view: View) {
         restartGame()
     }

@@ -29,6 +29,13 @@ public class GameActivity extends AppCompatActivity {
     List<Integer> flagsToLearnImageResources;
     ArrayAdapter<String> mAdapter;
     private int numberOfFlagsToRecognize;
+    private TextView textView;
+    private int tracker_current_correct_answer = 0;
+    private ListView myListView;
+    private TextView tvTracker;
+    private ImageView imageFlag;
+    private String text_answer;
+    private int number_flags_to_learn = 10;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -36,26 +43,22 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+        //Retrieve the continent selected else go back to selection
+        World world = new World();
 
-        // Mockup continent selected
-        String[] continentSouthAmericaNames = {
-                "flag_argentina",
-                "flag_bolivia",
-                "flag_brazil",
-                "flag_chile",
-                "flag_colombia",
-                "flag_guyana",
-                "flag_paraguay",
-                "flag_peru",
-                "flag_suriname",
-                "flag_uruguay",
-                "flag_venezuela",
-        };
-        int max_flags_loaded = continentSouthAmericaNames.length;
-        int number_flags_to_learn = 10;
-        List<String> _data = Arrays.asList(continentSouthAmericaNames);
-        Collections.shuffle(_data);
+
+        Bundle extras = getIntent().getExtras();
+        int continentSelectorIndex = extras.getInt("continent_selected");
+        if ((continentSelectorIndex != (int) continentSelectorIndex) || (continentSelectorIndex >= world.getContinentsSize())) {
+            startActivity(new Intent(this, ContinentActivity.class));
+            finish();
+        }
+
+        String[] continents = world.getCountries(world.getContinents()[continentSelectorIndex]);
+        int max_flags_loaded = continents.length;
+        List<String> _data = Arrays.asList(continents);
         List<String> flagsToLearn = _data.subList(0, number_flags_to_learn);
+        Collections.shuffle(_data);
         // Getting the flags image resources ready
         flagsToLearnImageResources = new ArrayList<>();
         for (int i = 0; i < flagsToLearn.size(); i++) {
@@ -72,37 +75,20 @@ public class GameActivity extends AppCompatActivity {
          *
          */
 
-        int tracker_current_correct_answer = 0;
+        // The game starts
+        numberOfFlagsToRecognize = number_flags_to_learn;
+        tvTracker = (TextView) findViewById(R.id.tvStatusGame);
+        imageFlag = (ImageView) findViewById(R.id.imageViewFlag);
+        myListView = findViewById(R.id.listFlagGameQuestion);
+        text_answer = world.toCountryName(flagsToLearn.get(tracker_current_correct_answer));
+        // TODO: random generation of alternative answers
+        listAnswer = new String[]{text_answer, "Demo start", "Demo 1", "Demo 2"};
+        updateQuestion();
 
-        //得到启动这个activity的intent对象
-         Intent intent = getIntent();
-        //取值
-        numberOfFlagsToRecognize = intent.getIntExtra("numberOfFlagsToRecognize", 0);
-        TextView textView = findViewById(R.id.tvStatusGame);
-        textView.setText(numberOfFlagsToRecognize + "/10");
-        tracker_current_correct_answer = intent.getIntExtra("tracker_current_correct_answer", 0);
 
-
-        ((ImageView) findViewById(R.id.imageViewFlag)).setImageResource(flagsToLearnImageResources.get(tracker_current_correct_answer));
-        // Load the possible answers
-        String text_answer = flagsToLearn.get(tracker_current_correct_answer).replace("flag_", "");
-        listAnswer = new String[]{text_answer, "Asia", "Australia", "Europe"};
-        mAdapter = new ArrayAdapter<String>(
-                this,
-                R.layout.item_game_question,
-                R.id.tvCountry,
-                listAnswer
-        );
-
-        ListView myListView = findViewById(R.id.listFlagGameQuestion);
-        myListView.setAdapter(mAdapter);
-        int finalTracker_current_correct_answer = tracker_current_correct_answer;
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int itemPosition, long l) {
-                //TODO: Open the question
-                Toast.makeText(getApplicationContext(), listAnswer[itemPosition], Toast.LENGTH_SHORT).show();
-                // not correct answer selected, set the radio checked to red and open a dialog
                 if (!listAnswer[itemPosition].equals(text_answer)) {
                     ((RadioButton) view.findViewById(R.id.radioCountrySelector)).setChecked(true);
                     changeColorRadio((RadioButton) view.findViewById(R.id.radioCountrySelector));
@@ -110,19 +96,37 @@ public class GameActivity extends AppCompatActivity {
                     alert.showDialog();
 
                 } else {
-                    //TODO: Continue the game
-//                    startActivity(new Intent(GameActivity.this, GameReport.class));
-//                    finish();
+                    //TODO: Continue the gam
 
-                    Intent intent = new Intent(GameActivity.this, GameActivity.class);
-                    intent.putExtra("numberOfFlagsToRecognize", numberOfFlagsToRecognize);
-                    intent.putExtra("tracker_current_correct_answer", finalTracker_current_correct_answer);
-                    startActivity(intent);
-
+                    // if not the last flag to guess, go to next
+                    numberOfFlagsToRecognize -= 1;
+                    if (numberOfFlagsToRecognize == 0) {
+                        // Go to the report
+                        startActivity(new Intent(getBaseContext(), GameReport.class));
+                        finish();
+                    } else {
+                        tracker_current_correct_answer += 1;
+                        text_answer = world.toCountryName(flagsToLearn.get(tracker_current_correct_answer));
+                        // TODO: random generation of alternative answers
+                        listAnswer = new String[]{text_answer, "Demo2", "Dem 3", "Demo 3"};
+                        updateQuestion();
+                    }
                 }
             }
         });
+    }
 
+    private void updateQuestion() {
+        // Load a new question
+        tvTracker.setText((number_flags_to_learn - numberOfFlagsToRecognize) + 1 + "/" + number_flags_to_learn);
+        imageFlag.setImageResource(flagsToLearnImageResources.get(tracker_current_correct_answer));
+        mAdapter = new ArrayAdapter<String>(
+                this,
+                R.layout.item_game_question,
+                R.id.tvCountry,
+                listAnswer
+        );
+        myListView.setAdapter(mAdapter);
 
     }
 

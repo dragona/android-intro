@@ -17,7 +17,7 @@ public class ContinentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_continent);
 
-        String[] continents = {"Africa", "Asia", "Australia", "Europe", "North America", "South America"};
+        String[] continents = new World().getContinents();
         ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(
                 this,
                 R.layout.item_continent,
@@ -31,12 +31,14 @@ public class ContinentActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int itemPosition, long l) {
                 //TODO: Open the question
-                startActivity(new Intent(ContinentActivity.this, GameActivity.class));
+                Intent intent = new Intent(ContinentActivity.this, GameActivity.class);
+                intent.putExtra("continent_selected", itemPosition);
+                startActivity(intent);
                 finish();
 
             }
         });
-        
+
 
     }
 }

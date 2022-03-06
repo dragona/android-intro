@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
                     "Friday",
                     "Saturday",
                     "Sunday"));
-    private Button button;
 
 
     @Override
@@ -34,7 +33,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Getting the reference of and ListView
         listView = (ListView) findViewById(R.id.listView);
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, R.layout.item_listview, R.id.tv_item, arrayList);
+        ArrayAdapter arrayAdapter = new ArrayAdapter(
+                this,
+                R.layout.item_listview,
+                R.id.tv_item,
+                arrayList);
         listView.setAdapter(arrayAdapter);
 
 

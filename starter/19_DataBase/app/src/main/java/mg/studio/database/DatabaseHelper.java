@@ -8,7 +8,6 @@ package mg.studio.database;
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
  */
 
 import android.content.ContentValues;
@@ -17,6 +16,7 @@ import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 /**
  * Created by Discipulus
@@ -85,5 +85,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME, null);
         return cursor;
+    }
+
+    public void deleteData() {
+        SQLiteDatabase db = getWritableDatabase();
+        db.beginTransaction();
+        try {
+            db.delete(TABLE_NAME, null, null);
+            db.setTransactionSuccessful();
+        } catch (Exception e) {
+            Log.d("TAG", "Error ---");
+        } finally {
+            db.endTransaction();
+        }
     }
 }

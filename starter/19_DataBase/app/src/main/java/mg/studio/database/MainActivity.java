@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -53,11 +54,23 @@ public class MainActivity extends AppCompatActivity {
         ((EditText) findViewById(R.id.first_name)).setText("");
         ((EditText) findViewById(R.id.last_name)).setText("");
         ((EditText) findViewById(R.id.marks)).setText("");
+
+        Toast.makeText(this, "Insertion complete!", Toast.LENGTH_LONG).show();
+
     }
 
     public void btnReadDb(View view) {
-        Cursor cursor = databaseHelper.readData();
+        readingBdContent();
+    }
 
+    public void btnDelete(View view) {
+        databaseHelper.deleteData();
+        Toast.makeText(this, "Delete the DB content", Toast.LENGTH_LONG).show();
+        readingBdContent();
+    }
+
+    private void readingBdContent() {
+        Cursor cursor = databaseHelper.readData();
         if (cursor.getCount() == 0) {
             //The table is empty
             Log.e(getPackageName(), " Reader: empty");
