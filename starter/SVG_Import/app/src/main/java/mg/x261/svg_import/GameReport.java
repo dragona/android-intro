@@ -7,8 +7,9 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
-// TODO: need to add the menu and the  History
+// TODO: Update the text (Game report)
+// TODO: Add the menu
+// TODO: Add the history listing loaded from the DB
 
 public class GameReport extends AppCompatActivity {
     @Override

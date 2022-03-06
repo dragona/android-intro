@@ -71,8 +71,6 @@ public class GameActivity extends AppCompatActivity {
          * Game logic
          *  generate the first flag with the possible answers
          *  generate a dialog if the answer is wrong, stay on the same question
-         *  TODO: When the correct answer is selected, move to the next question.
-         *
          */
 
         // The game starts
@@ -96,8 +94,6 @@ public class GameActivity extends AppCompatActivity {
                     alert.showDialog();
 
                 } else {
-                    //TODO: Continue the gam
-
                     // if not the last flag to guess, go to next
                     numberOfFlagsToRecognize -= 1;
                     if (numberOfFlagsToRecognize == 0) {

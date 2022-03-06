@@ -30,7 +30,6 @@ public class ContinentActivity extends AppCompatActivity {
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int itemPosition, long l) {
-                //TODO: Open the question
                 Intent intent = new Intent(ContinentActivity.this, GameActivity.class);
                 intent.putExtra("continent_selected", itemPosition);
                 startActivity(intent);
