@@ -106,12 +106,13 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int itemPosition, long l) {
                 if (!listAnswer[itemPosition].equals(text_answer)) {
-                    // Record my mistakes
-                    Log.d("TAG", "continentSelectorIndex - flag_resource_name:" + continentSelectorIndex + " - " + flag_resource_name);
-                    recordMistake(continentSelectorIndex, flag_resource_name); // persistent data tracker
+
                     if (firstMistakeFlag) {
                         mistakeCounts += 1;
                         firstMistakeFlag = false;
+                        // Record my mistakes
+                        Log.d("TAG", "continentSelectorIndex - flag_resource_name:" + continentSelectorIndex + " - " + flag_resource_name);
+                        recordMistake(continentSelectorIndex, flag_resource_name); // persistent data tracker
                     }
                     ((RadioButton) view.findViewById(R.id.radioCountrySelector)).setChecked(true);
                     changeColorRadio((RadioButton) view.findViewById(R.id.radioCountrySelector));

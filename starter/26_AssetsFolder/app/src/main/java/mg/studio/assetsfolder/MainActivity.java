@@ -27,12 +27,10 @@ import android.widget.TextView;
 
 
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 
 /**
  * Reads  files from the assets folder
@@ -50,93 +48,61 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        accessAssetsOne();
-        accessAssetsTwo("data.txt");
-        listFilesInAssets();
+        /*Read a file for the assests folder and display the content in a textView*/
+        String textContent = readTextFileContentFromAssets("file1.txt");
+        ((TextView) findViewById(R.id.tvContent1)).setText(textContent);
+        Log.d(TAG_LOG, "accessAssetsOne():" + textContent);
+
+        ((TextView) findViewById(R.id.tvContent2)).setText(readTextFileContentFromAssets("file2.txt"));
+        ((TextView) findViewById(R.id.tvContent3)).setText(readTextFileContentFromAssets("file3.txt"));
+
+        logListFilesInAssets();
         copyAssetsFileIntoSdCard();
 
         readImageFromAssets();
 
     }
 
-    /**
-     * Accesses and reads a text file from the Assets, set its content in a view
-     */
-    private void accessAssetsOne() {
-
-        BufferedReader bufferedReader;
-        try {
-            bufferedReader = new BufferedReader(new InputStreamReader(getAssets().open("data.txt")));
-            StringBuilder stringBuilder = new StringBuilder();
-            String temp;
-            while ((temp = bufferedReader.readLine()) != null) {
-                stringBuilder.append(temp);
-            }
-            ((TextView) findViewById(R.id.tv_top)).setText(stringBuilder.toString());
-            Log.d(TAG_LOG, "accessAssetsOne():" + stringBuilder.toString());
-        } catch (IOException e) {
-            Log.e(TAG_LOG, "Get file from assets, accessAssetsOne(): " + e.toString());
-        }
-
-    }
-
-    /**
-     * Reads a file from the assets folder and set its content in a view
-     *
-     * @param fileName file to read from the assets
-     */
-    private void accessAssetsTwo(String fileName) {
+    private String readTextFileContentFromAssets(String fileName) {
         InputStream inputStream = null;
         try {
             inputStream = getAssets().open(fileName);
-
             int size = inputStream.available();
-
             byte[] bytesBuffer = new byte[size];
             int numberByteInBuffer = inputStream.read(bytesBuffer);
-            Log.d(TAG_LOG, "accessAssetsTwo(), numberByteInBuffer: " + numberByteInBuffer);
+            Log.d(TAG_LOG, "numberByteInBuffer: " + numberByteInBuffer);
             inputStream.close();
-
             // If the buffer has something, set it to the view
             if (numberByteInBuffer > 0) {
-                String string = new String(bytesBuffer);
-                //Todo: get the previous text and update the view, use AsynchTask
-                //String previousText = ((TextView)findViewById(R.id.tv_center)).getText().toString();
-                ((TextView) findViewById(R.id.tv_center)).setText(string);
-
-                Log.d(TAG_LOG, "accessAssetsTwo(), bytesBuffer.toString(): " + string);
+                return new String(bytesBuffer);
             }
+            return "";
 
         } catch (IOException e) {
             Log.e(TAG_LOG, "Get file from assets, accessAssetsTwo() : " + e.toString());
+            return "";
         }
-
-
     }
 
     /**
-     * Lists the files that are in the assets folder and open its content
+     * Log the all files in the assets folder
      */
-
-    private void listFilesInAssets() {
+    private void logListFilesInAssets() {
         String[] fileNames;
         try {
             fileNames = getAssets().list("");
             for (int i = 0; i < fileNames.length; i++) {
                 Log.d(TAG_LOG, "listFilesInAssets(): " + i + " - " + fileNames[i]);
-                accessAssetsTwo(fileNames[i]);
             }
         } catch (IOException e) {
             Log.e(TAG_LOG, "listFilesInAssets() : " + e.toString());
         }
-
-
     }
 
     /**
+     * Create a copy of the file 
      * Copies the files from the Assets to the the SD card
      */
-
     private void getAssetAppFolder() {
         String[] fileNames;
         try {

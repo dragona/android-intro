@@ -7,21 +7,23 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_top"
+        android:id="@+id/tvContent1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <ScrollView
+    <TextView
+        android:id="@+id/tvContent2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1" />
 
-        <TextView
-            android:id="@+id/tv_center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </ScrollView>
+    <TextView
+        android:id="@+id/tvContent3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
 
     <ImageView
         android:id="@+id/imageView"
