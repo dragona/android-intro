@@ -287,6 +287,11 @@ public class World {
         return africa[index];
     }
 
+    // Get continent at index
+    public String getContinentAtIndex(int index) {
+        return continents[index];
+    }
+
     // Country names
     public String[] countryNames(String[] continentFlagIds) {
         List<String> countries = new ArrayList<String>();

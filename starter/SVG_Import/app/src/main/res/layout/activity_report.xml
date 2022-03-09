@@ -1,33 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-
-
-
-    <TextView
-        android:id="@+id/tv_resented_questions"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/groupGameReport"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Total flags presented: 10" />
-    <TextView
-        android:id="@+id/tv_recognized"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/tv_resented_questions"
-        android:text="Recognized: 2" />
+        android:visibility="visible"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_to_learn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_recognized"
-        android:layout_centerHorizontal="true"
-        android:text="To learn 8" />
-</RelativeLayout>
+        <TextView
+            android:id="@+id/tvCountQuestionsPresented"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Total flags presented: 10"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tvCountCorrectAnswers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Recognized: 2"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tvCountWrongAnswers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="To learn 8"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/listViewReport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:background="@drawable/item_border"
+        android:divider="@color/white"
+        android:dividerHeight="5dp"
+        android:scrollbars="none">
+
+    </ListView>
+
+
+</LinearLayout>
 
 
 

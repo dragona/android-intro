@@ -9,11 +9,12 @@
         <entry key="app/src/main/res/layout/activity_continent.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/layout/activity_game.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5635416666666667" />
-        <entry key="app/src/main/res/layout/activity_report.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_report.xml" value="0.375" />
         <entry key="app/src/main/res/layout/custom_dialog.xml" value="0.37771739130434784" />
         <entry key="app/src/main/res/layout/item_content.xml" value="0.5635416666666667" />
         <entry key="app/src/main/res/layout/item_continent.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/layout/item_game_question.xml" value="0.3255208333333333" />
+        <entry key="app/src/main/res/layout/item_history.xml" value="0.14583333333333334" />
         <entry key="app/src/main/res/layout/layout.xml" value="0.39402173913043476" />
         <entry key="app/src/main/res/layout/layout_continent.xml" value="0.3546195652173913" />
       </map>
