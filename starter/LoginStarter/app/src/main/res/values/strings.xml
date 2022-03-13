@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">LoginStarter</string>
+    <!--  Added string values  -->
+
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Username</string>
+    <string name="name">Name</string>
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">Logout</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_register">Sign-up</string>
+    <string name="btn_link_to_register">Create a new account.</string>
+    <string name="btn_link_to_login">Log into your account.</string>
+    <string name="enter_credentials">Enter your credentials.</string>
+    <string name="account_created">your account has been created.</string>
+
+</resources>

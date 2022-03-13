@@ -27,10 +27,12 @@ import android.widget.TextView;
 
 
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 /**
  * Reads  files from the assets folder
@@ -48,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*Read a file for the assests folder and display the content in a textView*/
-        String textContent = readTextFileContentFromAssets("file1.txt");
+        /*Read some text files from the assets folder and display the content in a textView*/
+        String textContent = readTextFileContentFromAssets("files/file1.txt");
         ((TextView) findViewById(R.id.tvContent1)).setText(textContent);
         Log.d(TAG_LOG, "accessAssetsOne():" + textContent);
 
-        ((TextView) findViewById(R.id.tvContent2)).setText(readTextFileContentFromAssets("file2.txt"));
-        ((TextView) findViewById(R.id.tvContent3)).setText(readTextFileContentFromAssets("file3.txt"));
+        ((TextView) findViewById(R.id.tvContent2)).setText(readTextFileContentFromAssets("data.txt"));
+        ((TextView) findViewById(R.id.tvContent3)).setText(readTextFileContentFromAssets("files/file2.txt"));
 
         logListFilesInAssets();
         copyAssetsFileIntoSdCard();
@@ -64,23 +66,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String readTextFileContentFromAssets(String fileName) {
-        InputStream inputStream = null;
+        BufferedReader bufferedReader;
         try {
-            inputStream = getAssets().open(fileName);
-            int size = inputStream.available();
-            byte[] bytesBuffer = new byte[size];
-            int numberByteInBuffer = inputStream.read(bytesBuffer);
-            Log.d(TAG_LOG, "numberByteInBuffer: " + numberByteInBuffer);
-            inputStream.close();
-            // If the buffer has something, set it to the view
-            if (numberByteInBuffer > 0) {
-                return new String(bytesBuffer);
+            bufferedReader = new BufferedReader(new InputStreamReader(getAssets().open(fileName)));
+            StringBuilder stringBuilder = new StringBuilder();
+            String temp;
+            while ((temp = bufferedReader.readLine()) != null) {
+                stringBuilder.append(temp);
             }
-            return "";
-
+            return "Demo " + stringBuilder.toString();
         } catch (IOException e) {
-            Log.e(TAG_LOG, "Get file from assets, accessAssetsTwo() : " + e.toString());
-            return "";
+            Log.e(TAG_LOG, "Get file from assets, readTextFileContentFromAssets() : " + e.toString());
+            return null;
         }
     }
 
@@ -95,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG_LOG, "listFilesInAssets(): " + i + " - " + fileNames[i]);
             }
         } catch (IOException e) {
-            Log.e(TAG_LOG, "listFilesInAssets() : " + e.toString());
+            Log.e(TAG_LOG, "Error : listFilesInAssets() : " + e.toString());
         }
     }
 
@@ -110,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < fileNames.length; i++) {
                 try {
                     InputStream inputStream = getAssets().open(fileNames[i]);
+
                     copyToDisk(fileNames[i], inputStream);
                 } catch (IOException e) {
                     Log.e(TAG_LOG, "getAssetAppFolder() / copyToDisk: " + e.toString());
@@ -124,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Creates a file in the SdCard based on the inputStream provided
+     * Creates a file in the sdcard based on the inputStream provided
      *
      * @param filename    the file name as the copied file
      * @param inputStream for creating the new file
@@ -138,6 +136,11 @@ public class MainActivity extends AppCompatActivity {
         File sdCard = Environment.getExternalStorageDirectory();
         // The external storage
         Log.d(TAG_LOG, "Environment.getExternalStorageDirectory():" + sdCard);
+//        File path = Environment.getExternalStoragePublicDirectory(
+//                Environment.DIRECTORY_PICTURES);
+//        File file = new File(path, "DemoPicture.jpg");
+
+
         File directoryDestination = new File(sdCard.getAbsolutePath() + "/backupAssets");
 
         if (!directoryDestination.exists() || !directoryDestination.isDirectory()) {
@@ -165,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
-
             // Permission is not granted
             // Should we show an explanation?
             if (ActivityCompat.shouldShowRequestPermissionRationale(this,
@@ -192,11 +194,9 @@ public class MainActivity extends AppCompatActivity {
             try {
                 getAssetAppFolder();
             } catch (Exception e) {
-                Log.e(TAG_LOG, "getAssetAppFolder()");
+                Log.e(TAG_LOG, "copyAssetsFileIntoSdCard()");
             }
-
             /* END: Copy the files that are in the Assets into the SD card */
-
         }
     }
 
@@ -212,7 +212,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
 }
