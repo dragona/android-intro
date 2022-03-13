@@ -14,5 +14,9 @@
     <string name="btn_link_to_login">Log into your account.</string>
     <string name="enter_credentials">Enter your credentials.</string>
     <string name="account_created">your account has been created.</string>
+    <string name="preference_file_key">this_is_my_preference_key</string>
+    <string name="user_access_token">USER_TOKEN</string>
+    <string name="saved_access_token_default">ACCESS_TOKEN</string>
+
 
 </resources>
