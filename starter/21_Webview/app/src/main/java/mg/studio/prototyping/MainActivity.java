@@ -3,17 +3,18 @@ package mg.studio.prototyping;
 /**
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT,.
  * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
  */
 
 import android.app.ProgressDialog;
 import android.os.Build;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         //Hide nav bar and status bar
         hideSystemUI();
 
-        progressDialog = ProgressDialog.show(this, "Loading","Please wait...", true);
+        progressDialog = ProgressDialog.show(this, "Loading", "Please wait...", true);
         progressDialog.setCancelable(false);
 
         WebView webView = findViewById(R.id.web_view);
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadWithOverviewMode(true);
         webView.getSettings().setUseWideViewPort(true);
-        webView.setWebViewClient(new WebViewClient(){
+        webView.setWebViewClient(new WebViewClient() {
 
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
                 return true;
             }
+
             @Override
             public void onPageFinished(WebView view, final String url) {
                 progressDialog.dismiss();
@@ -59,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
         webView.loadUrl("https://studio.mg");
 
     }
-
-
 
 
     private void hideSystemUI() {

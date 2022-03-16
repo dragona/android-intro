@@ -2,6 +2,7 @@ package com.mpianatra.a21_webview_todo;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
 
@@ -19,6 +20,6 @@ public class MainActivity extends AppCompatActivity {
          */
 
 
-        //TODO: use a webview to load this page  https://studio.mg
+        //TODO: use a WebView to load this page  https://studio.mg
     }
 }
