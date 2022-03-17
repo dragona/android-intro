@@ -29,30 +29,25 @@ public class MainActivity extends AppCompatActivity {
     private SeekBar songPrgs;
     private static int oTime = 00, sTime = 00, eTime = 00, fTime = 5000, bTime = 5000;
     private Handler hdlr = new Handler();
-    Songs song = new Songs("Live Sayd", "mrsaydalivesccoustique");
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        backwardbtn = findViewById(R.id.btnBackward);
-        forwardbtn =  findViewById(R.id.btnForward);
-        playbtn = findViewById(R.id.btnPlay);
-        pausebtn =  findViewById(R.id.btnPause);
-        songName =  findViewById(R.id.txtSname);
-        startTime = findViewById(R.id.txtStartTime);
-        songTime =  findViewById(R.id.txtSongTime);
-        songName.setText(song.getTitle());
-        String songNameId = song.getAudioFile();
-        int songResourceId = getResources().getIdentifier(songNameId, "raw", getPackageName());
 
-        //  mPlayer = MediaPlayer.create(this, R.raw.mrsaydalivesccoustique);
-        mPlayer = MediaPlayer.create(this, songResourceId);
-        songPrgs = (SeekBar) findViewById(R.id.sBar);
-        songPrgs.setClickable(false);
-        pausebtn.setEnabled(false);
+
+        backwardbtn = findViewById(R.id.btnBackward);
+        forwardbtn = findViewById(R.id.btnForward);
+        playbtn = findViewById(R.id.btnPlay);
+        pausebtn = findViewById(R.id.btnPause);
+        songName = findViewById(R.id.txtSname);
+        startTime = findViewById(R.id.txtStartTime);
+        songTime = findViewById(R.id.txtSongTime);
+
+        Songs song = new Songs("Live Sayd", "mrsaydalivesccoustique");
+
+        loadAudio(song);
 
         playbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,5 +120,25 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private void loadAudio(Songs song) {
+        songName.setText(song.getTitle());
+        String songNameId = song.getAudioFile();
+        int songResourceId = getResources().getIdentifier(songNameId, "raw", getPackageName());
 
+        //  mPlayer = MediaPlayer.create(this, R.raw.mrsaydalivesccoustique);
+        mPlayer = MediaPlayer.create(this, songResourceId);
+        songPrgs = (SeekBar) findViewById(R.id.sBar);
+        songPrgs.setClickable(false);
+        pausebtn.setEnabled(false);
+
+        // Show time as soon as the song is loaded
+        eTime = mPlayer.getDuration();
+        sTime = mPlayer.getCurrentPosition();
+
+        songTime.setText(String.format("%d:%d", TimeUnit.MILLISECONDS.toMinutes(eTime),
+                TimeUnit.MILLISECONDS.toSeconds(eTime) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(eTime))));
+        startTime.setText(String.format("%d:%d", TimeUnit.MILLISECONDS.toMinutes(sTime),
+                TimeUnit.MILLISECONDS.toSeconds(sTime) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(sTime))));
+
+    }
 }
