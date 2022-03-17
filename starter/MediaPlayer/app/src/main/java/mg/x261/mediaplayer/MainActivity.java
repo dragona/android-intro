@@ -60,10 +60,11 @@ public class MainActivity extends AppCompatActivity {
                     songPrgs.setMax(eTime);
                     oTime = 1;
                 }
-                songTime.setText(String.format("%d:%d", TimeUnit.MILLISECONDS.toMinutes(eTime),
+                songTime.setText(String.format("%02d:%02d", TimeUnit.MILLISECONDS.toMinutes(eTime),
                         TimeUnit.MILLISECONDS.toSeconds(eTime) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(eTime))));
-                startTime.setText(String.format("%d:%d", TimeUnit.MILLISECONDS.toMinutes(sTime),
+                startTime.setText(String.format("%02d:%02d", TimeUnit.MILLISECONDS.toMinutes(sTime),
                         TimeUnit.MILLISECONDS.toSeconds(sTime) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(sTime))));
+
                 songPrgs.setProgress(sTime);
                 hdlr.postDelayed(UpdateSongTime, 100);
                 pausebtn.setEnabled(true);
@@ -113,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             sTime = mPlayer.getCurrentPosition();
-            startTime.setText(String.format("%d:%d", TimeUnit.MILLISECONDS.toMinutes(sTime),
+            startTime.setText(String.format("%02d:%02d", TimeUnit.MILLISECONDS.toMinutes(sTime),
                     TimeUnit.MILLISECONDS.toSeconds(sTime) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(sTime))));
             songPrgs.setProgress(sTime);
             hdlr.postDelayed(this, 100);
@@ -135,9 +136,9 @@ public class MainActivity extends AppCompatActivity {
         eTime = mPlayer.getDuration();
         sTime = mPlayer.getCurrentPosition();
 
-        songTime.setText(String.format("%d:%d", TimeUnit.MILLISECONDS.toMinutes(eTime),
+        songTime.setText(String.format("%02d:%02d", TimeUnit.MILLISECONDS.toMinutes(eTime),
                 TimeUnit.MILLISECONDS.toSeconds(eTime) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(eTime))));
-        startTime.setText(String.format("%d:%d", TimeUnit.MILLISECONDS.toMinutes(sTime),
+        startTime.setText(String.format("%02d:%02d", TimeUnit.MILLISECONDS.toMinutes(sTime),
                 TimeUnit.MILLISECONDS.toSeconds(sTime) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(sTime))));
 
     }
