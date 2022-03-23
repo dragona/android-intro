@@ -53,6 +53,7 @@
         android:layout_alignTop="@+id/btnPlay"
         android:layout_marginLeft="20dp"
         android:layout_toRightOf="@+id/btnPlay"
+        android:visibility="gone"
         android:src="@android:drawable/ic_media_pause" />
 
     <ImageButton

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:background="@drawable/item_border"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewFlag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:contentDescription="Country flag"
+        android:elevation="7dp"
+        android:src="@drawable/flag_madagascar" />
+
+    <TextView
+        android:id="@+id/txtCountryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewFlag"
+        android:layout_margin="20dp"
+        android:text="Madagascar" />
+
+    <TextView
+        android:id="@+id/txtContinentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewFlag"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:layout_alignRight="@+id/imageViewFlag"
+        android:text="Africa" />
+</RelativeLayout>

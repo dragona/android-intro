@@ -8,10 +8,10 @@ package mg.studio.audiorecorder;
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- *
- *  Demo App Recorder
- *  Based on https://developer.android.com/guide/topics/media/mediarecorder.html
+ * <p>
+ * <p>
+ * Demo App Recorder
+ * Based on https://developer.android.com/guide/topics/media/mediarecorder.html
  */
 
 import android.Manifest;
@@ -19,9 +19,11 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
+
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -95,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         mRecorder = new MediaRecorder();
         mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+        Log.d("TAG", "startRecording: " + mFileName);
         mRecorder.setOutputFile(mFileName);
         mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
 

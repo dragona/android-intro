@@ -15,11 +15,12 @@ import java.util.concurrent.TimeUnit;
 
 /*
 TODO:
-      - Auto load the audio time when the audio is selected
+      - [x] Auto load the audio time when the audio is selected
       - Use service to play the audio
       - Feed media player from source db
-      - Time format 00:00 but not 0:0 -> 01:01 but not 1:1
+      - [x] Time format 00:00 but not 0:0 -> 01:01 but not 1:1
       - Changes icons based on the playing state
+      - A dedicated place for the Pause button is not needed, we should replace the play with pause when the music is playing
 
  */
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private SeekBar songPrgs;
     private static int oTime = 00, sTime = 00, eTime = 00, fTime = 5000, bTime = 5000;
     private Handler hdlr = new Handler();
+    private boolean pauseVisible = false;
 
 
     @Override
