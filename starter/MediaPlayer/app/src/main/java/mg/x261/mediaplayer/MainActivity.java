@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
@@ -110,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // Handling the seekbar change
+
+        songProgress.setOnSeekBarChangeListener(new songProgressListener());
     }
 
     private Runnable UpdateSongTime = new Runnable() {
@@ -143,5 +148,36 @@ public class MainActivity extends AppCompatActivity {
         startTime.setText(String.format("%02d:%02d", TimeUnit.MILLISECONDS.toMinutes(sTime),
                 TimeUnit.MILLISECONDS.toSeconds(sTime) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(sTime))));
 
+    }
+
+    private class songProgressListener implements SeekBar.OnSeekBarChangeListener {
+        int currentTimeDesiredTime = 0;
+        @Override
+        public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+            Log.d("TAG", "onProgressChanged: "+ i );
+            currentTimeDesiredTime=i;
+
+        }
+
+        @Override
+        public void onStartTrackingTouch(SeekBar seekBar) {
+
+        }
+
+        @Override
+        public void onStopTrackingTouch(SeekBar seekBar) {
+            int desired = seekBar.getProgress();
+            Log.d("TAG", "onStopTrackingTouch: "+desired);
+            if (desired <= eTime) {
+                sTime = desired;
+                mPlayer.seekTo(sTime);
+            } else {
+                Toast.makeText(getApplicationContext(), "Cannot jump forward 5 seconds", Toast.LENGTH_SHORT).show();
+            }
+            if (!playBtn.isEnabled()) {
+                playBtn.setEnabled(true);
+            }
+
+        }
     }
 }
