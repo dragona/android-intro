@@ -28,64 +28,72 @@
         android:layout_below="@+id/txtVw1"
         android:src="@drawable/ic_launcher_foreground" />
 
-    <ImageButton
-        android:id="@+id/btnBackward"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="44dp"
-        android:src="@android:drawable/ic_media_rew" />
 
-    <ImageButton
-        android:id="@+id/btnPlay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnBackward"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/btnBackward"
-        android:src="@android:drawable/ic_media_play" />
+    <!--  Buttons  -->
 
-    <ImageButton
-        android:id="@+id/btnPause"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnPlay"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/btnPlay"
-        android:visibility="gone"
-        android:src="@android:drawable/ic_media_pause" />
-
-    <ImageButton
-        android:id="@+id/btnForward"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnPause"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/btnPause"
-        android:contentDescription="@+id/imageButton3"
-        android:src="@android:drawable/ic_media_ff" />
-
-    <TextView
-        android:id="@+id/txtStartTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/sBar"
-        android:text="00:00" />
-
-    <SeekBar
-        android:id="@+id/sBar"
+    <LinearLayout
+        android:id="@+id/layoutButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnBackward"
-        android:layout_toLeftOf="@+id/txtSongTime"
-        android:layout_toRightOf="@+id/txtStartTime" />
+        android:layout_marginTop="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
 
-    <TextView
-        android:id="@+id/txtSongTime"
-        android:layout_width="wrap_content"
+        <ImageButton
+            android:id="@+id/btnBackward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_rew" />
+
+        <ImageButton
+            android:id="@+id/btnPlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_play" />
+
+        <ImageButton
+            android:id="@+id/btnPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_pause"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/btnForward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_ff" />
+    </LinearLayout>
+
+
+    <!--Seekbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/sBar"
-        android:layout_toRightOf="@+id/btnForward"
-        android:text="00:00" />
+        android:layout_above="@+id/layoutButton"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00" />
+
+        <SeekBar
+            android:id="@+id/sBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/txtSongTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00" />
+    </LinearLayout>
 </RelativeLayout>
