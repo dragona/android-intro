@@ -1,15 +1,12 @@
 ![Dragona](dragona-android.gif)
 
-# Android resources
+# Android Resources: Essential Elements for Developing Android Apps.
 
-The building blocks of Android Application development.
+### Introduction:
+This repository holds various demo projects, with descriptions for each project located in the corresponding project folder's .md file.
 
-
-
-## Getting Started
-
-This repository contains multiple demo projects, and the description for each project be found in the md file of every project folder.
-
+### Programming:
+The majority of the demo projects use Java language.
 
 ### Coding
 
