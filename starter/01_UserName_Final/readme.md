@@ -1,11 +1,14 @@
+## Enhanced User Input Project
+
+Based on the previous demo project, this version includes the following improvements:
+
+- [x] Button click using `setOnClickListener`
+- [x] Toast implementation
+- [x] Hiding keyboard after button press
+
+
 ![Updated version](display/updated.gif)
 
-Based on the previous demo project where the user input is retrieved, in this version, the following are implemented:
-
-
-- [x] Button click using ``` setOnClickListener ``` 
-- [x] Toast
-- [x] Hiding a keyboard after button press
 
 --- 
 ## Snippet
