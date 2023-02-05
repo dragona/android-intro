@@ -3,7 +3,7 @@
 # Android Resources: Essential Elements for Developing Android Apps.
 
 ### Introduction:
-This repository holds various demo projects, with descriptions for each project located in the corresponding project folder's .md file.
+This repository offers a wide range of Android content, with a focus on well-commented code. The topics covered include life cycle management, layout design, button design and implementation, implicit intents, image buttons, user input with EditText, radio buttons, checkboxes, and activities. The account also covers more advanced topics such as custom dialogs, color selection, gradient backgrounds, weather app design, audio recording, database integration, fragments, webviews, services, fingerprint authentication, app private directories, and assets folders. Additionally, the account provides resources for understanding and implementing Android design for developers, as well as samples of architecture components.
 
 ### Programming:
 The majority of the demo projects use Java language.
