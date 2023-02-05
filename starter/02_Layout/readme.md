@@ -1,12 +1,17 @@
-##  LinearLayout and RelativeLayout
+## LinearLayout and RelativeLayout in Android
 
-You are provided two layout files, one using ```LinearLayout``` and the other using ```RelativeLayout```.
+This section contains two layout files for an Android app, one using `LinearLayout` and the other using `RelativeLayout`.
 
 ![Layouts](display/layout.gif)
 
 
-The ```linear_layout.xml``` has a ```vertical orientation``` and the inner views are set to ```wrap_content``` except 
-the ```EditText``` for the message which has a ```android:layout_height="0dp"``` and a ```android:layout_weight="1"```
+### LinearLayout
+The `linear_layout.xml` file uses `LinearLayout` with a `vertical orientation`. The height of the inner views is set to `wrap_content`, except for the `EditText` used for message input, which has a height of `0dp` and a weight of `1`.
+
+```
+android:layout_height="0dp"
+android:layout_weight="1"
+```
 
 
 ```xml
