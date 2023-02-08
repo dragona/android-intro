@@ -71,5 +71,468 @@ The application we will be creating is called GlobeTrotter Quiz. This applicatio
 | Is the largest ocean in the world the Pacific Ocean? | Yes |
 
 
+The logic of the GlobeTrotter Quiz app shall be like this 
+
+```
+START
+
+Initialize score to 0
+
+WHILE there are still questions in the question bank
+  Display the current question
+  Get the answer from the user
+  IF the answer is correct
+    Increment the score by 1
+  END IF
+END WHILE
+
+Display the final score
+
+END
+```
+
+
+## Outline of the code for the app
+
+1. Set up the Android project in Android Studio and create a new activity for the quiz.
+2. Create a layout for the quiz activity using XML. 
+    - This layout should include:
+        - A TextView for displaying questions
+        - Two buttons for answering the questions (True and False)
+        - A TextView for displaying feedback.
+3. Create a Quiz class that will store the questions and answers for the quiz. 
+    - This class should have:
+        - A constructor that sets up the questions and answers
+        - A method for getting the current question
+        - A method for checking the answer
+        - A method for getting the feedback for the answer.
+4. In the quiz activity, create an instance of the Quiz class and use it to:
+    - Display the current question
+    - Check the answer when the user presses a button
+    - Display the feedback.
+5. Add logic to the quiz activity to keep track of the user's score and move to the next question when the user answers the current question.
+6. Add a menu to the quiz activity that allows the user to:
+    - Reset the quiz
+    - View the answers.
+7. Add styles and colors to the quiz activity to make it look nice.
+
+
+
+```java
+package com.example.globetrotter;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+/**
+ * MainActivity class contains the code for the main activity of the quiz application.
+ * The main functionality of the class is to show a question and two buttons to answer it, True or False.
+ * When a button is clicked, the answer will be checked and a message will be displayed if it is correct or incorrect.
+ *
+ * @author Long
+ * @version 1.0
+ * @since 2023-02-06
+ */
+
+public class MainActivity extends AppCompatActivity {
+
+    /**
+     * The True button for the answer
+     */
+    private Button mTrueButton;
+
+    /**
+     * The False button for the answer
+     */
+    private Button mFalseButton;
+
+    /**
+     * The TextView to display the question
+     */
+    private TextView mQuestionTextView;
+
+    /**
+     * An array of Question objects to store all the questions
+     */
+    private Question[] mQuestionBank = new Question[]{
+            new Question(R.string.is_australia_a_continent, true),
+            new Question(R.string.does_russia_share_a_border_with_kazakhstan, true),
+    };
+
+    /**
+     * The index of the current question in the Question array
+     */
+    private int mCurrentIndex = 0;
+
+    /**
+     * The onCreate method is called when the activity is created.
+     * It sets the content view to the activity_main layout, initializes the buttons and text view,
+     * sets on click listeners for the buttons, and calls the updateQuestion method to display the first question.
+     *
+     * @param savedInstanceState The saved instance state.
+     */
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
+        mTrueButton = (Button) findViewById(R.id.true_button);
+        mTrueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(true);
+            }
+        });
+        mFalseButton = (Button) findViewById(R.id.false_button);
+        mFalseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(false);
+            }
+        });
+
+        updateQuestion();
+    }
+
+    /**
+     * The updateQuestion method updates the question in the text view to the current question.
+     */
+    private void updateQuestion() {
+        int questionResId = mQuestionBank[mCurrentIndex].getTextResId();
+        String question = getString(questionResId);
+        mQuestionTextView.setText(question);
+    }
+
+    /**
+     * The checkAnswer method checks the user's answer and displays a message if it is correct or incorrect.
+     * If there are more questions, it increments the current index and calls the updateQuestion method to display the next question.
+     * If there are no more questions, a message is displayed indicating that it is the end of the quiz.
+     *
+     * @param userPressedTrue A boolean indicating whether the user pressed the True button.
+     */
+
+    private void checkAnswer(boolean userPressedTrue) {
+        boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
+
+
+        int messageResId = 0;
+        if (userPressedTrue == answerIsTrue) {
+            messageResId = R.string.correct_toast;
+        } else {
+            messageResId = R.string.incorrect_toast;
+        }
+        Toast.makeText(this, messageResId, Toast.LENGTH_SHORT).show();
+
+        if (mQuestionBank.length > mCurrentIndex + 1) {
+            mCurrentIndex += 1;
+        } else {
+            Toast.makeText(this, "That is the end of the Quiz.", Toast.LENGTH_SHORT).show();
+        }
+        updateQuestion();
+
+    }
+
+
+    private class Question {
+        private int mQuestion;
+        private boolean mAnswer;
+
+        public Question(int s, boolean b) {
+            mQuestion = s;
+            mAnswer = b;
+        }
+
+        public int getTextResId() {
+            return mQuestion;
+        }
+
+        public boolean isAnswerTrue() {
+            return mAnswer;
+        }
+
+    }
+
+}
+
+
+```
+
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F0F0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/question_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Hello World!"
+        android:textSize="20sp"
+        android:padding="30dp"
+        android:textColor="#000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp">
+
+        <Button
+            android:id="@+id/true_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:textColor="#FFFFFF"
+            android:text="True" />
+
+        <Button
+            android:id="@+id/false_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:textColor="#FFFFFF"
+            android:text="False" />
+    </LinearLayout>
+
+</LinearLayout>
+
+```
+
+
+```xml
+<resources>
+    <string name="app_name">GlobeTrotter</string>
+    <string name="correct_toast">Correct</string>
+    <string name="incorrect_toast">Wrong</string>
+    <string name="is_australia_a_continent">Is Australia a continent?</string>
+    <string name="does_russia_share_a_border_with_kazakhstan">Does Russia share a border with Kazakhstan?</string>
+
+</resources>
+```
+
+For those who like challenges, you can try 
+
+
+## Extension for the GlobeTrotter App
+
+The current GlobeTrotter app only has two questions and the functionality to check if the answer is correct or incorrect. Here is an extension for the app that can be used as an assignment for beginner android app developers.
+
+1. Add more questions: 
+    - Add more questions to the `Question[]` array. 
+    - The questions should be related to geography and should have a boolean answer (true or false). 
+
+2. Add a scoring mechanism: 
+    - Keep track of the number of correct answers. 
+    - Show the score after the quiz is finished.
+
+3. Add a navigation mechanism: 
+    - Add a next button to go to the next question.
+    - Add a previous button to go back to the previous question.
+
+4. Add a shuffle mechanism: 
+    - Shuffle the questions so that they appear in a random order each time the quiz is taken. 
+    - Ensure that each question is only asked once.
+
+5. Add a timer: 
+    - Add a timer to limit the time for each question.
+    - Show the time remaining for each question.
+
+6. Add a submit button: 
+    - Add a submit button that allows the user to submit their answers after the timer has run out.
+    - Show the score after the user submits their answers.
+
+7. Add a reset button: 
+    - Add a reset button that allows the user to reset the quiz.
+    - Reset the score, the current index, and the timer.
+
+This extension should provide a good starting point for beginner android app developers to practice.
+
+
+## Let's add Add a scoring mechanism: 
+    - Keep track of the number of correct answers. 
+    - Show the score after the quiz is finished.
+
+Compared with the code above, most of our updates would be in the `checkAnswer` function. The updates to the `checkAnswer` function will include adding a scoring mechanism. The code will keep track of the number of correct answers by incrementing the `mScore` variable whenever the user provides a correct answer `(mScore++)`. At the end of the quiz, the score will be displayed in a Toast message, which will show the value of `mScore` and the total number of questions in the quiz `(Toast.makeText(this, "Score: " + mScore + " out of " + mQuestionBank.length, Toast.LENGTH_SHORT).show();)`. 
+
+```java
+private void checkAnswer(boolean userPressedTrue) {
+    boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
+    int messageResId = 0;
+    if (userPressedTrue == answerIsTrue) {
+        messageResId = R.string.correct_toast;
+        mScore++;
+    } else {
+        messageResId = R.string.incorrect_toast;
+    }
+    Toast.makeText(this, messageResId, Toast.LENGTH_SHORT).show();
+
+    if (mQuestionBank.length > mCurrentIndex + 1) {
+        mCurrentIndex += 1;
+        updateQuestion();
+    } else {
+        Toast.makeText(this, "That is the end of the Quiz.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Score: " + mScore + " out of " + mQuestionBank.length, Toast.LENGTH_SHORT).show();
+    }
+}
+
+```
+
+The updated `MainActivity` now looks like this 
+
+
+```java
+package com.example.globetrotter;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+/**
+ * The main activity of the quiz app.
+ * The app presents the user with questions to answer, and the score is
+ * displayed after all questions have been answered.
+ */
+public class MainActivity extends AppCompatActivity {
+    // Button for True answer
+    private Button mTrueButton;
+    // Button for False answer
+    private Button mFalseButton;
+    // TextView to display the question
+    private TextView mQuestionTextView;
+
+    // An array of questions to be displayed
+    private Question[] mQuestionBank = new Question[]{
+            new Question(R.string.is_australia_a_continent, true),
+            new Question(R.string.does_russia_share_a_border_with_kazakhstan, true),
+    };
+    // The index of the current question
+    private int mCurrentIndex = 0;
+    // The score of the user's answers
+    private int mScore = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Bind the TextView to the corresponding UI element
+        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
+        // Bind the True button to the corresponding UI element
+        mTrueButton = (Button) findViewById(R.id.true_button);
+        // Set an OnClickListener for the True button
+        mTrueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(true);
+            }
+        });
+        // Bind the False button to the corresponding UI element
+        mFalseButton = (Button) findViewById(R.id.false_button);
+        // Set an OnClickListener for the False button
+        mFalseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(false);
+            }
+        });
+
+        // Show the first question
+        updateQuestion();
+    }
+
+    /**
+     * Updates the TextView to show the current question.
+     */
+    private void updateQuestion() {
+        int questionResId = mQuestionBank[mCurrentIndex].getTextResId();
+        String question = getString(questionResId);
+        mQuestionTextView.setText(question);
+    }
+
+    /**
+     * This method checks the answer of the question and updates the score accordingly.
+     *
+     * @param userPressedTrue represents the answer selected by the user
+     */
+    private void checkAnswer(boolean userPressedTrue) {
+        boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
+        int messageResId = 0;
+        if (userPressedTrue == answerIsTrue) {
+            messageResId = R.string.correct_toast;
+            mScore++;
+        } else {
+            messageResId = R.string.incorrect_toast;
+        }
+        Toast.makeText(this, messageResId, Toast.LENGTH_SHORT).show();
+
+        if (mQuestionBank.length > mCurrentIndex + 1) {
+            mCurrentIndex += 1;
+            updateQuestion();
+
+        } else {
+            Toast.makeText(this, "That is the end of the Quiz.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Score: " + mScore + " out of " + mQuestionBank.length, Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    private class Question {
+        private int mQuestion;
+        private boolean mAnswer;
+
+        public Question(int s, boolean b) {
+            mQuestion = s;
+            mAnswer = b;
+        }
+
+        public int getTextResId() {
+            return mQuestion;
+        }
+
+        public boolean isAnswerTrue() {
+            return mAnswer;
+        }
+
+    }
+
+
+}
+
+
+```
+
+## Adding a Timer to the Quiz
+
+To add a timer to the quiz, you will need to:
+- Create a timer object (such as a `CountDownTimer` in Android)
+- Start the timer when a new question is displayed
+- Update the time remaining display each time the timer ticks
+- Cancel the timer when the user answers the question or the quiz ends
+- Disable the user's ability to answer the question after the timer has run out
+- Display a message indicating that time has run out
+
+The `checkAnswer` function and the `updateQuestion` function should be updated to include a timer that limits the time for each question and displays the time remaining. Additionally, you may want to add a new class, such as `Timer` or `QuizTimer`, to handle the timer functionality and keep track of the time remaining for each question.
+
+In the `checkAnswer` function, you would start the timer and check if the time has run out before checking the user's answer. If the time has run out, you would display a message indicating that the time is up and move on to the next question. The new timer class could be implemented using the `CountDownTimer` class in Android, which allows you to set the duration of the timer and update the time remaining for each question. The time remaining for each question should be displayed in the quiz interface, for example, as a `TextView`.
 
 
