@@ -535,4 +535,66 @@ The `checkAnswer` function and the `updateQuestion` function should be updated t
 
 In the `checkAnswer` function, you would start the timer and check if the time has run out before checking the user's answer. If the time has run out, you would display a message indicating that the time is up and move on to the next question. The new timer class could be implemented using the `CountDownTimer` class in Android, which allows you to set the duration of the timer and update the time remaining for each question. The time remaining for each question should be displayed in the quiz interface, for example, as a `TextView`.
 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F0F0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/timer_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Time Remaining: 30s"
+        android:textSize="20sp"
+        android:padding="30dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/question_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Hello World!"
+        android:textSize="20sp"
+        android:padding="30dp"
+        android:textColor="#000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp">
+
+        <Button
+            android:id="@+id/true_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:textColor="#FFFFFF"
+            android:text="True" />
+
+        <Button
+            android:id="@+id/false_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:textColor="#FFFFFF"
+            android:text="False" />
+    </LinearLayout>
+
+</LinearLayout>
+
+
+```
+
 
