@@ -1,11 +1,11 @@
 # Getting Started with Android Development
 
-## 1.1 Introduction to Android
-## 1.2 Setting up your first project
-## 1.3 Launching a simulator
-## 1.4 Running the application
-## 1.5 Understanding the Android program structure
-## 1.6 Optimizing your applications
+- Introduction to Android
+- Setting up your first project
+- Launching a simulator
+- Running the application
+- Understanding the Android program structure
+- Optimizing your applications
 
 ### Instructions:
 - Run your first app and take a screenshot.
@@ -17,23 +17,23 @@
 
 # Designing the Android User Interface
 
-## 2.1 Overview of Android UI
-## 2.2 Creating a layout file
-## 2.3 Understanding LinearLayout
-## 2.4 Understanding RelativeLayout
-## 2.5 Understanding TableLayout
-## 2.6 Understanding FrameLayout
-## 2.7 Understanding TextView
-## 2.8 Understanding EditText
-## 2.9 Understanding Button
-## 2.10 Understanding RadioButton
-## 2.11 Understanding Checkbox
-## 2.12 Understanding ImageView
-## 2.13 Different types of ProgressBar
-## 2.14 Default Dialog
-## 2.15 Radio Dialog Box
-## 2.16 Multi-select Dialog
-## 2.17 Progress Bar Dialog Box and Message Box Dialog Box
+- Overview of Android UI
+- Creating a layout file
+- Understanding LinearLayout
+- Understanding RelativeLayout
+- Understanding TableLayout
+- Understanding FrameLayout
+- Understanding TextView
+- Understanding EditText
+- Understanding Button
+- Understanding RadioButton
+- Understanding Checkbox
+- Understanding ImageView
+- Different types of ProgressBar
+- Default Dialog
+- Radio Dialog Box
+- Multi-select Dialog
+- Progress Bar Dialog Box and Message Box Dialog Box
 
 ### Practice: Building a Survey App
 ### Goal:
@@ -41,19 +41,19 @@
 
 # Activities in Android Development
 
-## 3.1 Creating a new Activity
-## 3.2 Connecting the Activity Java file to the layout XML file
-## 3.3 Understanding the AndroidManifest file
-## 3.4 Creating Explicit intents
-## 3.5 Creating Implicit intents
-## 3.6 Transferring data between activities
-## 3.7 Designing a Login UI
-## 3.8 Implementing the Login coding
-## 3.9 Returning results to the calling activity
-## 3.10 Examining the User Interface
-## 3.11 Implementing the first part of the application
-## 3.12 Implementing the second part of the application
-## 3.13 Implementing the third part of the application
+- Creating a new Activity
+- Connecting the Activity Java file to the layout XML file
+- Understanding the AndroidManifest file
+- Creating Explicit intents
+- Creating Implicit intents
+- Transferring data between activities
+- Designing a Login UI
+- Implementing the Login coding
+- Returning results to the calling activity
+- Examining the User Interface
+- Implementing the first part of the application
+- Implementing the second part of the application
+- Implementing the third part of the application
 
 ### Instructions:
 - Implement the Java or Kotlin code for collecting data from the Survey App.
@@ -63,19 +63,19 @@
 
 # Android Data Storage
 
-## 4.1 Overview of Android SharedPreferences
-## 4.2 Designing a Login app that uses SharedPreferences (part 1)
-## 4.3 Implementing the Login app that uses SharedPreferences in Java/Kotlin (part 2)
-## 4.4 Writing in SharedPreferences (part 3)
-## 4.5 Overview of Android file storage
-## 4.6 Designing a demo app using file storage (part 1)
-## 4.7 Implementing the demo app using file storage in Java/Kotlin (part 2)
-## 4.8 Writing in a file (part 3)
-## 4.9 Overview of XML data parsing
-## 4.10 Implementing XML parsing (part 1)
-## 4.11 Implementing XML parsing (part 2)
-## 4.12 Overview of JSON file
-## 4.13 Implementing JSON parsing
+- Overview of Android SharedPreferences
+- Designing a Login app that uses SharedPreferences (part 1)
+- Implementing the Login app that uses SharedPreferences in Java/Kotlin (part 2)
+- Writing in SharedPreferences (part 3)
+- Overview of Android file storage
+- Designing a demo app using file storage (part 1)
+- Implementing the demo app using file storage in Java/Kotlin (part 2)
+- Writing in a file (part 3)
+- Overview of XML data parsing
+- Implementing XML parsing (part 1)
+- Implementing XML parsing (part 2)
+- Overview of JSON file
+- Implementing JSON parsing
 
 ### Instructions:
 - Implement the Java code for storing the collected data from the Survey App in a JSON file.
