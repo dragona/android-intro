@@ -1,7 +1,5 @@
 ---
 marp: true
-theme: gaia
-class: lead
 ---
 <!-- paginate: true -->
 
@@ -12,21 +10,16 @@ class: lead
 
 }
 -->
-<style>
-  :root {
-    --color-background: #fff;
-    --color-background-code: #000;
-    --color-background-paginate: rgba(128, 128, 128, 0.05);
-    --color-foreground: #000;
-    --color-highlight: #000;
-    --color-highlight-hover: #000;
-    --color-highlight-heading: #000;
-    --color-header: #000;
-    --color-header-shadow: transparent;
-  }
-</style>
 
-# Getting Started with Android Development
+
+Android Development
+===
+
+![h:250](./images/sse.png)
+
+# Getting Started
+
+by Feno Heriniaina(fenoheriniaina@cqu.edu.cn)
 
 
 ---
@@ -117,8 +110,8 @@ class: lead
 ### Activities in Android  - part 1
 
 - Creating a new Activity
-- Connecting the Activity Java file to the layout XML file
 - Understanding the AndroidManifest file
+- Connecting the Activity Java file to the layout XML file
 - Creating Explicit intents
 - Creating Implicit intents
 
@@ -126,11 +119,8 @@ class: lead
 
 ### Activities in Android  - part 2
 - Transferring data between activities
-- Designing a Login UI
-- Implementing the Login coding
 - Returning results to the calling activity
-- Examining the User Interface
-- Implementing the  the application
+
 
 
 ---
@@ -213,23 +203,5 @@ This hand's on project for this unit is to create a registration app that allows
 
 The app should allow for complete CRUD operations and have a list view that displays the recorded information.
 
----
-
-<!--
-{
-"header": "Grading Scheme"
-}
--->
-
-# Grading Scheme
-
----
-
-### Grading Scheme
-
-Assessment of your performance in the course will be based on the following components:
-
-- 8 assignments, contributing 40% to your final grade
-- One mini project, accounting for 60% of your final grade
 
 
