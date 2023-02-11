@@ -1,110 +1,235 @@
+---
+marp: true
+theme: gaia
+class: lead
+---
+<!-- paginate: true -->
+
+<!--
+{
+  "header": "",
+  "footer": " Dr. Feno Heriniaina - Mobile Application Dev."
+
+}
+-->
+<style>
+  :root {
+    --color-background: #fff;
+    --color-background-code: #000;
+    --color-background-paginate: rgba(128, 128, 128, 0.05);
+    --color-foreground: #000;
+    --color-highlight: #000;
+    --color-highlight-hover: #000;
+    --color-highlight-heading: #000;
+    --color-header: #000;
+    --color-header-shadow: transparent;
+  }
+</style>
+
 # Getting Started with Android Development
 
-- Introduction to Android
-- Setting up your first project
-- Launching a simulator
-- Running the application
-- Understanding the Android program structure
-- Optimizing your applications
 
-### Instructions:
-- Run your first app and take a screenshot.
+---
 
-### Goals:
+<!--
+{
+
+"header": "Getting Started with Android Development",
+"footer": " Dr. Feno Heriniaina - Mobile Application Dev."
+
+
+}
+-->
+
+1. Introduction to Android
+2. Setting up your first project
+3. Launching a simulator
+4. Running the application
+5. Understanding the Android program structure
+6. Optimizing your applications
+
+---
+
+### Goals
 - Prepare the development environment
 - Familiarize yourself with Android Studio
 - Learn how to submit your assignments
 
+---
+<!--
+{
+"header": "Designing the Android User Interface"
+}
+-->
+
 # Designing the Android User Interface
 
-- Overview of Android UI
+---
+   
+
+### Overview of Android UI
 - Creating a layout file
 - Understanding LinearLayout
 - Understanding RelativeLayout
 - Understanding TableLayout
 - Understanding FrameLayout
+
+---
+
+### Understanding UI elements
 - Understanding TextView
 - Understanding EditText
 - Understanding Button
 - Understanding RadioButton
 - Understanding Checkbox
 - Understanding ImageView
+
+---
+
+### ProgressBar and Dialogs
 - Different types of ProgressBar
 - Default Dialog
 - Radio Dialog Box
 - Multi-select Dialog
 - Progress Bar Dialog Box and Message Box Dialog Box
 
-### Practice: Building a Survey App
-### Goal:
-- Gain mastery in the basics of Android UI development using Android Studio.
 
-# Activities in Android Development
+---
+
+<!--
+{
+"header": "Designing the Android User Interface > Building a Survey App"
+}
+-->
+
+### Practice: Building a Survey App
+
+
+- Goal: Gain mastery in the basics of Android UI development using Android Studio.
+- Instruction: Implement the Java or Kotlin code for collecting data from the Survey App.
+---
+<!--
+{
+"header": "Designing the Android User Interface > Building a Survey App > Activities "
+}
+-->
+
+### Activities in Android  - part 1
 
 - Creating a new Activity
 - Connecting the Activity Java file to the layout XML file
 - Understanding the AndroidManifest file
 - Creating Explicit intents
 - Creating Implicit intents
+
+---
+
+### Activities in Android  - part 2
 - Transferring data between activities
 - Designing a Login UI
 - Implementing the Login coding
 - Returning results to the calling activity
 - Examining the User Interface
-- Implementing the first part of the application
-- Implementing the second part of the application
-- Implementing the third part of the application
+- Implementing the  the application
 
-### Instructions:
-- Implement the Java or Kotlin code for collecting data from the Survey App.
 
-### Goal:
-- Master the use of different Android widgets and activities.
+---
+<!--
+{
+"header": "Designing the Android User Interface > Building a Survey App > Android Data Storage "
+}
+-->
 
-# Android Data Storage
+### Android Data Storage - part 1
 
 - Overview of Android SharedPreferences
-- Designing a Login app that uses SharedPreferences (part 1)
-- Implementing the Login app that uses SharedPreferences in Java/Kotlin (part 2)
-- Writing in SharedPreferences (part 3)
+- Designing a Login app that uses SharedPreferences
+- Implementing the Login app that uses SharedPreferences in Java/Kotlin
+- Writing in SharedPreferences
+
+---
+
+
+### Android Data Storage - part 2
 - Overview of Android file storage
-- Designing a demo app using file storage (part 1)
-- Implementing the demo app using file storage in Java/Kotlin (part 2)
-- Writing in a file (part 3)
+- Designing a demo app using file storage
+- Implementing the demo app using file storage in Java/Kotlin
+- Writing in a file
+
+---
+
+<!--
+{
+"header": "Designing the Android User Interface > Building a Survey App > Android Data Storage "
+}
+-->
+
+### Android Data Storage - part 1
 - Overview of XML data parsing
-- Implementing XML parsing (part 1)
-- Implementing XML parsing (part 2)
+- Implementing XML parsing
+
+---
+
+### Android Data Storage - part 2
 - Overview of JSON file
 - Implementing JSON parsing
 
-### Instructions:
-- Implement the Java code for storing the collected data from the Survey App in a JSON file.
+---
 
-### Goal:
-- Gain mastery in saving data in an Android device as a JSON file.
-
-# SQLite database in Android
-
-In this unit, we will cover the basics of SQLite database in Android. You will learn how to create a database, perform basic operations and implement
+<!--
+{
+"header": "Designing the Android User Interface > Building a Survey App > SQLite database in Android "
+}
+-->
 
 
-# SQLite Database in Android 
+### SQLite database in Android - part 1
 
 In this unit, you will cover the basics of SQLite database in Android, including:
 - Creating an SQLite database 
 - Basic SQLite operations
 - Developing a record information app that includes design, code implementation, and writing to the database
+
+---
+
+### SQLite database in Android - part 2
+
 - Using Android ListView with BaseAdapter, ArrayAdapter and SimpleAdapter
 - Optimizing ListView with recycling views and using ViewHolder
 - Advanced design and implementation of ListView
 
-## Final Project 
+---
+<!--
+{
+"header": "Hand's on project "
+}
+-->
 
-The final project of this unit is to create a registration app that allows the user to enter their name, email, and phone number, and save the information in a database. The app should allow for complete CRUD operations and have a list view that displays the recorded information.
+# Hand's on Project 
 
-## Grading Scheme
+---
+
+This hand's on project for this unit is to create a registration app that allows the user to enter their name, email, and phone number, and save the information in a database. 
+
+The app should allow for complete CRUD operations and have a list view that displays the recorded information.
+
+---
+
+<!--
+{
+"header": "Grading Scheme"
+}
+-->
+
+# Grading Scheme
+
+---
+
+### Grading Scheme
 
 Assessment of your performance in the course will be based on the following components:
 
 - 8 assignments, contributing 40% to your final grade
 - One mini project, accounting for 60% of your final grade
+
+
