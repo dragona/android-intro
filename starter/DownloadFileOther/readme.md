@@ -1,199 +1,122 @@
-AsyncTask is a utility class in Android that allows you to perform background operations and publish results on the UI thread. It's useful when you have a small amount of background work to do that doesn't require a separate service or thread.
+# Understanding Android Download Task
 
-Some examples of when you might use an AsyncTask in Android include:
+The Android `DownloadTask` is a utility class that helps you to perform background operations and publish results on the UI thread. It is useful when you have a small amount of background work to do that doesn't require a separate service or thread.
 
-- Downloading data from a network or a file and displaying the data in a UI element.
-- Performing a database query and updating the UI with the query results.
-- Doing some computation in the background and updating the UI with the results.
+In this article, we will be looking at a sample Android code that shows how to download data from the web and display the result in a text view using the `DownloadTask` class.
 
-It's important to note that AsyncTask is designed to be used only a few times in an application's lifecycle. If you have a lot of background work to do, you should use a service or a thread instead.
+## Understanding the Code
 
-AsyncTask is also not suitable for tasks that might take a long time to complete, such as downloading a large file or performing a complex computation. In these cases, you should use a service or a thread to avoid tying up the UI thread for too long.
-
-
-Here are the steps that happen when you download a text file using an Android AsyncTask:
-
-1- Create an AsyncTask class that extends AsyncTask<Params, Progress, Result>.
-2- In the doInBackground() method, create a URL object with the URL of the text file you want to download.
-3- Open an HttpURLConnection and set the request method to "GET".
-4- Connect to the server by calling the connect() method on the HttpURLConnection.
-5- Read the response from the server using an InputStreamReader and a BufferedReader.
-6- Convert the response to a string using a StringBuilder.
-7- Return the string from the doInBackground() method.
-8- In the onPostExecute() method, display the downloaded text file in a TextView or do something else with the data.
-
-
-
-Here is a snippet of code that demonstrates how to use an AsyncTask to download a text file in
-Android:
+The code starts with an `onCreate()` method, which sets up the UI of the app. There is a button (`mDownloadButton`), an edit text (`mUrlEditText`) where the user can input the URL of the file they want to download, and a text view (`mResultTextView`) that will display the result of the download.
 
 ```java
+mDownloadButton = findViewById(R.id.download_button);
+mUrlEditText = findViewById(R.id.url_edit_text);
+mResultTextView = findViewById(R.id.result_text_view);
+```
+
+When the user clicks the download button (mDownloadButton), the app checks if the URL is valid, and if it is, it disables the button and starts the download using the DownloadTask class.
+
+```java
+
+mDownloadButton.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        String url = mUrlEditText.getText().toString();
+
+        if (url.isEmpty()) {
+            Toast.makeText(MainActivity.this, "Please enter a URL", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (url.matches("(https?)://[a-zA-Z0-9./_-]+")) {
+            // URL is valid, proceed with the request
+            mDownloadButton.setEnabled(false); // Disable the button
+            new DownloadTask().execute(url);
+        } else {
+            // URL is not valid, show an error message to the user
+            Toast.makeText(MainActivity.this, "Invalid URL. Please enter a valid HTTPS or HTTP URL.", Toast.LENGTH_LONG).show();
+        }
+
+    }
+});
+
+```
+
+The DownloadTask class extends AsyncTask<String, Void, String>, which means that it takes a String as a parameter, doesn't use a progress bar, and returns a String.
+
+```java
+
 private class DownloadTask extends AsyncTask<String, Void, String> {
-
-    @Override
-    protected String doInBackground(String... urls) {
-        String result = "";
-        URL url;
-        HttpURLConnection urlConnection = null;
-
-        try {
-            url = new URL(urls[0]);
-            urlConnection = (HttpURLConnection) url.openConnection();
-            InputStream in = urlConnection.getInputStream();
-            InputStreamReader reader = new InputStreamReader(in);
-            int data = reader.read();
-
-            while (data != -1) {
-                char current = (char) data;
-                result += current;
-                data = reader.read();
-            }
-
-            return result;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "Failed";
-        }
-    }
+    // ...
 }
 
 ```
 
-To use this AsyncTask, you can call execute() on an instance of it, passing in the URL of the text
-file you want to download as a parameter. For example:
+The DownloadTask class has three methods that you need to implement: onPreExecute(), doInBackground(), and onPostExecute().
 
+## onPreExecute()
+
+The onPreExecute() method is called before the doInBackground() method is executed. In this method, we disable the download button.
 
 ```java
-DownloadTask task=new DownloadTask();
-task.execute("http://www.example.com/textfile.txt");
+@Override
+protected void onPreExecute() {
+    super.onPreExecute();
+    mDownloadButton.setEnabled(false);
+}
+
 ```
 
-The AsyncTask will then run in the background, and the doInBackground() method will be called to download the file. When the download is complete, the AsyncTask will return the contents of the file as a string. You can then use this string to display the contents of the file in your app.
-
-It's important to note that AsyncTask is a convenience class and not a replacement for a more robust threading solution. It's intended for simple tasks that don't require the full power of the java.util.concurrent package. For more complex tasks, you may want to consider using Thread or HandlerThread.
-
-As of Android 11 (API level 30), the AsyncTask class is deprecated and is no longer recommended for use. Instead, you can use the java.util.concurrent package to perform tasks in the background.
-
-Here is an example of how you can use a Thread to download a text file in Android:
-
+## doInBackground()
+The doInBackground() method is where the actual download takes place. This method runs in the background thread, so it doesn't block the UI thread. In this method, we create a URL object with the URL of the file we want to download, open an HttpURLConnection, set the request method to "GET", and set the user agent.
 
 ```java
-class DownloadThread extends Thread {
-    private String url;
+protected String doInBackground(String... urls) {
 
-    public DownloadThread(String url) {
-        this.url = url;
-    }
-
-    @Override
-    public void run() {
         String result = "";
-        URL url;
+        String url = urls[0];
         HttpURLConnection urlConnection = null;
 
         try {
-            url = new URL(this.url);
-            urlConnection = (HttpURLConnection) url.openConnection();
-            InputStream in = urlConnection.getInputStream();
-            InputStreamReader reader = new InputStreamReader(in);
-            int data = reader.read();
+        URL urlObject = new URL(url);
+        urlConnection = (HttpURLConnection) urlObject.openConnection();
+        urlConnection.setRequestMethod("GET");
+        urlConnection.setRequestProperty("User-Agent", USER_AGENT);
+        InputStream in = urlConnection.getInputStream();
+        InputStreamReader reader = new InputStreamReader(in);
+        int data = reader.read();
 
-            while (data != -1) {
-                char current = (char) data;
-                result += current;
-                data = reader.read();
-            }
+        while (data != -1) {
+        char current = (char) data;
+        result += current;
+        data = reader.read();
+        }
         } catch (Exception e) {
-            e.printStackTrace();
-            result = "Failed";
+        e.printStackTrace();
+        result = "Failed";
         } finally {
-            if (urlConnection != null) {
-                urlConnection.disconnect();
-            }
+        if (urlConnection != null) {
+        urlConnection.disconnect();
+        }
         }
 
-        // Use the result here
-    }
-}
-
+        return result;
+        }
 ```
 
-
-To use this Thread, you can create a new instance of it and call start() on it, like this:
-
+## onPostExecute()
+The onPostExecute() method is called after the doInBackground() method is finished. In this method, we enable the download button and display the result in the text view.
 
 ```java
-DownloadThread thread = new DownloadThread("http://www.example.com/textfile.txt");
-thread.start();
+@Override
+protected void onPostExecute(String s) {
+        super.onPostExecute(s);
+        mDownloadButton.setEnabled(true); // Enable the button
+        mResultTextView.setText(s);
+        }
+
 ```
 
+## Conclusion
 
-This will create a new thread and start it running in the background. The run() method will be called to download the file, and when the download is complete, the result variable will contain the contents of the file as a string.
-
-Another option is to use a HandlerThread, which is a Thread that has a Looper attached to it. This allows you to use a Handler to schedule work to be run on the thread. Here is an example of how you can use a HandlerThread to download a text file in Android:
-
-
-```java
-class DownloadHandlerThread extends HandlerThread {
-    private String url;
-    private Handler handler;
-
-    public DownloadHandlerThread(String name, String url) {
-        super(name);
-        this.url = url;
-    }
-
-    @Override
-    protected void onLooperPrepared() {
-        handler = new Handler(getLooper()) {
-            @Override
-            public void handleMessage(Message msg) {
-                String result = "";
-                URL url;
-                HttpURLConnection urlConnection = null;
-
-                try {
-                    url = new URL(url);
-                    urlConnection = (HttpURLConnection) url.openConnection();
-                    InputStream in = urlConnection.getInputStream();
-                    InputStreamReader reader = new InputStreamReader(in);
-                    int data = reader.read();
-
-                    while (data != -1) {
-                        char current = (char) data;
-                        result += current;
-                        data = reader.read();
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    result = "Failed";
-                } finally {
-                    if (urlConnection != null) {
-                        urlConnection.disconnect();
-                    }
-                }
-                // Use the result here
-            }
-        };
-    }
-
-    public void download() {
-        handler.sendEmptyMessage(0);
-    }
-}
-```
-
-
-To use this `HandlerThread`, you can create a new instance of it, start it running, and then use the `download()` method to schedule a download on the thread. Here's an example:
-
-
-```java
-DownloadHandlerThread thread = new DownloadHandlerThread("download", "http://www.example.com/textfile.txt");
-thread.start();
-thread.download();
-```
-
-
-This will create a new `HandlerThread`, start it running, and then use the `Handler` to schedule a download on the thread. The `handleMessage()` method will be called to download the file, and when the download is complete, the `result` variable will contain the contents of the file as a string.
-
-It's important to note that these examples are just a starting point and are not intended to be used in production code without further testing and optimization. You should also make sure to handle any exceptions that may be thrown and to properly close any connections and streams when you are finished with them.
+In this article, we've looked at a sample Android code that uses the DownloadTask class to download data from the web and display it in a text view. We saw how the DownloadTask class works and how to implement its three methods: onPreExecute(), doInBackground(), and onPostExecute(). You can use this code as a starting point for your own download tasks in your Android apps.
