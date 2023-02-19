@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal">
+    <!-- The first child of the LinearLayout is a FrameLayout with a width of 200dp and a height that matches the parent. -->
+
+    <FrameLayout
+        android:layout_width="200dp"
+        android:layout_height="match_parent" />
+
+    <!-- The second child of the LinearLayout is another LinearLayout with a width and height that matches the parent.
+    This LinearLayout has a vertical orientation. -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- The first child of this LinearLayout is a FrameLayout with a width and height that match the parent.
+        The layout_weight attribute is set to 1 which means it takes up equal space to its sibling. The background
+        color is set to holo_red_light which is a predefined Android color. -->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_red_light" />
+
+        <!-- The second child of this LinearLayout is another FrameLayout with a width and height that match the parent.
+        The layout_weight attribute is also set to 1 which means it takes up equal space to its sibling. The background
+        color is set to holo_green_dark which is a predefined Android color. -->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_dark" />
+
+    </LinearLayout>
+</LinearLayout>

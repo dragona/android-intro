@@ -1,0 +1,4 @@
+/Users/studio/Library/Android/sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  /Users/studio/Downloads/android-intro/starter/ActivityDemo/openCV/.cxx/Debug/1n2f24t2/x86_64 \
+  opencv_jni_shared

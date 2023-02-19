@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GlobeTrotter</string>
+    <string name="correct_toast">Correct</string>
+    <string name="incorrect_toast">Wrong</string>
+    <string name="is_australia_a_continent">Is Australia a continent?</string>
+    <string name="does_russia_share_a_border_with_kazakhstan">Does Russia share a border with Kazakhstan?</string>
+
+</resources>

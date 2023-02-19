@@ -2,6 +2,8 @@ package mg.x261.mediaplayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,11 +19,12 @@ import java.util.concurrent.TimeUnit;
 /*
 TODO:
       - [x] Auto load the audio time when the audio is selected
-      - Use service to play the audio
-      - Feed media player from source db
+      - [] Feed media player from source db
       - [x] Time format 00:00 but not 0:0 -> 01:01 but not 1:1
-      - Changes icons based on the playing state
-      - A dedicated place for the Pause button is not needed, we should replace the play with pause when the music is playing
+      - [x] Changing current playing position using the seekbar
+      - [] Changes icons based on the playing state
+      - [] A dedicated place for the Pause button is not needed, we should replace the play with pause when the music is playing
+      - [] Use service to play the audio
 
  */
 public class MainActivity extends AppCompatActivity {
@@ -39,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Set volume audio to max
+        AudioManager mAudioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
+        int origionalVolume = mAudioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+        mAudioManager.setStreamVolume(AudioManager.STREAM_MUSIC, mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC), 0);
+
 
         backwardBtn = findViewById(R.id.btnBackward);
         forwardBtn = findViewById(R.id.btnForward);
@@ -47,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         songName = findViewById(R.id.txtSname);
         startTime = findViewById(R.id.txtStartTime);
         songTime = findViewById(R.id.txtSongTime);
-
+        // TODO: song listing source should be updated
         Songs song = new Songs("Live Sayd", "mrsaydalivesccoustique");
 
         loadAudio(song);
