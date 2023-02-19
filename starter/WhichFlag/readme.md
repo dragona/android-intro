@@ -1,24 +1,27 @@
-# DFlag Android Application
+# Starter code for DFlag Android Application
 
-This Android app makes use of the following components:
+![start](./starter.png)
+
+This Android app uses two components:
 
 - `android:windowSoftInputMode="adjustResize"`
 - Card view from Material Design
 
 ## `android:windowSoftInputMode="adjustResize"`
 
-When set on an activity in the application, this attribute defines how the `EditText` in a form and the soft keyboard should interact in case of potential overlap.
+The `android:windowSoftInputMode="adjustResize"` attribute is set on an activity to define how the `EditText` in a form and the soft keyboard should interact in case of potential overlap.
 
 ## Card View
 
-The app makes use of the [Card View](https://developer.android.com/guide/topics/ui/layout/cardview) component from Material Design for visually appealing user interface elements.
+The app uses the [Card View](https://developer.android.com/guide/topics/ui/layout/cardview) component from Material Design for visually appealing user interface elements.
 
 
-## Description of the below Android Layout
+## Android Layout
 
-This layout is a `CardView` which is a material design element for displaying items in a container that has a drop shadow and rounded edges.
+The app uses a `CardView`, which is a material design element for displaying items in a container that has a drop shadow and rounded edges.
 
-#### CardView
+### CardView
+
 - The `CardView` has an `id` of `@+id/card_view`.
 - `width` is set to `match_parent` and `height` to `wrap_content`.
 - It is positioned `centerInParent` with a `margin` of `16dp`.
@@ -26,16 +29,19 @@ This layout is a `CardView` which is a material design element for displaying it
 - The `elevation` is set to `8dp`.
 - The `cardCornerRadius` is set to `8dp`.
 
-#### LinearLayout
+### LinearLayout
+
 - A `LinearLayout` with `width` set to `match_parent` and `height` to `wrap_content` is nested inside the `CardView`.
 - `orientation` is set to `vertical` with `layout_margin` of `16dp`.
 
-#### TextView
+### TextView
+
 - Two `TextView`s are nested inside the `LinearLayout`.
 - The first `TextView` displays the text "Welcome" in size `30sp`.
 - The second `TextView` displays the text "What is your name?" in size `16sp`.
 
-#### TextInputLayout and TextInputEditText
+### TextInputLayout and TextInputEditText
+
 - A `TextInputLayout` with a `style` of `@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense` is nested inside the `LinearLayout`.
 - The `hint` attribute is set to `Username`.
 - The `width` is set to `match_parent` and the `height` to `wrap_content`.
@@ -44,7 +50,8 @@ This layout is a `CardView` which is a material design element for displaying it
 - `padding` is set to `8dp` and `maxLength` to `15`.
 - `singleLine` is set to `true`.
 
-#### Button
+### Button
+
 - A `Button` is nested inside the `LinearLayout`.
 - `width` is set to `match_parent` and `height` to `wrap_content`.
 - `margin` is set to `16dp` and the text size to `16sp`.
