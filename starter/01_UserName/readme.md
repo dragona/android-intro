@@ -1,50 +1,52 @@
-# Getting user input in Android (Java)
+## User Input in Android (Java)
 
-This Android application allows users to input text in an EditText. When the EditText has some inputs, and the button "Proceed" is pressed, the app will retrieve the input text and print it in a TextView placed below the button.
+This Android app lets users enter text into an `EditText` field. When text is entered and the "Proceed" button is pressed, the app retrieves the input text and displays it in a `TextView` below the button.
 
-## Problem decomposition
+### Problem Breakdown
 
-### Get to know:
-The components of the application: TextView, EditText, Button, and View
+#### Components
+- TextView
+- EditText
+- Button
+- View
+
+Here's a visual representation:
 
 ![Getting the user input](display/Intro_Getting_user_Input.gif)
 
-### Feature selection
-We will complete this application in two versions.
 
-- [ ] Features version 1
-  - [ ] the application has a single activity.
-  - [ ] the application has a text view that displays "Enter the name"
-  - [ ] the application has an editText that will be used to retrieve the user input.
-  - [ ] the application has a button named "Proceed". When the button is pressed, the text from the editText is retrieved and displayed in a textview below the button.
-  - [ ] the application has a TextView below the button to show the text inserted by the user
-  - [ ] a view (line) separates the button and the TextView below it
+#### Feature Selection
+The application will have two versions:
 
-- [ ] Features version 2
-  - [ ] all the features of version 1
-  - [ ] validate user input
-    - [ ] display an informative toast if a user presses the button Process, but the edit text is still empty.
-    - [ ] remove the trailing spaces from the user input
-  - [ ] clear the edit text after the user presses the button
+##### Version 1
+- [ ] Single activity
+- [ ] "Enter the name" displayed in a TextView
+- [ ] EditText to retrieve user input
+- [ ] "Proceed" button retrieves input text and displays it in a TextView below the button
+- [ ] A view separates the button and the TextView
 
+##### Version 2
+- [ ] All features from Version 1
+- [ ] User input validation
+  - [ ] Informative toast if button is pressed but editText is empty
+  - [ ] Trailing spaces removed from user input
+- [ ] EditText cleared after button press
 
+#### Final Product
+Here's what the completed Version 2 will look like:
 
-### Finished application:
+##### Building Version 1
+To build Version 1, follow these steps:
 
-
-The completed application (Version 2) looks like this:
-
-## Building the application version 1:
-
-Using the android studio, create a new application with one activity.
+1. Create a new app with one activity using Android Studio
 
 
 ![New project - Android View](display/new_project.png)
 
-We will edit the following files:
-- manifest.xml,
-- MainActivity.java
-- activity_main.xml
+2. Edit these files:
+   - manifest.xml
+   - MainActivity.java
+   - activity_main.xml
 
 #### manifest.xml
 

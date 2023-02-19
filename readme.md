@@ -1,15 +1,12 @@
 ![Dragona](dragona-android.gif)
 
-# Android resources
+# Android Resources: Essential Elements for Developing Android Apps.
 
-The building blocks of Android Application development.
+### Introduction:
+This repository offers a wide range of Android content, with a focus on well-commented code. The topics covered include life cycle management, layout design, button design and implementation, implicit intents, image buttons, user input with EditText, radio buttons, checkboxes, and activities. The account also covers more advanced topics such as custom dialogs, color selection, gradient backgrounds, weather app design, audio recording, database integration, fragments, webviews, services, fingerprint authentication, app private directories, and assets folders. Additionally, the account provides resources for understanding and implementing Android design for developers, as well as samples of architecture components.
 
-
-
-## Getting Started
-
-This repository contains multiple demo projects, and the description for each project be found in the md file of every project folder.
-
+### Programming:
+The majority of the demo projects use Java language.
 
 ### Coding
 

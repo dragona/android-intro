@@ -1,19 +1,55 @@
-# DFlag
+# DFlag Android Application
 
-This an Android application that makes use of the following
+This Android app makes use of the following components:
+
+- `android:windowSoftInputMode="adjustResize"`
+- Card view from Material Design
+
+## `android:windowSoftInputMode="adjustResize"`
+
+When set on an activity in the application, this attribute defines how the `EditText` in a form and the soft keyboard should interact in case of potential overlap.
+
+## Card View
+
+The app makes use of the [Card View](https://developer.android.com/guide/topics/ui/layout/cardview) component from Material Design for visually appealing user interface elements.
 
 
-- android:windowSoftInputMode="adjustResize" 
-- Card view from material design
+## Description of the below Android Layout
 
+This layout is a `CardView` which is a material design element for displaying items in a container that has a drop shadow and rounded edges.
 
+#### CardView
+- The `CardView` has an `id` of `@+id/card_view`.
+- `width` is set to `match_parent` and `height` to `wrap_content`.
+- It is positioned `centerInParent` with a `margin` of `16dp`.
+- The `background` color is set to white.
+- The `elevation` is set to `8dp`.
+- The `cardCornerRadius` is set to `8dp`.
 
-## ```android:windowSoftInputMode="adjustResize"```
+#### LinearLayout
+- A `LinearLayout` with `width` set to `match_parent` and `height` to `wrap_content` is nested inside the `CardView`.
+- `orientation` is set to `vertical` with `layout_margin` of `16dp`.
 
-Set to the activity of the application, it defines how the editText in a form and the soft keyboard should behave in case of possible overlap.
+#### TextView
+- Two `TextView`s are nested inside the `LinearLayout`.
+- The first `TextView` displays the text "Welcome" in size `30sp`.
+- The second `TextView` displays the text "What is your name?" in size `16sp`.
 
-## Card
-https://developer.android.com/guide/topics/ui/layout/cardview
+#### TextInputLayout and TextInputEditText
+- A `TextInputLayout` with a `style` of `@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense` is nested inside the `LinearLayout`.
+- The `hint` attribute is set to `Username`.
+- The `width` is set to `match_parent` and the `height` to `wrap_content`.
+- A `TextInputEditText` is nested inside the `TextInputLayout`.
+- `width` and `height` are set to `match_parent`.
+- `padding` is set to `8dp` and `maxLength` to `15`.
+- `singleLine` is set to `true`.
+
+#### Button
+- A `Button` is nested inside the `LinearLayout`.
+- `width` is set to `match_parent` and `height` to `wrap_content`.
+- `margin` is set to `16dp` and the text size to `16sp`.
+- The text displayed is "Save".
+
 
 ```xml 
 
@@ -74,5 +110,24 @@ https://developer.android.com/guide/topics/ui/layout/cardview
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 ```
+
+<hr/>
+
+
+## Question
+What is the purpose of `android:layout_centerInParent="true"` in the `CardView` element?
+
+- A) It sets the center of the `CardView` to the center of its parent view.
+- B) It aligns the `CardView` to the top-center of its parent view.
+- C) It aligns the `CardView` to the bottom-center of its parent view.
+- D) It sets the height of the `CardView` to match its parent view.
+
+<details>
+  <summary>Answer</summary>
+  
+A) It sets the center of the `CardView` to the center of its parent view.
+  
+</details>
+
 
 

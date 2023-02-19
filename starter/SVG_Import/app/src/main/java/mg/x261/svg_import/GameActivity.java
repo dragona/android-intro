@@ -24,59 +24,58 @@ import java.util.Collections;
 import java.util.List;
 
 public class GameActivity extends AppCompatActivity {
+// Variables to store game related data
+String[] listAnswer;
+CustomDialog alert;
+List<Integer> flagsToLearnImageResources;
+ArrayAdapter<String> mAdapter;
+private int numberOfFlagsToRecognize;
+private TextView textView;
+private int trackerCurrentCorrectAnswer = 0;
+private ListView myListView;
+private TextView tvTracker;
+private ImageView imageFlag;
+private String text_answer;
+private final int numberFlagsToLearn = 10;
+private DbHelper databaseHelper;
+private int mistakeCounts = 0;
+private boolean firstMistakeFlag = true;
 
-    String[] listAnswer;
-    CustomDialog alert;
-    List<Integer> flagsToLearnImageResources;
-    ArrayAdapter<String> mAdapter;
-    private int numberOfFlagsToRecognize;
-    private TextView textView;
-    private int trackerCurrentCorrectAnswer = 0;
-    private ListView myListView;
-    private TextView tvTracker;
-    private ImageView imageFlag;
-    private String text_answer;
-    private final int numberFlagsToLearn = 10;
-    private DbHelper databaseHelper;
-    private int mistakeCounts = 0;
-    private boolean firstMistakeFlag = true; /* Used to track whether the user already made
-                                                a mistake on the given question without considering
-                                                previous game sessions*/
+// Method to create the activity and set the layout
+@RequiresApi(api = Build.VERSION_CODES.N)
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_game);
 
+    // Retrieve the continent selected from the previous activity
+    World world = new World();
+    databaseHelper = new DbHelper(this);
+    Bundle extras = getIntent().getExtras();
+    int continentSelectorIndex = extras.getInt("continent_selected");
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+    // Check if the selected index is valid and go back to selection if not
+    if ((continentSelectorIndex != (int) continentSelectorIndex) || (continentSelectorIndex >= world.getContinentsSize())) {
+        startActivity(new Intent(this, ContinentActivity.class));
+        finish();
+    }
 
-
-        //Retrieve the continent selected else go back to selection
-        World world = new World();
-        databaseHelper = new DbHelper(this);
-
-
-        Bundle extras = getIntent().getExtras();
-        int continentSelectorIndex = extras.getInt("continent_selected");
-        if ((continentSelectorIndex != (int) continentSelectorIndex) || (continentSelectorIndex >= world.getContinentsSize())) {
-            startActivity(new Intent(this, ContinentActivity.class));
-            finish();
-        }
-
-        String continenSelected = world.getContinents()[continentSelectorIndex];
-        setTitle(getString(R.string.app_name) + " : " + continenSelected);
-        String[] continents = world.getCountries(continenSelected);
-        int max_flags_loaded = continents.length;
-        List<String> _data = Arrays.asList(continents);
-        List<String> flagsToLearn = _data.subList(0, numberFlagsToLearn);
-        Collections.shuffle(_data);
-        // Getting the flags image resources ready
-        flagsToLearnImageResources = new ArrayList<>();
-        for (int i = 0; i < flagsToLearn.size(); i++) {
-            String imageId = flagsToLearn.get(i);
-            int flagResIDs = getResources().getIdentifier(imageId, "drawable", getPackageName());
-            flagsToLearnImageResources.add(flagResIDs);
-        }
+    // Set the title of the activity and retrieve the countries in the selected continent
+    String continenSelected = world.getContinents()[continentSelectorIndex];
+    setTitle(getString(R.string.app_name) + " : " + continenSelected);
+    String[] continents = world.getCountries(continenSelected);
+    int max_flags_loaded = continents.length;
+    List<String> _data = Arrays.asList(continents);
+    List<String> flagsToLearn = _data.subList(0, numberFlagsToLearn);
+    Collections.shuffle(_data);
+    
+    // Get the image resources for the flags to learn
+    flagsToLearnImageResources = new ArrayList<>();
+    for (int i = 0; i < flagsToLearn.size(); i++) {
+        String imageId = flagsToLearn.get(i);
+        int flagResIDs = getResources().getIdentifier(imageId, "drawable", getPackageName());
+        flagsToLearnImageResources.add(flagResIDs);
+    }
 
         /**
          *  Game logic
