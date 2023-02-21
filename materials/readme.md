@@ -63,6 +63,7 @@ That's where the Globetrotter app comes in. It's a fun and educational game that
 
 So, whether you're a student looking to improve your geography skills or simply someone who loves to explore the world, the Globetrotter app is the perfect tool for you!
 
+![Initial idea](./images/globTrotter000.png)
 We will start by creating an Android app called GlobeTrotter Quiz, which will prompt the user to press either TRUE or FALSE to answer a question displayed on the screen. The app will then provide instant feedback. To begin, we need a set of questions to use.
 
 
