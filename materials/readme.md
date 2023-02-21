@@ -225,7 +225,13 @@ In this specific case, the string resources define the name of the app (app_name
 Time to open the MainActivity.java code of our GlobeTrotter app. The code is responsible for creating the main activity of the application, which consists of a question displayed on a text view and two buttons to answer it.
 
 The class extends the AppCompatActivity class, 
-```java public class MainActivity extends AppCompatActivity {...}```
+
+```java 
+public class MainActivity extends AppCompatActivity {
+   //...
+}
+```
+
 which provides the base implementation for the activity. The class also declares private member variables, including the True and False buttons, a text view for the question, an array of Question objects, and an index to keep track of the current question.
 
 The `onCreate()` method is called when the activity is created, 
@@ -399,12 +405,14 @@ public class MainActivity extends AppCompatActivity {
 </details>
 
 
-For those who like challenges, you can try 
+If you followed with me, you should have something like this so far. 
 
+![First look of the globtrotter](./images/globTrotter004-part1.png)
 
 ## Extension for the GlobeTrotter App
 
-The current GlobeTrotter app only has two questions and the functionality to check if the answer is correct or incorrect. Here is an extension for the app that can be used as an assignment for beginner android app developers.
+The current GlobeTrotter app only has two questions and the functionality to check if the answer is correct or incorrect. 
+Here is an extension for the app that can be used as an assignment for beginner android app developers.
 
 1. Add more questions: 
     - Add more questions to the `Question[]` array. 
@@ -435,8 +443,17 @@ This extension should provide a good starting point for beginner android app dev
     - Keep track of the number of correct answers. 
     - Show the score after the quiz is finished.
 
-Compared with the code above, most of our updates would be in the `checkAnswer` function. The updates to the `checkAnswer` function will include adding a scoring mechanism. The code will keep track of the number of correct answers by incrementing the `mScore` variable whenever the user provides a correct answer `(mScore++)`. At the end of the quiz, the score will be displayed in a Toast message, which will show the value of `mScore` and the total number of questions in the quiz `(Toast.makeText(this, "Score: " + mScore + " out of " + mQuestionBank.length, Toast.LENGTH_SHORT).show();)`. 
+Compared with the code above, most of our updates would be in the `checkAnswer` function. The updates to the `checkAnswer` function will include adding a scoring mechanism. The code will keep track of the number of correct answers by incrementing the `mScore` variable whenever the user provides a correct answer `(mScore++)`. At the end of the quiz, the score will be displayed in a Toast message, which will show the value of `mScore` and the total number of questions in the quiz 
 
+
+
+
+```java
+Toast.makeText(this, "Score: " + mScore + " out of " + mQuestionBank.length, Toast.LENGTH_SHORT).show();
+```. 
+
+        
+        
 ```java
 private void checkAnswer(boolean userPressedTrue) {
     boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
@@ -460,7 +477,13 @@ private void checkAnswer(boolean userPressedTrue) {
 
 ```
 
+
+
+
 The updated `MainActivity` now looks like this 
+
+<details>
+<summary>Click here to see the updated Java code</summary>
 
 
 ```java
@@ -588,11 +611,12 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
+</details>
 
 
 To improve the application, it's important to have someone else test it on a device and gather feedback. Based on user feedback, we have made some notes to enhance the app:
 
-# Updates required by the users
+## Updates requested by the users
 
 * Place the timer at the bottom of the screen to make it more visible.
 * Add haptic feedback to provide a more engaging experience, such as vibration when moving to the next question, or a sound when selecting the correct answer.
