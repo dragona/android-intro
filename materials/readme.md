@@ -134,6 +134,7 @@ END
 
 ## Wireframe
 
+![GlobTrotter](./images/globTrotter001.png)
 
 ## The code
 
@@ -217,6 +218,28 @@ In this specific case, the string resources define the name of the app (app_name
 </resources>
 ```
 
+Time to open the MainActivity.java code of our GlobeTrotter app. The code is responsible for creating the main activity of the application, which consists of a question displayed on a text view and two buttons to answer it.
+
+The class extends the AppCompatActivity class, `public class MainActivity extends AppCompatActivity { ...}` which provides the base implementation for the activity. The class also declares private member variables, including the True and False buttons, a text view for the question, an array of Question objects, and an index to keep track of the current question.
+
+The `onCreate()` method is called when the activity is created, 
+
+```java 
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+    //...
+    }
+```
+
+and it initializes the member variables, sets up the click listeners for the True and False buttons, and calls the `updateQuestion()` method to display the first question.
+
+The `setContentView(R.layout.activity_main);` connects this Java code to the XML layout file named `activity_main.xml`, which defines the layout for the main activity of the GlobeTrotter application.  The layout consists of a vertical LinearLayout that contains a text view to display the question and a horizontal LinearLayout that contains two buttons for True and False. The IDs for the text view and buttons are used in the Java code to reference the views and set up the click listeners.
+
+The `updateQuestion()` method updates the question displayed on the text view to the current question in the Question array.
+
+The `checkAnswer()` method checks the user's answer and displays a message if it is correct or incorrect. It also increments the current index to display the next question if there are more questions left, or displays a message indicating that the quiz is over if there are no more questions.
+
+The Question class is a private inner class that is used to store each question and its answer as a Question object. The text of the question is stored as a string resource ID, and the answer is stored as a boolean value.
 
 
 <details>
