@@ -4,6 +4,9 @@ To effectively use this book, you should have a strong understanding of object-o
 
 If these topics are not familiar to you, it is recommended to start with an introductory Kotlin book before proceeding with this book. This will ensure a smoother understanding of the content as you progress. It is also recommended to have a Kotlin reference on hand for additional support as you read through the book.
 
+<details>
+<summary>Click here to see read more</summary>
+
 ## Kotlin or Java?
 
 In 2017, Google officially announced support for Kotlin in Android development, after a rising number of developers had already been utilizing it unofficially. Today, Kotlin is the favored language for most Android developers, although Java is still used. For this course, Java will be used while introducing the use of Kotlin from time to time. However, it's always an advantage to have knowledge of Kotlin if one plans to be a serious Android application developer, particularly due to its unique features like Jetpack Compose that are only available with Kotlin. Despite the original Java implementation of the Android framework and many Android classes, Kotlin's interoperability with Java ensures a smooth transition for developers. As the Android platform evolves, Kotlin is becoming increasingly vital to its future, and both Google and the Android developer community are investing in making Kotlin development easier and more valuable for Android. Join this growing community and reap the benefits of Kotlin in Android development.
@@ -46,6 +49,7 @@ In order to work withthe Android Emulator, you will need to download and install
 
 While the emulator is useful for testing purposes, it cannot accurately measure the performance of your app like a physical Android device can. For the best experience, it is recommended to use a physical Android device during certain parts of this book. The benefits and utilization of physical devices will be discussed further in the book.
 
+</details>
 
 # Your First Android Application
 
@@ -133,8 +137,16 @@ END
 
 ## The code
 
-Let's start with the layout
+Let's start with the XML layout file that defines the user interface of the MainActivity in the GlobeTrotter app. The layout should be structured as a vertical LinearLayout that should contain a TextView and a nested horizontal LinearLayout containing two Buttons.
 
+The first TextView, with id "question_text_view," takes up the full width of the screen and is centered both horizontally and vertically. It displays the question prompt for the current question, and is styled with a black text color on a light gray (#F0F0F0) background, and has a large 30dp padding.
+
+The nested LinearLayout, which is centered vertically in the parent layout, contains two Buttons, the "true_button" and the "false_button." Each button has a blue background (#2196F3) and white text color, and their width is set to "wrap_content" to make them just large enough to fit their text.
+
+Overall, this layout creates a simple and straightforward interface for the user to read and answer a geography question, by providing a large and clear question prompt and two clickable buttons to select either true or false.
+
+<details>
+<summary>Click here to see the Layout XML code</summary>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -185,6 +197,9 @@ Let's start with the layout
 </LinearLayout>
 
 ```
+
+</details>
+
 
 Now, let's open our string resource XML file that defines a set of strings for the "GlobeTrotter"  app. These string resources are defined within the <resources> tag and given a name with the name attribute. The value of each string resource is defined between the opening and closing tags of each string resource element.
 
