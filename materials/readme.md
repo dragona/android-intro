@@ -48,9 +48,19 @@ While the emulator is useful for testing purposes, it cannot accurately measure 
 
 
 # Your First Android Application
-Welcome to the world of Android Development! This first chapter is a great starting point for learning the new concepts and moving parts involved in building an Android application. Do not worry if you do not fully understand everything by the end of this chapter, as we will be revisiting these ideas in greater detail as we progress through the book. 
 
-The application we will be creating is called GlobeTrotter Quiz. This application will test your knowledge of geography. The user will be prompted to press either TRUE or FALSE to answer a question displayed on the screen, and GlobeTrotter Quiz will provide instant feedback. Get ready to dive in and start building your first Android application!
+Welcome to the world of Android Development! This first chapter is a great starting point for learning the new concepts and moving parts involved in building an Android application. Do not worry if you do not fully understand everything by the end of this chapter, as we will be revisiting these ideas in greater detail as we progress through the book.
+
+Imagine you're a student studying geography, and you want a fun and interactive way to learn about the world's countries and cities. You want to test your knowledge and challenge yourself with questions that cover different topics, such as which countries share borders, what the capital cities are, and which continent a country is located in.
+
+You also want to track your progress and see how much you've improved over time. You want to be able to compete with your friends and family and compare scores to see who knows more about the world.
+
+That's where the Globetrotter app comes in. It's a fun and educational game that allows you to test your geography knowledge in a challenging and interactive way. With its user-friendly interface, you can easily navigate through the different questions and track your progress with each round.
+
+So, whether you're a student looking to improve your geography skills or simply someone who loves to explore the world, the Globetrotter app is the perfect tool for you!
+
+We will start by creating an Android app called GlobeTrotter Quiz, which will prompt the user to press either TRUE or FALSE to answer a question displayed on the screen. The app will then provide instant feedback. To begin, we need a set of questions to use.
+
 
 | Question | Answer |
 | --- | --- |
@@ -71,7 +81,9 @@ The application we will be creating is called GlobeTrotter Quiz. This applicatio
 | Is the largest ocean in the world the Pacific Ocean? | Yes |
 
 
-The logic of the GlobeTrotter Quiz app shall be like this 
+## The logic
+
+the this first version of the GlobeTrotter Quiz app shall be like this 
 
 ```
 START
@@ -113,10 +125,87 @@ END
 5. Add logic to the quiz activity to keep track of the user's score and move to the next question when the user answers the current question.
 6. Add a menu to the quiz activity that allows the user to:
     - Reset the quiz
-    - View the answers.
+    - View the answers (Optional).
 7. Add styles and colors to the quiz activity to make it look nice.
 
+## Wireframe
 
+
+## The code
+
+Let's start with the layout
+
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F0F0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/question_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Hello World!"
+        android:textSize="20sp"
+        android:padding="30dp"
+        android:textColor="#000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp">
+
+        <Button
+            android:id="@+id/true_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:textColor="#FFFFFF"
+            android:text="True" />
+
+        <Button
+            android:id="@+id/false_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:textColor="#FFFFFF"
+            android:text="False" />
+    </LinearLayout>
+
+</LinearLayout>
+
+```
+
+Now, let's open our string resource XML file that defines a set of strings for the "GlobeTrotter"  app. These string resources are defined within the <resources> tag and given a name with the name attribute. The value of each string resource is defined between the opening and closing tags of each string resource element.
+
+In this specific case, the string resources define the name of the app (app_name), and we will add several question prompts for the app (is_australia_a_continent, does_russia_share_a_border_with_kazakhstan, etc.).
+
+
+```xml
+<resources>
+    <string name="app_name">GlobeTrotter</string>
+    <string name="correct_toast">Correct</string>
+    <string name="incorrect_toast">Wrong</string>
+    <string name="is_australia_a_continent">Is Australia a continent?</string>
+    <string name="does_russia_share_a_border_with_kazakhstan">Does Russia share a border with Kazakhstan?</string>
+
+</resources>
+```
+
+
+
+<details>
+<summary>Click here to see the Java code</summary>
 
 ```java
 package com.example.globetrotter;
@@ -263,68 +352,8 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
+</details>
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#F0F0F0"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/question_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="Hello World!"
-        android:textSize="20sp"
-        android:padding="30dp"
-        android:textColor="#000000"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="100dp">
-
-        <Button
-            android:id="@+id/true_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#2196F3"
-            android:textColor="#FFFFFF"
-            android:text="True" />
-
-        <Button
-            android:id="@+id/false_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#2196F3"
-            android:textColor="#FFFFFF"
-            android:text="False" />
-    </LinearLayout>
-
-</LinearLayout>
-
-```
-
-
-```xml
-<resources>
-    <string name="app_name">GlobeTrotter</string>
-    <string name="correct_toast">Correct</string>
-    <string name="incorrect_toast">Wrong</string>
-    <string name="is_australia_a_continent">Is Australia a continent?</string>
-    <string name="does_russia_share_a_border_with_kazakhstan">Does Russia share a border with Kazakhstan?</string>
-
-</resources>
-```
 
 For those who like challenges, you can try 
 
@@ -341,27 +370,21 @@ The current GlobeTrotter app only has two questions and the functionality to che
     - Keep track of the number of correct answers. 
     - Show the score after the quiz is finished.
 
-3. Add a navigation mechanism: 
-    - Add a next button to go to the next question.
-    - Add a previous button to go back to the previous question.
+3. Add a shuffle mechanism:
+   - Shuffle the questions so that they appear in a random order each time the quiz is taken.
+   - Ensure that each question is only asked once.
 
-4. Add a shuffle mechanism: 
-    - Shuffle the questions so that they appear in a random order each time the quiz is taken. 
-    - Ensure that each question is only asked once.
+4. Add a timer:
+   - Add a timer to limit the time for each question.
+   - Show the time remaining for each question.
 
-5. Add a timer: 
-    - Add a timer to limit the time for each question.
-    - Show the time remaining for each question.
-
-6. Add a submit button: 
-    - Add a submit button that allows the user to submit their answers after the timer has run out.
-    - Show the score after the user submits their answers.
-
-7. Add a reset button: 
-    - Add a reset button that allows the user to reset the quiz.
-    - Reset the score, the current index, and the timer.
+5. Add a reset button:
+   - Add a reset button that allows the user to reset the quiz.
+   - Reset the score, the current index, and the timer.
 
 This extension should provide a good starting point for beginner android app developers to practice.
+
+
 
 
 ## Let's add Add a scoring mechanism: 
@@ -521,80 +544,18 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
-## Adding a Timer to the Quiz
-
-To add a timer to the quiz, you will need to:
-- Create a timer object (such as a `CountDownTimer` in Android)
-- Start the timer when a new question is displayed
-- Update the time remaining display each time the timer ticks
-- Cancel the timer when the user answers the question or the quiz ends
-- Disable the user's ability to answer the question after the timer has run out
-- Display a message indicating that time has run out
-
-The `checkAnswer` function and the `updateQuestion` function should be updated to include a timer that limits the time for each question and displays the time remaining. Additionally, you may want to add a new class, such as `Timer` or `QuizTimer`, to handle the timer functionality and keep track of the time remaining for each question.
-
-In the `checkAnswer` function, you would start the timer and check if the time has run out before checking the user's answer. If the time has run out, you would display a message indicating that the time is up and move on to the next question. The new timer class could be implemented using the `CountDownTimer` class in Android, which allows you to set the duration of the timer and update the time remaining for each question. The time remaining for each question should be displayed in the quiz interface, for example, as a `TextView`.
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#F0F0F0"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/timer_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="Time Remaining: 30s"
-        android:textSize="20sp"
-        android:padding="30dp"
-        android:textColor="#000000"/>
-
-    <TextView
-        android:id="@+id/question_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="Hello World!"
-        android:textSize="20sp"
-        android:padding="30dp"
-        android:textColor="#000000"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="100dp">
-
-        <Button
-            android:id="@+id/true_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#2196F3"
-            android:textColor="#FFFFFF"
-            android:text="True" />
-
-        <Button
-            android:id="@+id/false_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#2196F3"
-            android:textColor="#FFFFFF"
-            android:text="False" />
-    </LinearLayout>
-
-</LinearLayout>
 
 
-```
+To improve the application, it's important to have someone else test it on a device and gather feedback. Based on user feedback, we have made some notes to enhance the app:
+
+# Updates required by the users
+
+* Place the timer at the bottom of the screen to make it more visible.
+* Add haptic feedback to provide a more engaging experience, such as vibration when moving to the next question, or a sound when selecting the correct answer.
+* Display the final score on an aesthetically pleasing UI.
+* Add more questions to increase the duration and enjoyment of the game.
+* Consider adding a restart button or difficulty levels to enhance replayability.
+* Implement question randomization to provide a fresh experience each time.
+* Provide the correct answer with an explanation if the user selects the wrong answer.
 
 

@@ -1,8 +1,18 @@
 <resources>
     <string name="app_name">GlobeTrotter</string>
-    <string name="correct_toast">Correct</string>
-    <string name="incorrect_toast">Wrong</string>
     <string name="is_australia_a_continent">Is Australia a continent?</string>
     <string name="does_russia_share_a_border_with_kazakhstan">Does Russia share a border with Kazakhstan?</string>
-
+    <string name="is_equator_in_northern_hemisphere">Is the Equator located in the Northern Hemisphere?</string>
+    <string name="is_highest_mountain_in_himalayas">Is the highest mountain in the world located in the Himalayas?</string>
+    <string name="does_amazon_river_flow_through_brazil">Does the Amazon River flow through Brazil?</string>
+    <string name="is_red_sea_between_africa_and_asia">Is the Red Sea located between Africa and Asia?</string>
+    <string name="is_capital_of_france_paris">Is the capital of France Paris?</string>
+    <string name="does_nile_flow_into_mediterranean_sea">Does the River Nile flow into the Mediterranean Sea?</string>
+    <string name="is_great_barrier_reef_off_coast_of_australia">Is the Great Barrier Reef located off the coast of Australia?</string>
+    <string name="is_arctic_ocean_located_in_southern_hemisphere">Is the Arctic Ocean located in the Southern Hemisphere?</string>
+    <string name="is_dead_sea_between_jordan_and_israel">Is the Dead Sea located between Jordan and Israel?</string>
+    <string name="does_amazon_rainforest_span_over_multiple_countries">Does the Amazon Rainforest span over multiple countries?</string>
+    <string name="is_mount_everest_highest_mountain_in_world">Is Mount Everest the highest mountain in the world?</string>
+    <string name="is_sahara_desert_located_in_north_africa">Is the Sahara Desert located in North Africa?</string>
+    <string name="is_pacific_ocean_largest_ocean_in_world">Is the largest ocean in the world the Pacific Ocean?</string>
 </resources>
