@@ -146,6 +146,8 @@ The nested LinearLayout, which is centered vertically in the parent layout, cont
 
 Overall, this layout creates a simple and straightforward interface for the user to read and answer a geography question, by providing a large and clear question prompt and two clickable buttons to select either true or false.
 
+![XML layout](./images/globTrotter002_xml_layout.png)
+
 <details>
 <summary>Click here to see the Layout XML code</summary>
 
@@ -204,6 +206,8 @@ Overall, this layout creates a simple and straightforward interface for the user
 
 Now, let's open our string resource XML file that defines a set of strings for the "GlobeTrotter"  app. These string resources are defined within the <resources> tag and given a name with the name attribute. The value of each string resource is defined between the opening and closing tags of each string resource element.
 
+![String resource](./images/globTrotter003_string.png)
+
 In this specific case, the string resources define the name of the app (app_name), and we will add several question prompts for the app (is_australia_a_continent, does_russia_share_a_border_with_kazakhstan, etc.).
 
 
@@ -220,7 +224,9 @@ In this specific case, the string resources define the name of the app (app_name
 
 Time to open the MainActivity.java code of our GlobeTrotter app. The code is responsible for creating the main activity of the application, which consists of a question displayed on a text view and two buttons to answer it.
 
-The class extends the AppCompatActivity class, `public class MainActivity extends AppCompatActivity { ...}` which provides the base implementation for the activity. The class also declares private member variables, including the True and False buttons, a text view for the question, an array of Question objects, and an index to keep track of the current question.
+The class extends the AppCompatActivity class, 
+```java public class MainActivity extends AppCompatActivity {...}```
+which provides the base implementation for the activity. The class also declares private member variables, including the True and False buttons, a text view for the question, an array of Question objects, and an index to keep track of the current question.
 
 The `onCreate()` method is called when the activity is created, 
 
