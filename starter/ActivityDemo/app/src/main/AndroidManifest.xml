@@ -19,7 +19,7 @@
             android:name="org.opencv.camera2"
             android:value="false" />
         <activity
-            android:name=".ActivitySpinner"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
