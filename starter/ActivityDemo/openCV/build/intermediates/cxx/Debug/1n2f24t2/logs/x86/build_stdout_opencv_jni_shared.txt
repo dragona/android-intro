@@ -1,2 +1,0 @@
-ninja: Entering directory `/Users/studio/Downloads/android-intro/starter/ActivityDemo/openCV/.cxx/Debug/1n2f24t2/x86'
-ninja: no work to do.

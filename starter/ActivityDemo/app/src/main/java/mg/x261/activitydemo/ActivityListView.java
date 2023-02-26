@@ -1,8 +1,11 @@
 package mg.x261.activitydemo;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,6 +32,16 @@ public class ActivityListView extends AppCompatActivity {
         // This connects the data in the array to the ListView, and handles the display of each item
         myListView.setAdapter(adapter);
 
+        // Set an OnItemClickListener on the ListView
+        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Get the text of the clicked item
+                String itemText = parent.getItemAtPosition(position).toString();
 
+                // Show a Toast with the text of the clicked item
+                Toast.makeText(ActivityListView.this, itemText, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
