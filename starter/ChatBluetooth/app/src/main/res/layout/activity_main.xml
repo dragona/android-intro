@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/discoverButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discover Devices"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="discoverDevices" />
+
+    <ListView
+        android:id="@+id/deviceListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/discoverButton"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/pairButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pair Device"
+        android:layout_below="@+id/deviceListView"
+        android:layout_alignParentLeft="true"
+        android:onClick="pairDevice" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect to Device"
+        android:layout_below="@+id/deviceListView"
+        android:layout_alignParentRight="true"
+        android:onClick="connectToDevice" />
+
+    <EditText
+        android:id="@+id/messageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pairButton"
+        android:layout_marginTop="16dp"
+        android:hint="Enter a message to send" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Message"
+        android:layout_below="@+id/messageEditText"
+        android:layout_alignParentRight="true"
+        android:onClick="sendMessage" />
+
+</RelativeLayout>
