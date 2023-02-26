@@ -44,6 +44,12 @@ dependencies {
 
     implementation 'com.rmtheis:tess-two:5.4.1'
 
+    // Required for UI testing
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.5.1'
+
+
 
 
 
