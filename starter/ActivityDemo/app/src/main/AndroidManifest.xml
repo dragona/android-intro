@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -52,6 +53,12 @@
         <activity android:name=".MainTable" />
         <activity android:name=".MainTextView" />
         <activity android:name=".MainToast" />
+        <activity android:name=".ActivityJsonParsing" />
+        <activity android:name=".ActivityRecyclerView" />
+        <activity android:name=".ActivityRecyclerViewDesignTwo" />
+        <activity android:name=".ActivityRecyclerViewDesignThree" />
+        <activity android:name=".ActivityRecyclerDataDownloaded" />
+        <activity android:name=".ActivityRecyclerDataDownloadedUpdated" />
 
     </application>
 

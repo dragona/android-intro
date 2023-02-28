@@ -20,12 +20,13 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView activityListView;
 
-    private String[] activityNames = {"ActivityCheckbox", "ActivityDatePicker", "ActivityDatePickerDialog",
-            "ActivityListView", "ActivityProgressBar", "ActivityRadioButton", "ActivityRating",
-            "ActivityRunnableThreadHandler", "ActivityScrollView", "ActivitySpinner", "ActivitySwitch",
-            "ActivityTimePicker", "LoadImage", "MainButton", "MainCalendarView", "MainDialog",
-            "MainEditText", "MainImageView", "MainLinearLayout", "MainRelativeLayout", "MainSeekBar",
-            "MainTable", "MainTextView", "MainToast"};
+    private String[] activityNames = {"ActivityDatePickerDialog", "ActivityJsonParsing","ActivityRecyclerView", "ActivityRecyclerViewDesignTwo",  "ActivityRecyclerViewDesignThree","ActivityRecyclerDataDownloadedUpdated",
+            "ActivityRecyclerDataDownloaded",
+            "ActivityTimePicker", "ActivityDatePicker", "ActivityListView", "ActivityScrollView",
+            "MainCalendarView", "ActivityRating", "MainSeekBar", "ActivitySwitch", "ActivitySpinner",
+            "MainDialog", "ActivityRunnableThreadHandler", "ActivityProgressBar", "ActivityCheckbox",
+            "ActivityRadioButton", "MainImageView", "MainToast", "LoadImage", "MainButton", "MainEditText",
+            "MainTextView", "MainTable", "MainLinearLayout", "MainRelativeLayout"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     Class<?> activityClass = Class.forName(getPackageName() + "." + activityNames[position]);
                     // Create an Intent to launch the activity and start it.
                     Intent intent = new Intent(MainActivity.this, activityClass);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP); //only allow one instance of an activity to be started
                     startActivity(intent);
                 } catch (ClassNotFoundException e) {
                     // Print the stack trace if the activity class cannot be found.
