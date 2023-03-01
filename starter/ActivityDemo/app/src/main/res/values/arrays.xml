@@ -1,0 +1,6 @@
+<resources>
+    <string-array name="data_source_options">
+        <item>Assign 001</item>
+        <item>Assign 002</item>
+    </string-array>
+</resources>

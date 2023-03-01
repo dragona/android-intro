@@ -21,7 +21,7 @@
             android:value="false" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".ActivityAssignReport"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,6 +59,7 @@
         <activity android:name=".ActivityRecyclerViewDesignThree" />
         <activity android:name=".ActivityRecyclerDataDownloaded" />
         <activity android:name=".ActivityRecyclerDataDownloadedUpdated" />
+        <activity android:name=".MainActivity" />
 
     </application>
 
