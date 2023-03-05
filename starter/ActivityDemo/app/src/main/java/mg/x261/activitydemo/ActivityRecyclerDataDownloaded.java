@@ -1,7 +1,6 @@
 package mg.x261.activitydemo;
 
-import android.app.ProgressDialog;
-import android.os.AsyncTask;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,18 +18,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
+
 import java.util.ArrayList;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -49,8 +43,6 @@ public class ActivityRecyclerDataDownloaded extends AppCompatActivity {
 
         // Download the first page of data
         downloadData(recyclerView, currentPage);
-
-
     }
 
     // Download data from the server for a specific page
@@ -58,23 +50,14 @@ public class ActivityRecyclerDataDownloaded extends AppCompatActivity {
         String url = "https://studio.mg/api-country/index.php?page=" + page;
         RequestQueue queue = Volley.newRequestQueue(this);
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
+                Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray data = response.getJSONArray("data");
-
-                            // Convert the JSON response to an array of objects
-                            ArrayList<DataObject> dataObjects = new ArrayList<>();
-                            for (int i = 0; i < data.length(); i++) {
-                                JSONObject object = data.getJSONObject(i);
-                                String country = object.getString("country");
-                                String capital = object.getString("capital");
-                                dataObjects.add(new DataObject(country, capital));
-                            }
-
-                            // Set the data to the RecyclerView adapter
+                            ArrayList<DataObject> dataObjects = parseJsonData(data);
                             recyclerView.setAdapter(new MyAdapter(dataObjects));
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -84,14 +67,30 @@ public class ActivityRecyclerDataDownloaded extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), "Error downloading data", Toast.LENGTH_SHORT).show();
-                        Log.d("TAG", "Error downloading data :"+error);
+                        Toast.makeText(getApplicationContext(), "Error downloading data",
+                                Toast.LENGTH_SHORT).show();
+                        Log.d("TAG", "Error downloading data :" + error);
                     }
                 });
 
         queue.add(jsonObjectRequest);
+    }
 
 
+    // Parse the JSON data and return an ArrayList of DataObject
+    private ArrayList<DataObject> parseJsonData(JSONArray jsonArray) {
+        ArrayList<DataObject> dataObjects = new ArrayList<>();
+        try {
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                String country = jsonObject.getString("country");
+                String capital = jsonObject.getString("capital");
+                dataObjects.add(new DataObject(country, capital));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return dataObjects;
     }
 
     // RecyclerView adapter
@@ -162,75 +161,6 @@ public class ActivityRecyclerDataDownloaded extends AppCompatActivity {
             return capital;
         }
     }
-
-    // Make an HTTP request to the server
-    private String makeHttpRequest(String urlString) {
-        StringBuilder stringBuilder = new StringBuilder();
-        try {
-            URL url = new URL(urlString);
-            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-            if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
-                String line;
-                while ((line = bufferedReader.readLine()) != null) {
-                    stringBuilder.append(line);
-                }
-                bufferedReader.close();
-            }
-            httpURLConnection.disconnect();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return stringBuilder.toString();
-    }
-
-    // Parse the JSON data and return an ArrayList of DataObject
-    private ArrayList<DataObject> parseJsonData(String jsonData) {
-        ArrayList<DataObject> dataObjects = new ArrayList<>();
-        try {
-            JSONArray jsonArray = new JSONArray(jsonData);
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonObject = jsonArray.getJSONObject(i);
-                String country = jsonObject.getString("country");
-                String capital = jsonObject.getString("capital");
-                dataObjects.add(new DataObject(country, capital));
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return dataObjects;
-    }
-
-    // AsyncTask to download the JSON data in the background
-    private class DownloadDataTask extends AsyncTask<String, Void, ArrayList<DataObject>> {
-        private ProgressDialog progressDialog;
-
-        @Override
-        protected void onPreExecute() {
-            progressDialog = ProgressDialog.show(ActivityRecyclerDataDownloaded.this, "Loading data", "Please wait...");
-        }
-
-        @Override
-        protected ArrayList<DataObject> doInBackground(String... urls) {
-            String jsonData = makeHttpRequest(urls[0]);
-            return parseJsonData(jsonData);
-        }
-
-        @Override
-        protected void onPostExecute(ArrayList<DataObject> dataObjects) {
-            progressDialog.dismiss();
-            // Set up the RecyclerView
-            RecyclerView recyclerView = findViewById(R.id.my_recycler_view_for_downloaded_data);
-            recyclerView.setLayoutManager(new LinearLayoutManager(ActivityRecyclerDataDownloaded.this));
-            recyclerView.setAdapter(new MyAdapter(dataObjects));
-        }
-
-
-    }
-
-
-
-
 
 }
 

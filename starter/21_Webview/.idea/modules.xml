@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/21_Webview.iml" filepath="$PROJECT_DIR$/.idea/modules/21_Webview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/21_Webview.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/21_Webview.app.iml" />
-    </modules>
-  </component>
-</project>

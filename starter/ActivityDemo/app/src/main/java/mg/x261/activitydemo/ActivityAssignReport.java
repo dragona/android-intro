@@ -32,7 +32,7 @@ public class ActivityAssignReport extends AppCompatActivity {
     // TODO: Load the data from the server
     //     https://studio.mg/submission2023/api-report.php?apikey=89821d232c6a62c57c369a9c8372fbc52bd9e206233748fb4032f86d28c2e86d&q=assign_001
 
-    String mJsonString1 = "{\"reports\":[{\"name\":\"XueXiang\",\"id\":\"20205911\",\"size\":\"0.2 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"\\u6731\\u5f00\\u6e90\",\"id\":\"20204229\",\"size\":\"0.2 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"\\u8c22\\u5b9d\\u6770\",\"id\":\"20201703\",\"size\":\"0.2 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"Zhu_ZiJun\",\"id\":\"20204051\",\"size\":\"0.7 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"\\u5362\\u5b87\\u822a\",\"id\":\"20201739\",\"size\":\"174.9 Mo\",\"status\":\"Processing\\n\"},{\"name\":\"\\u4efb\\u799bAzil\",\"id\":\"20201697\",\"size\":\"0.2 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"\\u96f7\\u9e4f\\u5b87\",\"id\":\"20201683\",\"size\":\"0.2 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"\\u6768\\u5929\\u5b87\",\"id\":\"20203033\",\"size\":\"0.1 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"\\u6768\\u5929\\u5b87\",\"id\":\"20203033\",\"size\":\"0.3 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"\\u674e\\u6668\\u96e8\",\"id\":\"20201726\",\"size\":\"13.5 Mo\",\"status\":\"Processing\\n\"},{\"name\":\"\\u4f59\\u6cfd\\u4f1f\",\"id\":\"20201793\",\"size\":\"6.4 Mo\",\"status\":\"Processing\\n\"},{\"name\":\"\\u674e\\u6668\\u96e8\",\"id\":\"20201726\",\"size\":\"1.3 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"LeiYinuo\",\"id\":\"20201780\",\"size\":\"1.2 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"\\u7f57\\u6210\\u5458\",\"id\":\"20204226\",\"size\":\"0.2 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"boyuan_xiao\",\"id\":\"20203062\",\"size\":\"0.3 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"boyuan_xiao\",\"id\":\"20203062\",\"size\":\"0.3 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"\\u4f59\\u6cfd\\u4f1f\",\"id\":\"20201793\",\"size\":\"1.5 Ko\",\"status\":\"Processing\\n\"}]}";
+    String mJsonString1 = "{\"reports\":[{\"name\":\"XueXiang\",\"id\":\"20205911\",\"size\":\"0.2 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"\\u6731\\u5f00\\u6e90\",\"id\":\"20204229\",\"size\":\"0.2 Ko\",\"status\":\"Processing\\n\"},{\"name\":\"\\u8c22\\u5b9d\\u6770\",\"id\":\"20201703\",\"size\":\"0.2 Ko\",\"status\":\"Processing\\n\"}]}";
     String mJsonString2 = "{\"reports\":[{\"name\":\"ZhuZiJun\",\"id\":\"20204051\",\"size\":\"13.1 Mo\",\"status\":\"Processing\\n\"},{\"name\":\"\\u4efb\\u799bAzil\",\"id\":\"20201697\",\"size\":\"13.2 Mo\",\"status\":\"Processing\\n\"},{\"name\":\"\\u6731\\u5f00\\u6e90\",\"id\":\"20204229\",\"size\":\"13 Mo\",\"status\":\"Processing\\n\"}]}";
 
     @Override
@@ -47,9 +47,12 @@ public class ActivityAssignReport extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.reportRecyclerView);
 
         // Set up spinner options
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this,
                 R.array.data_source_options, android.R.layout.simple_spinner_item);
+
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         mSpinner.setAdapter(adapter);
 
         // Set default JSON string
@@ -86,7 +89,6 @@ public class ActivityAssignReport extends AppCompatActivity {
     }
 
     private static class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportViewHolder> {
-
         private List<Report> mReportList;
 
         public ReportAdapter(List<Report> reportList) {
@@ -99,7 +101,6 @@ public class ActivityAssignReport extends AppCompatActivity {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycler_report, parent, false);
             return new ReportViewHolder(view);
         }
-
 
         @Override
         public void onBindViewHolder(@NonNull ReportViewHolder holder, int position) {
