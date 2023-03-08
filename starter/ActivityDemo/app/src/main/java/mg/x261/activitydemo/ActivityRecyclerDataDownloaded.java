@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ import com.android.volley.toolbox.Volley;
 public class ActivityRecyclerDataDownloaded extends AppCompatActivity {
     private int currentPage = 1; // Current page of data to download
     private static final int ITEMS_PER_PAGE = 10; // Number of items to show per page
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,12 +43,20 @@ public class ActivityRecyclerDataDownloaded extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.my_recycler_view_for_downloaded_data);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        // Set up the progress bar
+        progressBar = findViewById(R.id.progress_bar);
+
         // Download the first page of data
         downloadData(recyclerView, currentPage);
     }
 
+
     // Download data from the server for a specific page
     private void downloadData(RecyclerView recyclerView, int page) {
+
+        // Show the progress bar
+        progressBar.setVisibility(View.VISIBLE);
+
         String url = "https://studio.mg/api-country/index.php?page=" + page;
         RequestQueue queue = Volley.newRequestQueue(this);
 
@@ -55,6 +65,8 @@ public class ActivityRecyclerDataDownloaded extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
+                        // Hide the progress bar
+                        progressBar.setVisibility(View.GONE);
                         try {
                             JSONArray data = response.getJSONArray("data");
                             ArrayList<DataObject> dataObjects = parseJsonData(data);
@@ -67,6 +79,9 @@ public class ActivityRecyclerDataDownloaded extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        // Hide the progress bar
+                        progressBar.setVisibility(View.GONE);
+
                         Toast.makeText(getApplicationContext(), "Error downloading data",
                                 Toast.LENGTH_SHORT).show();
                         Log.d("TAG", "Error downloading data :" + error);
