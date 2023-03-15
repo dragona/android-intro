@@ -1,21 +1,40 @@
 package mg.x261.assignmenttrackerpro;
 
 import androidx.annotation.NonNull;
+
+import android.Manifest;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ProgressBar;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
@@ -27,51 +46,260 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class ActivityAssignReport extends AppCompatActivity {
+import com.android.volley.toolbox.JsonObjectRequest;
 
+
+public class ActivityAssignReport extends AppCompatActivity {
     private Spinner mSpinner;
     private RecyclerView mRecyclerView;
     private ReportAdapter mReportAdapter;
 
-    // TODO: Load the data from the server
-    //     https://studio.mg/submission2023/api-report.php?apikey=89821d232c6a62c57c369a9c8372fbc52bd9e206233748fb4032f86d28c2e86d&q=assign_001
+    private RequestQueue mRequestQueue;
+    private static final int MY_PERMISSIONS_REQUEST_NETWORK_STATE = 123;
 
-    String mJsonString1 = "{\"reports\":[{\"name\":\"XueXiang\",\"id\":\"20205911\",\"size\":\"0.2 Ko\",\"status\":\"Pass\\n\"},{\"name\":\"\\u6731\\u5f00\\u6e90\",\"id\":\"20204229\",\"size\":\"0.2 Ko\",\"status\":\"Pass\\n\"},{\"name\":\"\\u8c22\\u5b9d\\u6770\",\"id\":\"20201703\",\"size\":\"0.2 Ko\",\"status\":\"Pass\\n\"},{\"name\":\"Zhu_ZiJun\",\"id\":\"20204051\",\"size\":\"0.7 Ko\",\"status\":\"Pass\\n\"},{\"name\":\"\\u5362\\u5b87\\u822a\",\"id\":\"20201739\",\"size\":\"174.9 Mo\",\"status\":\"Pass\\n\"},{\"name\":\"\\u4efb\\u799bAzil\",\"id\":\"20201697\",\"size\":\"0.2 Ko\",\"status\":\"Pass\\n\"},{\"name\":\"\\u96f7\\u9e4f\\u5b87\",\"id\":\"20201683\",\"size\":\"0.2 Ko\",\"status\":\"Pass\\n\"},{\"name\":\"\\u6768\\u5929\\u5b87\",\"id\":\"20203033\",\"size\":\"0.1 Ko\",\"status\":\"Pass\\n\"},{\"name\":\"\\u6768\\u5929\\u5b87\",\"id\":\"20203033\",\"size\":\"0.3 Ko\",\"status\":\"Pass\\n\"},{\"name\":\"\\u674e\\u6668\\u96e8\",\"id\":\"20201726\",\"size\":\"13.5 Mo\",\"status\":\"Pass\\n\"},{\"name\":\"\\u4f59\\u6cfd\\u4f1f\",\"id\":\"20201793\",\"size\":\"6.4 Mo\",\"status\":\"Pass\\n\"},{\"name\":\"\\u674e\\u6668\\u96e8\",\"id\":\"20201726\",\"size\":\"1.3 Ko\",\"status\":\"Pass\\n\"},{\"name\":\"LeiYinuo\",\"id\":\"20201780\",\"size\":\"1.2 Ko\",\"status\":\"Pass\\n\"},{\"name\":\"\\u7f57\\u6210\\u5458\",\"id\":\"20204226\",\"size\":\"0.2 Ko\",\"status\":\"Pass\\n\"},{\"name\":\"boyuan_xiao\",\"id\":\"20203062\",\"size\":\"0.3 Ko\",\"status\":\"Pass\\n\"},{\"name\":\"boyuan_xiao\",\"id\":\"20203062\",\"size\":\"0.3 Ko\",\"status\":\"Pass\\n\"},{\"name\":\"\\u4f59\\u6cfd\\u4f1f\",\"id\":\"20201793\",\"size\":\"1.5 Ko\",\"status\":\"Pass\\n\"}]}";
-    String mJsonString2 = "{\"reports\":[{\"name\":\"ZhuZiJun\",\"id\":\"20204051\",\"size\":\"13.1 Mo\",\"status\":\"Processing\\n\"},{\"name\":\"\\u4efb\\u799bAzil\",\"id\":\"20201697\",\"size\":\"13.2 Mo\",\"status\":\"Processing\\n\"},{\"name\":\"\\u6731\\u5f00\\u6e90\",\"id\":\"20204229\",\"size\":\"13 Mo\",\"status\":\"Processing\\n\"}]}";
+    private ProgressBar mProgressBar;
+    SwipeRefreshLayout swipeRefreshLayout;
+
+    String selectedAssignmentId = "001"; // Default value
+    private static List<Report> mReportList = new ArrayList<>(); // Define mReportList variable here
+    private List<Report> mFilteredReportList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_activity_assignment);
-        // Set the title of the activity
         setTitle("Assign Report");
 
-        // Initialize views
-        mSpinner = findViewById(R.id.sourceSelectionSpinner);
+        swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
         mRecyclerView = findViewById(R.id.reportRecyclerView);
 
-        // Set up spinner options
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-                this,
-                R.array.data_source_options, android.R.layout.simple_spinner_item);
+        RadioGroup optionsRadioGroup = findViewById(R.id.optionsRadioGroup);
 
+        mFilteredReportList = new ArrayList<>();// initialize empty list
+        optionsRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                switch (checkedId) {
+                    case R.id.show_all:
+                        // handle selection of "All" radio button
+                        mFilteredReportList = new ArrayList<>(mReportList); // create a new instance of the list
+                        break;
+                    case R.id.show_processing:
+                        // handle selection of "Option 1" radio button
+                        mFilteredReportList = filterReportsByStatus("Processing");
+                        break;
+                    case R.id.show_pass:
+                        // handle selection of "Option 2" radio button
+                        mFilteredReportList = filterReportsByStatus("Pass");
+                        break;
+                    case R.id.show_failed:
+                        // handle selection of "Option 3" radio button
+                        mFilteredReportList = filterReportsByStatus("Failed");
+                        break;
+                    default:
+                        mFilteredReportList = new ArrayList<>(mReportList); // create a new instance of the list
+                        break;
+                }
+                mReportAdapter.setReportList(mFilteredReportList);
+            }
+        });
+
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                // Do something when the user pulls to refresh
+                loadRecyclerViewData(selectedAssignmentId);
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
+
+
+        // Check if the app has permission to access network state
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_NETWORK_STATE)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Permission is not granted, request it
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_NETWORK_STATE},
+                    MY_PERMISSIONS_REQUEST_NETWORK_STATE);
+        } else {
+            // Permission is granted, check network status
+            checkNetworkStatus();
+        }
+
+
+    }
+
+
+    private List<Report> filterReportsByStatus(String status) {
+        Log.d("Filter", "Filtering reports by status: " + status);
+        List<Report> filteredReports = new ArrayList<>();
+        for (Report report : mReportList) {
+            // Log to see the report
+            String reportStatus = report.getStatus().trim();
+            Log.d("Filter", "Report: " + report.toString() + " - " + reportStatus + " - status is " + status);
+
+            if (reportStatus != null && reportStatus.equals(status.trim())) {
+                Log.d("Filter", "Adding report with status " + status + ": " + report.toString());
+                filteredReports.add(report);
+            }
+        }
+        return filteredReports;
+    }
+
+
+    private void checkNetworkStatus() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+        if (isConnected) {
+            // Make API request
+            makeApiRequest();
+        } else {
+            // Display error message
+            Snackbar.make(findViewById(android.R.id.content), "No internet connection. Please check your network settings and try again.", Snackbar.LENGTH_LONG).show();
+            // Show network failure layout
+            findViewById(R.id.main_content).setVisibility(View.GONE);
+            findViewById(R.id.network_failure).setVisibility(View.VISIBLE);
+        }
+    }
+
+
+    private void makeApiRequest() {
+        // Show main content layout
+        findViewById(R.id.main_content).setVisibility(View.VISIBLE);
+        findViewById(R.id.network_failure).setVisibility(View.GONE);
+        Log.d("TAG", "request initiated");
+        mProgressBar = findViewById(R.id.progressBar);
+        mProgressBar.setVisibility(View.GONE);
+        loadSpinnerData();
+        loadRecyclerViewData(selectedAssignmentId);
+
+    }
+
+    private void loadRecyclerViewData(String selectedAssignmentId) {
+
+        mProgressBar.setVisibility(View.VISIBLE);
+        // Initialize RecyclerView
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mReportAdapter = new ReportAdapter(new ArrayList<>());
+        mRecyclerView.setAdapter(mReportAdapter);
+
+        String apiUrl = "https://studio.mg/submission2023/api-report.php?apikey=89821d232c6a62c57c369a9c8372fbc52bd9e206233748fb4032f86d28c2e86d&q=assign_" + selectedAssignmentId;
+        Log.d("TAG", apiUrl);
+        JsonObjectRequest reportRequest = new JsonObjectRequest(Request.Method.GET, apiUrl, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            mProgressBar.setVisibility(View.GONE);
+                            JSONArray reports = response.getJSONArray("reports");
+                            List<Report> reportList = parseJson(reports.toString());
+                            mReportList = reportList; // Update the mReportList with the fetched data
+                            mReportAdapter.setReportList(reportList);
+                            setLastUpdateDate();
+                            // Show main content layout
+                            findViewById(R.id.main_content).setVisibility(View.VISIBLE);
+                            findViewById(R.id.network_failure).setVisibility(View.GONE);
+                        } catch (JSONException e) {
+                            mProgressBar.setVisibility(View.GONE);
+                            Log.e("JSON", "Error parsing JSON data", e);
+                            Snackbar.make(findViewById(android.R.id.content), "There was an error loading the data. Please try again later.", Snackbar.LENGTH_LONG).show();
+                            // Show network failure layout
+                            findViewById(R.id.main_content).setVisibility(View.GONE);
+                            findViewById(R.id.network_failure).setVisibility(View.VISIBLE);
+
+                        }
+                    }
+
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("Volley", "Error retrieving report data", error);
+                        Snackbar.make(findViewById(android.R.id.content), "There was an error retrieving the data. Please try again later.", Snackbar.LENGTH_LONG).show();
+                        mProgressBar.setVisibility(View.GONE);
+                        // Show network failure layout
+                        findViewById(R.id.main_content).setVisibility(View.GONE);
+                        findViewById(R.id.network_failure).setVisibility(View.VISIBLE);
+
+                    }
+                });
+        reportRequest.setShouldCache(false);
+        mRequestQueue.add(reportRequest);
+
+
+        setLastUpdateDate(); // Move this outside of updateRecyclerView method
+    }
+
+
+    private void loadSpinnerData() {
+        mSpinner = findViewById(R.id.sourceSelectionSpinner);
+        List<String> options = new ArrayList<>();
+        options.add("Loading...");
+        mProgressBar.setVisibility(View.VISIBLE);
+
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, options);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         mSpinner.setAdapter(adapter);
 
-        // Set default JSON string
-        final String[] jsonString = {mJsonString1};
+        mRequestQueue = Volley.newRequestQueue(this);
 
-        // Set listener for spinner selection
+        String apiUrl = "https://studio.mg/submission2023/api-assignment.php";
+        JsonObjectRequest assignmentRequest = new JsonObjectRequest(Request.Method.GET, apiUrl, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            JSONArray assignments = response.getJSONArray("assignments");
+                            List<String> options = new ArrayList<>();
+                            for (int i = 0; i < assignments.length(); i++) {
+                                JSONObject assignment = assignments.getJSONObject(i);
+                                options.add("Assign " + assignment.getString("id") + " - " + assignment.getString("name"));
+                            }
+                            adapter.clear();
+                            adapter.addAll(options);
+                            adapter.notifyDataSetChanged();
+                            mProgressBar.setVisibility(View.GONE);
+
+                        } catch (JSONException e) {
+                            Log.e("JSON", "Error parsing JSON data", e);
+                            mProgressBar.setVisibility(View.GONE);
+
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        mProgressBar.setVisibility(View.GONE);
+                        Log.e("Volley", "Error retrieving assignment options", error);
+                        Snackbar.make(findViewById(android.R.id.content), "Error retrieving assignment options. Please try again later.", Snackbar.LENGTH_LONG).show();
+                        // Show network failure layout
+                        findViewById(R.id.main_content).setVisibility(View.GONE);
+                        findViewById(R.id.network_failure).setVisibility(View.VISIBLE);
+                    }
+                });
+        // Disable caching
+        assignmentRequest.setShouldCache(false);
+        mRequestQueue.add(assignmentRequest);
+
+
         mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) {
-                    jsonString[0] = mJsonString1;
-                } else if (position == 1) {
-                    jsonString[0] = mJsonString2;
+                mProgressBar.setVisibility(View.VISIBLE);
+
+                if (position > 0) {
+                    String selectedOption = (String) parent.getItemAtPosition(position);
+                    selectedAssignmentId = selectedOption.substring(selectedOption.indexOf("Assign ") + 7, selectedOption.indexOf(" - "));
                 }
-                updateRecyclerView(jsonString[0]);
+
+                loadRecyclerViewData(selectedAssignmentId);
+
             }
 
 
@@ -80,24 +308,48 @@ public class ActivityAssignReport extends AppCompatActivity {
             }
         });
 
-        // Initialize RecyclerView
-        mReportAdapter = new ReportAdapter(new ArrayList<>());
-        mRecyclerView.setAdapter(mReportAdapter);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-
-        // Parse initial JSON string and update RecyclerView
-        List<Report> reportList = parseJson(jsonString[0]);
-        mReportAdapter.setReportList(reportList);
-
     }
 
-    private static class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportViewHolder> {
-        private List<Report> mReportList;
+
+    // Handle the permission request result
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == MY_PERMISSIONS_REQUEST_NETWORK_STATE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission granted, check network status
+                checkNetworkStatus();
+            } else {
+                // Permission denied, show error message
+                Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    /**
+     * Opens the network settings of the device to allow the user to check the internet connection.
+     *
+     * @param view The view that triggered the method call.
+     */
+    public void btnNetworkSettings(View view) {
+        Intent intent = new Intent(Settings.ACTION_WIRELESS_SETTINGS);
+        startActivity(intent);
+    }
+
+
+    public void btnRefresh(View view) {
+        // Internet should be back now, try loading the data again
+        checkNetworkStatus();
+    }
+
+    private class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportViewHolder> {
+//        private List<Report> mReportList;
 
         public ReportAdapter(List<Report> reportList) {
             mReportList = reportList;
+            mFilteredReportList = reportList; // initialize the filtered report list
         }
+
 
         @NonNull
         @Override
@@ -107,16 +359,16 @@ public class ActivityAssignReport extends AppCompatActivity {
         }
 
         @Override
+        public int getItemCount() {
+            return mFilteredReportList.size();
+        }
+
+        @Override
         public void onBindViewHolder(@NonNull ReportViewHolder holder, int position) {
-            Report report = mReportList.get(position);
+            Report report = mFilteredReportList.get(position);
             holder.bind(report);
         }
 
-
-        @Override
-        public int getItemCount() {
-            return mReportList.size();
-        }
 
         class ReportViewHolder extends RecyclerView.ViewHolder {
 
@@ -148,39 +400,43 @@ public class ActivityAssignReport extends AppCompatActivity {
         }
 
         public void setReportList(List<Report> reportList) {
-            mReportList = reportList;
+            mFilteredReportList = reportList;
             notifyDataSetChanged();
         }
+
 
     }
 
     private List<Report> parseJson(String jsonString) {
         List<Report> reportList = new ArrayList<>();
         try {
-            JSONObject jsonObject = new JSONObject(jsonString);
-            JSONArray jsonArray = jsonObject.getJSONArray("reports");
+            JSONArray jsonArray = new JSONArray(jsonString);
             for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject reportObject = jsonArray.getJSONObject(i);
-                String name = reportObject.getString("name");
-                String id = reportObject.getString("id");
-                String size = reportObject.getString("size");
-                String status = removeLeadingAndTrailingNewLines(reportObject.getString("status"));
-                reportList.add(new Report(name, id, size, status));
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                String name = jsonObject.getString("name");
+                String id = jsonObject.getString("id");
+                String size = jsonObject.getString("size");
+                String status = jsonObject.getString("status");
+                Report report = new Report(name, id, size, status);
+                reportList.add(report);
             }
         } catch (JSONException e) {
-            Snackbar.make(findViewById(android.R.id.content), "There was an error loading the data. Please try again later.", Snackbar.LENGTH_LONG).show();
-            e.printStackTrace();
             Log.e("JSON", "Error parsing JSON data", e);
         }
-
         return reportList;
     }
 
 
     private void updateRecyclerView(String jsonString) {
+        mRecyclerView.setVisibility(View.GONE);
+        mProgressBar.setVisibility(View.VISIBLE);
+
+
         List<Report> reportList = parseJson(jsonString);
         mReportAdapter.updateData(reportList);
         setLastUpdateDate();
+        mProgressBar.setVisibility(View.GONE);
+        mRecyclerView.setVisibility(View.VISIBLE);
     }
 
     private String removeLeadingAndTrailingNewLines(String str) {
@@ -195,5 +451,7 @@ public class ActivityAssignReport extends AppCompatActivity {
 
 
 }
+
+
 
 
