@@ -48,7 +48,10 @@ import java.util.List;
 
 import com.android.volley.toolbox.JsonObjectRequest;
 
-
+/**
+ * The ActivityAssignReport class represents the activity that displays a list of reports and allows filtering
+ * based on report status. It also allows the user to refresh the report list by pulling down on the screen.
+ */
 public class ActivityAssignReport extends AppCompatActivity {
     private Spinner mSpinner;
     private RecyclerView mRecyclerView;
@@ -60,64 +63,73 @@ public class ActivityAssignReport extends AppCompatActivity {
     private ProgressBar mProgressBar;
     SwipeRefreshLayout swipeRefreshLayout;
 
-    String selectedAssignmentId = "001"; // Default value
-    private static List<Report> mReportList = new ArrayList<>(); // Define mReportList variable here
+    String selectedAssignmentId = "001";
+    private static List<Report> mReportList = new ArrayList<>();
     private List<Report> mFilteredReportList;
 
+    private ApiManager mApiManager;
 
+    /**
+     * Called when the activity is created. Initializes the views and listeners and checks network status.
+     *
+     * @param savedInstanceState A Bundle containing the activity's previously saved state, or null if there was no saved state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_activity_assignment);
         setTitle("Assign Report");
 
+        // Initialize views
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
         mRecyclerView = findViewById(R.id.reportRecyclerView);
-
         RadioGroup optionsRadioGroup = findViewById(R.id.optionsRadioGroup);
 
-        mFilteredReportList = new ArrayList<>();// initialize empty list
+        // Initialize objects
+        mApiManager = new ApiManager();
+        mFilteredReportList = new ArrayList<>();
+
+        // Set up radio button listeners
         optionsRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 switch (checkedId) {
                     case R.id.show_all:
-                        // handle selection of "All" radio button
-                        mFilteredReportList = new ArrayList<>(mReportList); // create a new instance of the list
+                        // Handle selection of "All" radio button
+                        mFilteredReportList = new ArrayList<>(mReportList); // Create a new instance of the list
                         break;
                     case R.id.show_processing:
-                        // handle selection of "Option 1" radio button
+                        // Handle selection of "Option 1" radio button
                         mFilteredReportList = filterReportsByStatus("Processing");
                         break;
                     case R.id.show_pass:
-                        // handle selection of "Option 2" radio button
+                        // Handle selection of "Option 2" radio button
                         mFilteredReportList = filterReportsByStatus("Pass");
                         break;
                     case R.id.show_failed:
-                        // handle selection of "Option 3" radio button
+                        // Handle selection of "Option 3" radio button
                         mFilteredReportList = filterReportsByStatus("Failed");
                         break;
                     default:
-                        mFilteredReportList = new ArrayList<>(mReportList); // create a new instance of the list
+                        mFilteredReportList = new ArrayList<>(mReportList); // Create a new instance of the list
                         break;
                 }
                 mReportAdapter.setReportList(mFilteredReportList);
             }
         });
 
-
+        // Set up SwipeRefreshLayout listener
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                // Do something when the user pulls to refresh
+                // Load new data when user refreshes
                 loadRecyclerViewData(selectedAssignmentId);
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
 
-
-        // Check if the app has permission to access network state
+        // Check for network state permission
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_NETWORK_STATE)
                 != PackageManager.PERMISSION_GRANTED) {
             // Permission is not granted, request it
@@ -128,11 +140,15 @@ public class ActivityAssignReport extends AppCompatActivity {
             // Permission is granted, check network status
             checkNetworkStatus();
         }
-
-
     }
 
 
+    /**
+     * The filterReportsByStatus method filters a list of reports based on their status.
+     *
+     * @param status A string representing the status to filter the report list by.
+     * @return A List of Report objects with the specified status.
+     */
     private List<Report> filterReportsByStatus(String status) {
         Log.d("Filter", "Filtering reports by status: " + status);
         List<Report> filteredReports = new ArrayList<>();
@@ -149,7 +165,10 @@ public class ActivityAssignReport extends AppCompatActivity {
         return filteredReports;
     }
 
-
+    /**
+     * The checkNetworkStatus method checks whether the device is connected to the internet and displays an error message
+     * if it is not.
+     */
     private void checkNetworkStatus() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
@@ -166,7 +185,9 @@ public class ActivityAssignReport extends AppCompatActivity {
         }
     }
 
-
+    /**
+     * The makeApiRequest method initiates an API request to load data into the views.
+     */
     private void makeApiRequest() {
         // Show main content layout
         findViewById(R.id.main_content).setVisibility(View.VISIBLE);
@@ -176,9 +197,13 @@ public class ActivityAssignReport extends AppCompatActivity {
         mProgressBar.setVisibility(View.GONE);
         loadSpinnerData();
         loadRecyclerViewData(selectedAssignmentId);
-
     }
 
+    /**
+     * The loadRecyclerViewData method loads the report data into the RecyclerView.
+     *
+     * @param selectedAssignmentId A string representing the ID of the selected assignment.
+     */
     private void loadRecyclerViewData(String selectedAssignmentId) {
 
         mProgressBar.setVisibility(View.VISIBLE);
@@ -186,8 +211,7 @@ public class ActivityAssignReport extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mReportAdapter = new ReportAdapter(new ArrayList<>());
         mRecyclerView.setAdapter(mReportAdapter);
-
-        String apiUrl = "https://studio.mg/submission2023/api-report.php?apikey=89821d232c6a62c57c369a9c8372fbc52bd9e206233748fb4032f86d28c2e86d&q=assign_" + selectedAssignmentId;
+        String apiUrl = mApiManager.getReportApiUrl(selectedAssignmentId);
         Log.d("TAG", apiUrl);
         JsonObjectRequest reportRequest = new JsonObjectRequest(Request.Method.GET, apiUrl, null,
                 new Response.Listener<JSONObject>() {
@@ -230,25 +254,29 @@ public class ActivityAssignReport extends AppCompatActivity {
         reportRequest.setShouldCache(false);
         mRequestQueue.add(reportRequest);
 
-
-        setLastUpdateDate(); // Move this outside of updateRecyclerView method
+        // Update the last update date
+        setLastUpdateDate();
     }
 
 
+    /**
+     * The loadSpinnerData method loads the assignment data into the spinner.
+     */
     private void loadSpinnerData() {
         mSpinner = findViewById(R.id.sourceSelectionSpinner);
         List<String> options = new ArrayList<>();
         options.add("Loading...");
         mProgressBar.setVisibility(View.VISIBLE);
 
-
+        // Initialize spinner with loading message
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, options);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpinner.setAdapter(adapter);
 
         mRequestQueue = Volley.newRequestQueue(this);
+        String apiUrl = mApiManager.getAssignmentApiUrl();
 
-        String apiUrl = "https://studio.mg/submission2023/api-assignment.php";
+        // Make request to get assignments
         JsonObjectRequest assignmentRequest = new JsonObjectRequest(Request.Method.GET, apiUrl, null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -287,7 +315,7 @@ public class ActivityAssignReport extends AppCompatActivity {
         assignmentRequest.setShouldCache(false);
         mRequestQueue.add(assignmentRequest);
 
-
+        // Set listener for spinner item selection
         mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -302,13 +330,12 @@ public class ActivityAssignReport extends AppCompatActivity {
 
             }
 
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
-
     }
+
 
 
     // Handle the permission request result
@@ -342,14 +369,21 @@ public class ActivityAssignReport extends AppCompatActivity {
         checkNetworkStatus();
     }
 
+    /**
+     * The ReportAdapter class is a custom adapter that binds report data to a RecyclerView.
+     */
     private class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportViewHolder> {
-//        private List<Report> mReportList;
+        private List<Report> mReportList;
+        private List<Report> mFilteredReportList;
 
+        /**
+         * Constructor for ReportAdapter class.
+         * @param reportList The list of Report objects to bind to the RecyclerView.
+         */
         public ReportAdapter(List<Report> reportList) {
             mReportList = reportList;
             mFilteredReportList = reportList; // initialize the filtered report list
         }
-
 
         @NonNull
         @Override
@@ -369,9 +403,10 @@ public class ActivityAssignReport extends AppCompatActivity {
             holder.bind(report);
         }
 
-
+        /**
+         * The ReportViewHolder class represents a single item in the RecyclerView.
+         */
         class ReportViewHolder extends RecyclerView.ViewHolder {
-
             private TextView mNameTextView;
             private TextView mIdTextView;
             private TextView mSizeTextView;
@@ -385,6 +420,10 @@ public class ActivityAssignReport extends AppCompatActivity {
                 mStatusTextView = itemView.findViewById(R.id.statusTextView);
             }
 
+            /**
+             * Bind Report object data to the view holder's TextViews.
+             * @param report The Report object to bind.
+             */
             public void bind(Report report) {
                 mNameTextView.setText(report.getName());
                 mIdTextView.setText(report.getId());
@@ -393,30 +432,41 @@ public class ActivityAssignReport extends AppCompatActivity {
             }
         }
 
-
+        /**
+         * Update the data in the adapter with a new list of Report objects.
+         * @param reportList The new list of Report objects.
+         */
         public void updateData(List<Report> reportList) {
             mReportList = reportList;
             notifyDataSetChanged();
         }
 
+        /**
+         * Set the list of Report objects to display in the RecyclerView.
+         * @param reportList The list of Report objects to display.
+         */
         public void setReportList(List<Report> reportList) {
             mFilteredReportList = reportList;
             notifyDataSetChanged();
         }
-
-
     }
 
+
+    /**
+     * Parse a JSON string and convert it to a list of Report objects.
+     * @param jsonString The JSON string to parse.
+     * @return A List of Report objects parsed from the JSON string.
+     */
     private List<Report> parseJson(String jsonString) {
         List<Report> reportList = new ArrayList<>();
         try {
             JSONArray jsonArray = new JSONArray(jsonString);
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                String name = jsonObject.getString("name");
-                String id = jsonObject.getString("id");
-                String size = jsonObject.getString("size");
-                String status = jsonObject.getString("status");
+                String name = removeLeadingAndTrailingNewLines(jsonObject.getString("name"));
+                String id = removeLeadingAndTrailingNewLines(jsonObject.getString("id"));
+                String size = removeLeadingAndTrailingNewLines(jsonObject.getString("size"));
+                String status = removeLeadingAndTrailingNewLines(jsonObject.getString("status"));
                 Report report = new Report(name, id, size, status);
                 reportList.add(report);
             }
@@ -427,10 +477,13 @@ public class ActivityAssignReport extends AppCompatActivity {
     }
 
 
+    /**
+     * Updates the RecyclerView with the data parsed from a JSON string.
+     * @param jsonString The JSON string to parse.
+     */
     private void updateRecyclerView(String jsonString) {
         mRecyclerView.setVisibility(View.GONE);
         mProgressBar.setVisibility(View.VISIBLE);
-
 
         List<Report> reportList = parseJson(jsonString);
         mReportAdapter.updateData(reportList);
@@ -439,15 +492,24 @@ public class ActivityAssignReport extends AppCompatActivity {
         mRecyclerView.setVisibility(View.VISIBLE);
     }
 
+    /**
+     * Removes leading and trailing newlines from a string.
+     * @param str The string to remove newlines from.
+     * @return The string without leading or trailing newlines.
+     */
     private String removeLeadingAndTrailingNewLines(String str) {
         return str == null || str.isEmpty() ? str : str.replaceAll("(^\\n+|\\n+$)", "");
     }
 
+    /**
+     * Sets the text of the last update TextView to the current date and time.
+     */
     private void setLastUpdateDate() {
         TextView lastUpdateTextView = findViewById(R.id.lastUpdateTextView);
         String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
         lastUpdateTextView.setText("Last update: " + currentDateTimeString);
     }
+
 
 
 }
