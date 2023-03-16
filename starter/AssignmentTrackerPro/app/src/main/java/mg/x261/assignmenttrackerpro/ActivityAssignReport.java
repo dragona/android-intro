@@ -84,6 +84,8 @@ public class ActivityAssignReport extends AppCompatActivity {
 
     private boolean assignmentDataLoaded = false;
 
+    RadioGroup optionsRadioGroup;
+
     /**
      * Called when the activity is created. Initializes the views and listeners and checks network status.
      *
@@ -103,7 +105,7 @@ public class ActivityAssignReport extends AppCompatActivity {
         // Initialize views
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
         mRecyclerView = findViewById(R.id.reportRecyclerView);
-        RadioGroup optionsRadioGroup = findViewById(R.id.optionsRadioGroup);
+        optionsRadioGroup = findViewById(R.id.optionsRadioGroup);
 
         assignmentRecyclerView = findViewById(R.id.recyclerViewAssignments);
 //        assignmentAdapter = new AssignmentAdapter(assignmentList);
@@ -238,6 +240,12 @@ public class ActivityAssignReport extends AppCompatActivity {
     }
 
 
+    private void resetRadioToAll() {
+        optionsRadioGroup.check(R.id.show_all);
+    }
+
+
+
 
     /**
      * The filterReportsByStatus method filters a list of reports based on their status.
@@ -303,6 +311,7 @@ public class ActivityAssignReport extends AppCompatActivity {
     private void loadRecyclerViewData(String selectedAssignmentId) {
 
         mProgressBar.setVisibility(View.VISIBLE);
+        resetRadioToAll();
         // Initialize RecyclerView
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mReportAdapter = new ReportAdapter(new ArrayList<>());
@@ -363,6 +372,8 @@ public class ActivityAssignReport extends AppCompatActivity {
         List<String> options = new ArrayList<>();
         options.add("Loading...");
         mProgressBar.setVisibility(View.VISIBLE);
+
+        resetRadioToAll();
 
         // Initialize spinner with loading message
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, options);
