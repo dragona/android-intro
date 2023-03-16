@@ -2,9 +2,11 @@ package mg.x261.assignmenttrackerpro;
 
 import android.app.Activity;
 import android.app.DownloadManager;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
@@ -17,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
@@ -79,7 +82,6 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
 
     }
 
-
     private void downloadFile(ViewHolder holder, Assignment assignment) {
         // Get download URL
         //String downloadUrl = assignment.getUrl();
@@ -104,35 +106,48 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
         // Set the local destination for the downloaded file to the Downloads folder
         request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, assignment.getFilename());
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            // Check if MANAGE_EXTERNAL_STORAGE permission is granted
-            if (Environment.isExternalStorageManager()) {
-                // Permission granted, enqueue the download
-                long downloadReference = downloadManager.enqueue(request);
-                Log.d("AssignmentAdapter", "Download enqueued with referenceId: " + downloadReference);
-            } else {
-                // Permission not granted, request it at runtime
-                Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
-                Uri uri = Uri.fromParts("package", holder.itemView.getContext().getPackageName(), null);
-                intent.setData(uri);
-                holder.itemView.getContext().startActivity(intent);
+        // Create and show progress dialog
+        ProgressDialog progressDialog = new ProgressDialog(holder.itemView.getContext());
+        progressDialog.setMessage("Downloading " + assignment.getFilename());
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        progressDialog.setCancelable(false);
+        progressDialog.show();
+
+        // Start the download
+        long downloadReference = downloadManager.enqueue(request);
+
+        // Monitor download progress
+        new Thread(() -> {
+            boolean downloading = true;
+            while (downloading) {
+                DownloadManager.Query query = new DownloadManager.Query();
+                query.setFilterById(downloadReference);
+                Cursor cursor = downloadManager.query(query);
+                if (cursor.moveToFirst()) {
+                    int bytesDownloaded = cursor.getInt(cursor.getColumnIndexOrThrow(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR));
+                    int bytesTotal = cursor.getInt(cursor.getColumnIndexOrThrow(DownloadManager.COLUMN_TOTAL_SIZE_BYTES));
+                    int progress = (int) ((bytesDownloaded * 100L) / bytesTotal);
+                    progressDialog.setProgress(progress);
+                    if (DownloadManager.STATUS_SUCCESSFUL == cursor.getInt(cursor.getColumnIndexOrThrow(DownloadManager.COLUMN_STATUS))) {
+                        downloading = false;
+                        progressDialog.dismiss();
+                        // Show a dialog telling the user where to find the downloaded file
+                        holder.itemView.post(() -> {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(holder.itemView.getContext());
+                            builder.setTitle("Download Complete");
+                            builder.setMessage("The file has been downloaded to your Downloads folder.");
+                            builder.setPositiveButton("OK", null);
+                            builder.show();
+                        });
+                    }
+                }
+                cursor.close();
             }
-        } else {
-            // Check if WRITE_EXTERNAL_STORAGE permission is granted
-            if (ContextCompat.checkSelfPermission(holder.itemView.getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                // Permission not granted, request it at runtime
-                ActivityCompat.requestPermissions((Activity) holder.itemView.getContext(), new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-            } else {
-                // Permission granted, enqueue the download
-                long downloadReference = downloadManager.enqueue(request);
-                Log.d("AssignmentAdapter", "Download enqueued with referenceId: " + downloadReference);
-
-            }
-        }
-
-
-
+        }).start();
     }
+
+
+
 
     @Override
     public int getItemCount() {

@@ -12,9 +12,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.app.DownloadManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -618,7 +621,6 @@ public class ActivityAssignReport extends AppCompatActivity {
         String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
         lastUpdateTextView.setText("Last update: " + currentDateTimeString);
     }
-
 
 
 }
