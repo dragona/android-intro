@@ -70,6 +70,10 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
         }
 
         holder.itemView.setOnClickListener(view -> {
+            // Start animation
+            holder.itemView.animate().scaleX(0.8f).scaleY(0.8f).setDuration(200).withEndAction(() -> {
+                holder.itemView.animate().scaleX(1f).scaleY(1f).setDuration(200);
+            }).start();
             downloadFile(holder, assignments.get(position));
         });
 

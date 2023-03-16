@@ -7,6 +7,7 @@ import android.Manifest;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -108,7 +109,8 @@ public class ActivityAssignReport extends AppCompatActivity {
         optionsRadioGroup = findViewById(R.id.optionsRadioGroup);
 
         assignmentRecyclerView = findViewById(R.id.recyclerViewAssignments);
-//        assignmentAdapter = new AssignmentAdapter(assignmentList);
+        assignmentRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
 
         assignmentAdapter = new AssignmentAdapter(assignmentList);
         assignmentRecyclerView.setAdapter(assignmentAdapter);
