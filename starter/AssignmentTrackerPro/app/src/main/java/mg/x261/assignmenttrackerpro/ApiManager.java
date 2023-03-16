@@ -8,6 +8,8 @@ public class ApiManager {
     private static final String REPORT_API_URL = BASE_URL + "api-report.php?apikey=" + API_KEY;
     private static final String ASSIGNMENT_API_URL = BASE_URL + "api-assignment.php";
 
+    private static final String ASSIGNMENT_LIST_API_URL = BASE_URL + "api-assignment-list.php";
+
     /**
      * Gets the URL for the report API, filtered by a specific assignment ID.
      * @param assignmentId The ID of the assignment to filter the report API by.
@@ -23,5 +25,9 @@ public class ApiManager {
      */
     public String getAssignmentApiUrl() {
         return ASSIGNMENT_API_URL;
+    }
+
+    public String getAssignmentFilesApiUrl() {
+        return ASSIGNMENT_LIST_API_URL;
     }
 }

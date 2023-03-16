@@ -28,6 +28,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,6 +37,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -44,12 +46,15 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Type;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 /**
  * The ActivityAssignReport class represents the activity that displays a list of reports and allows filtering
@@ -72,6 +77,13 @@ public class ActivityAssignReport extends AppCompatActivity {
 
     private ApiManager mApiManager;
 
+    private List<Assignment> assignmentList = new ArrayList<>();
+    private AssignmentAdapter assignmentAdapter;
+
+    RecyclerView assignmentRecyclerView;
+
+    private boolean assignmentDataLoaded = false;
+
     /**
      * Called when the activity is created. Initializes the views and listeners and checks network status.
      *
@@ -85,8 +97,24 @@ public class ActivityAssignReport extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_view);
         LinearLayout reportLayout = findViewById(R.id.main_content);
-        FrameLayout assignmentLayout = findViewById(R.id.layout_assignment);
+        RelativeLayout assignmentLayout = findViewById(R.id.layout_assignment);
         FrameLayout agoraLayout = findViewById(R.id.layout_agora);
+
+        // Initialize views
+        swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
+        mRecyclerView = findViewById(R.id.reportRecyclerView);
+        RadioGroup optionsRadioGroup = findViewById(R.id.optionsRadioGroup);
+
+        assignmentRecyclerView = findViewById(R.id.recyclerViewAssignments);
+//        assignmentAdapter = new AssignmentAdapter(assignmentList);
+
+        assignmentAdapter = new AssignmentAdapter(assignmentList);
+        assignmentRecyclerView.setAdapter(assignmentAdapter);
+        assignmentRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        assignmentDataLoaded = false; // Set the flag to false when the Activity is created
+
+
+
 
         // Set the report layout as the default
         reportLayout.setVisibility(View.VISIBLE);
@@ -100,30 +128,24 @@ public class ActivityAssignReport extends AppCompatActivity {
                     reportLayout.setVisibility(View.VISIBLE);
                     assignmentLayout.setVisibility(View.GONE);
                     agoraLayout.setVisibility(View.GONE);
-                    animateView(reportLayout, true);
-                    animateView(assignmentLayout, false);
-                    animateView(agoraLayout, false);
                     break;
                 case R.id.navigation_assignment_details:
                     reportLayout.setVisibility(View.GONE);
                     assignmentLayout.setVisibility(View.VISIBLE);
                     agoraLayout.setVisibility(View.GONE);
+
+                    showAssignmentLayout();
                     break;
+
                 case R.id.navigation_agora:
                     reportLayout.setVisibility(View.GONE);
                     assignmentLayout.setVisibility(View.GONE);
                     agoraLayout.setVisibility(View.VISIBLE);
-                    animateView(reportLayout, false);
-                    animateView(assignmentLayout, false);
-                    animateView(agoraLayout, true);
                     break;
                 default:
                     reportLayout.setVisibility(View.VISIBLE);
                     assignmentLayout.setVisibility(View.GONE);
                     agoraLayout.setVisibility(View.GONE);
-                    animateView(reportLayout, true);
-                    animateView(assignmentLayout, false);
-                    animateView(agoraLayout, false);
                     break;
             }
             return true;
@@ -134,10 +156,7 @@ public class ActivityAssignReport extends AppCompatActivity {
 
 
 
-        // Initialize views
-        swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
-        mRecyclerView = findViewById(R.id.reportRecyclerView);
-        RadioGroup optionsRadioGroup = findViewById(R.id.optionsRadioGroup);
+
 
         // Initialize objects
         mApiManager = new ApiManager();
@@ -154,15 +173,12 @@ public class ActivityAssignReport extends AppCompatActivity {
                         mFilteredReportList = new ArrayList<>(mReportList); // Create a new instance of the list
                         break;
                     case R.id.show_processing:
-                        // Handle selection of "Option 1" radio button
                         mFilteredReportList = filterReportsByStatus("Processing");
                         break;
                     case R.id.show_pass:
-                        // Handle selection of "Option 2" radio button
                         mFilteredReportList = filterReportsByStatus("Pass");
                         break;
                     case R.id.show_failed:
-                        // Handle selection of "Option 3" radio button
                         mFilteredReportList = filterReportsByStatus("Failed");
                         break;
                     default:
@@ -196,22 +212,32 @@ public class ActivityAssignReport extends AppCompatActivity {
         }
     }
 
+    private void showAssignmentLayout() {
+        Log.d("TAG", "showAssignmentLayout() called");
 
-    private void animateView(View view, boolean slideIn) {
-        if (slideIn) {
-            view.animate()
-                    .translationX(0f)
-                    .alpha(1f)
-                    .setDuration(500)
-                    .setListener(null);
-        } else {
-            view.animate()
-                    .translationX(view.getWidth())
-                    .alpha(0f)
-                    .setDuration(500)
-                    .setListener(null);
+        if (!assignmentDataLoaded) {
+            // Clear the assignmentList before downloading new data
+            assignmentList.clear();
+
+            String url = mApiManager.getAssignmentFilesApiUrl();
+            JsonArrayRequest assignmentRequest = new JsonArrayRequest(url, response -> {
+                Gson gson = new Gson();
+                Type listType = new TypeToken<List<Assignment>>(){}.getType();
+                assignmentList.addAll(gson.fromJson(response.toString(), listType));
+                Log.d("TAG", "assignmentList size: " + assignmentList.size());
+                assignmentAdapter.notifyDataSetChanged();
+                Log.d("TAG", "notifyDataSetChanged() called");
+            }, error -> {
+                Toast.makeText(this, "Error downloading assignments", Toast.LENGTH_SHORT).show();
+            });
+
+            Volley.newRequestQueue(this).add(assignmentRequest);
+
+            assignmentDataLoaded = true; // Set the flag to true after loading data
         }
     }
+
+
 
     /**
      * The filterReportsByStatus method filters a list of reports based on their status.

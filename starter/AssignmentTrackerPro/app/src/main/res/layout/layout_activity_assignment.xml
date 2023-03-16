@@ -180,7 +180,7 @@
 
     </LinearLayout>
 
-    <FrameLayout
+    <RelativeLayout
         android:id="@+id/layout_assignment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -189,11 +189,23 @@
 
         <!-- Your assignment layout here -->
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_assignment_header"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Assignment lists" />
+            android:text="Assignments" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/tv_assignment_header"
+            android:id="@+id/recyclerViewAssignments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:scrollbars="horizontal" />
 
-    </FrameLayout>
+
+    </RelativeLayout>
 
     <FrameLayout
         android:id="@+id/layout_agora"
@@ -209,6 +221,7 @@
             android:text="Agora" />
 
     </FrameLayout>
+
 
 </RelativeLayout>
 
