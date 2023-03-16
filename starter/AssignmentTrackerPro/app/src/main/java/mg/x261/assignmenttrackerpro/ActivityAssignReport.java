@@ -24,6 +24,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -35,6 +37,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
@@ -79,6 +82,57 @@ public class ActivityAssignReport extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_activity_assignment);
         setTitle("Assign Report");
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_view);
+        LinearLayout reportLayout = findViewById(R.id.main_content);
+        FrameLayout assignmentLayout = findViewById(R.id.layout_assignment);
+        FrameLayout agoraLayout = findViewById(R.id.layout_agora);
+
+        // Set the report layout as the default
+        reportLayout.setVisibility(View.VISIBLE);
+        assignmentLayout.setVisibility(View.GONE);
+        agoraLayout.setVisibility(View.GONE);
+
+        // Set the listener for bottom navigation items
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.navigation_assignment_tracker:
+                    reportLayout.setVisibility(View.VISIBLE);
+                    assignmentLayout.setVisibility(View.GONE);
+                    agoraLayout.setVisibility(View.GONE);
+                    animateView(reportLayout, true);
+                    animateView(assignmentLayout, false);
+                    animateView(agoraLayout, false);
+                    break;
+                case R.id.navigation_assignment_details:
+                    reportLayout.setVisibility(View.GONE);
+                    assignmentLayout.setVisibility(View.VISIBLE);
+                    agoraLayout.setVisibility(View.GONE);
+                    break;
+                case R.id.navigation_agora:
+                    reportLayout.setVisibility(View.GONE);
+                    assignmentLayout.setVisibility(View.GONE);
+                    agoraLayout.setVisibility(View.VISIBLE);
+                    animateView(reportLayout, false);
+                    animateView(assignmentLayout, false);
+                    animateView(agoraLayout, true);
+                    break;
+                default:
+                    reportLayout.setVisibility(View.VISIBLE);
+                    assignmentLayout.setVisibility(View.GONE);
+                    agoraLayout.setVisibility(View.GONE);
+                    animateView(reportLayout, true);
+                    animateView(assignmentLayout, false);
+                    animateView(agoraLayout, false);
+                    break;
+            }
+            return true;
+        });
+
+
+
+
+
 
         // Initialize views
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
@@ -142,6 +196,22 @@ public class ActivityAssignReport extends AppCompatActivity {
         }
     }
 
+
+    private void animateView(View view, boolean slideIn) {
+        if (slideIn) {
+            view.animate()
+                    .translationX(0f)
+                    .alpha(1f)
+                    .setDuration(500)
+                    .setListener(null);
+        } else {
+            view.animate()
+                    .translationX(view.getWidth())
+                    .alpha(0f)
+                    .setDuration(500)
+                    .setListener(null);
+        }
+    }
 
     /**
      * The filterReportsByStatus method filters a list of reports based on their status.

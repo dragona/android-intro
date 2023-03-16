@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/bottom_navigation_menu" />
+
+    <!--  Report layout  -->
     <LinearLayout
         android:id="@+id/main_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation_view"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -16,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:entries="@array/data_source_options" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,10 +41,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Show:"
-                android:textSize="16sp"
                 android:textColor="@android:color/black"
-                android:padding="8dp" />
+                android:textSize="16sp" />
 
             <RadioGroup
                 android:id="@+id/optionsRadioGroup"
@@ -40,41 +56,38 @@
                     android:id="@+id/show_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="#CCCCCC"
                     android:checked="true"
-                    android:textSize="14sp"
                     android:text="All"
-                    android:buttonTint="#CCCCCC" />
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/show_processing"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="14sp"
+                    android:buttonTint="#CCCCCC"
                     android:text="Processing"
-                    android:buttonTint="#CCCCCC" />
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/show_pass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="14sp"
+                    android:buttonTint="#CCCCCC"
                     android:text="Pass"
-                    android:buttonTint="#CCCCCC" />
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/show_failed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="14sp"
+                    android:buttonTint="#CCCCCC"
                     android:text="Failed"
-                    android:buttonTint="#CCCCCC" />
+                    android:textSize="14sp" />
 
             </RadioGroup>
 
         </LinearLayout>
-
-
-
 
 
         <View
@@ -124,10 +137,12 @@
 
     </LinearLayout>
 
+    <!--  Network failure layout  -->
     <LinearLayout
         android:id="@+id/network_failure"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation_view"
         android:orientation="vertical"
         android:visibility="gone">
 
@@ -138,6 +153,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="100dp"
             android:src="@drawable/no_internet" />
+
         <Button
             android:id="@+id/btn_settings"
             android:layout_width="wrap_content"
@@ -145,10 +161,10 @@
             android:layout_gravity="center_horizontal"
             android:background="@android:color/transparent"
             android:onClick="btnNetworkSettings"
-            android:textAllCaps="false"
             android:text="Configure Network"
-            android:textSize="12sp"
-            android:textColor="@color/black" />
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
 
         <Button
             android:layout_width="wrap_content"
@@ -158,10 +174,41 @@
             android:onClick="btnRefresh"
             android:text="Refresh"
             android:textAllCaps="false"
-            android:textSize="16sp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
 
     </LinearLayout>
-</FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_assignment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation_view"
+        android:visibility="gone">
+
+        <!-- Your assignment layout here -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assignment lists" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_agora"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation_view"
+        android:visibility="gone">
+
+        <!-- Your Agora layout here -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agora" />
+
+    </FrameLayout>
+
+</RelativeLayout>
 

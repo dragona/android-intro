@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_assignment_tracker"
+        android:icon="@drawable/selector_report_icon"
+        android:title="@string/title_assignment_tracker" />
+    <item
+        android:id="@+id/navigation_assignment_details"
+        android:icon="@drawable/selector_assignment_icon"
+        android:title="@string/title_assignment_details" />
+    <item
+        android:id="@+id/navigation_agora"
+        android:icon="@drawable/selector_agora_icon"
+        android:title="@string/title_agora" />
+</menu>
