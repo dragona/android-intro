@@ -192,9 +192,11 @@
             android:id="@+id/tv_assignment_header"
             android:layout_alignParentTop="true"
             android:gravity="center"
+            android:layout_margin="16dp"
+            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Assignments" />
+            android:text="All Assignments" />
         <androidx.recyclerview.widget.RecyclerView
             android:layout_below="@+id/tv_assignment_header"
             android:id="@+id/recyclerViewAssignments"
@@ -216,7 +218,10 @@
 
         <!-- Your Agora layout here -->
         <TextView
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_margin="16dp"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Agora" />
 
