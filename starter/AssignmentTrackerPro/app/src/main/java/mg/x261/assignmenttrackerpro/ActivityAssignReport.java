@@ -90,6 +90,9 @@ public class ActivityAssignReport extends AppCompatActivity {
 
     RadioGroup optionsRadioGroup;
 
+
+
+
     /**
      * Called when the activity is created. Initializes the views and listeners and checks network status.
      *
