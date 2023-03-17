@@ -4,18 +4,24 @@ import android.app.Activity;
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.Settings;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -145,13 +151,31 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
                                     // Open the downloaded file using an appropriate application
                                     Intent openFileIntent = new Intent(Intent.ACTION_VIEW);
                                     Uri fileUri = FileProvider.getUriForFile(holder.itemView.getContext(), holder.itemView.getContext().getPackageName() + ".provider", file);
-                                    openFileIntent.setDataAndType(fileUri, "application/pdf"); // Replace "application/pdf" with the appropriate MIME type for your file
+                                    openFileIntent.setDataAndType(fileUri, "application/pdf"); // TODO: Replace "application/pdf" with the appropriate MIME type if not PDF
                                     openFileIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                                     Log.d("OPEN_PATH", "Open Path: " + file.getAbsolutePath());
                                     holder.itemView.getContext().startActivity(Intent.createChooser(openFileIntent, "Open file with"));
                                 });
                                 builder.setNegativeButton("Dismiss", null);
-                                builder.show();
+                                // Show the dialog and get a reference to its "Dismiss" button
+                                AlertDialog alertDialog = builder.show();
+                                Button negativeButton = alertDialog.getButton(DialogInterface.BUTTON_NEGATIVE);
+
+                                // Update the appearance of the "Dismiss" button
+                                negativeButton.setTextColor(Color.BLACK);
+                                negativeButton.setBackgroundColor(Color.WHITE);
+                                // Update the appearance of the "Open" button
+                                Button positiveButton = alertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
+                                positiveButton.setBackgroundResource(R.color.white);
+                                positiveButton.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.purple_500));
+                                positiveButton.setLayoutParams(new LinearLayout.LayoutParams(
+                                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                                        LinearLayout.LayoutParams.WRAP_CONTENT
+                                ));
+                                positiveButton.setAllCaps(true);
+                                positiveButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+                                positiveButton.setTypeface(Typeface.create("sans-serif-medium", Typeface.NORMAL));
+                                positiveButton.setPadding(32, 16, 32, 16);
                             });
 
                         });
