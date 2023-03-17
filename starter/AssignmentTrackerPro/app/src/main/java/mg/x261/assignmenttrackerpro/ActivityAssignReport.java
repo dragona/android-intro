@@ -18,6 +18,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Rect;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
@@ -58,6 +60,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -129,8 +132,6 @@ public class ActivityAssignReport extends AppCompatActivity {
         assignmentDataLoaded = false; // Set the flag to false when the Activity is created
 
 
-
-
         // Set the report layout as the default
         reportLayout.setVisibility(View.VISIBLE);
         assignmentLayout.setVisibility(View.GONE);
@@ -165,13 +166,6 @@ public class ActivityAssignReport extends AppCompatActivity {
             }
             return true;
         });
-
-
-
-
-
-
-
 
         // Initialize objects
         mApiManager = new ApiManager();
@@ -219,6 +213,22 @@ public class ActivityAssignReport extends AppCompatActivity {
             }
         });
 
+
+        // Agora
+
+        final TextInputEditText etAskQuestion = findViewById(R.id.et_ask_question);
+
+        etAskQuestion.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                if (isKeyboardVisible(etAskQuestion.getRootView())) {
+                    bottomNavigationView.setVisibility(View.GONE);
+                } else {
+                    bottomNavigationView.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
         // Check for network state permission
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_NETWORK_STATE)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -231,6 +241,17 @@ public class ActivityAssignReport extends AppCompatActivity {
             checkNetworkStatus();
         }
     }
+
+
+    private boolean isKeyboardVisible(View rootView) {
+        Rect r = new Rect();
+        rootView.getWindowVisibleDisplayFrame(r);
+        int screenHeight = rootView.getRootView().getHeight();
+        int keypadHeight = screenHeight - r.bottom;
+
+        return keypadHeight > screenHeight * 0.15; // 15% of the screen height
+    }
+
 
 
     /**
