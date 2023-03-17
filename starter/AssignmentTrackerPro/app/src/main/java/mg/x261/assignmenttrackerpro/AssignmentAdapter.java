@@ -16,6 +16,7 @@ import android.os.Environment;
 import android.provider.Settings;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -220,7 +221,43 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
                 openFile(holder, file);
             });
             builder.setNeutralButton("Cancel", null);
-            builder.show();
+
+            // Create the AlertDialog
+            AlertDialog alertDialog = builder.create();
+
+            // Customize the buttons
+            alertDialog.setOnShowListener(dialog -> {
+                Button openButton = alertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
+                Button removeDownloadButton = alertDialog.getButton(DialogInterface.BUTTON_NEGATIVE);
+                Button cancelButton = alertDialog.getButton(DialogInterface.BUTTON_NEUTRAL);
+
+                // Set button colors
+                int whiteColor = Color.WHITE;
+                int greyColor = Color.GRAY;
+
+                openButton.setTextColor(whiteColor);
+                removeDownloadButton.setTextColor(whiteColor);
+                cancelButton.setTextColor(whiteColor);
+
+                openButton.setBackgroundColor(greyColor);
+                removeDownloadButton.setBackgroundColor(greyColor);
+                cancelButton.setBackgroundColor(greyColor);
+
+                // Align buttons to center
+                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                );
+                layoutParams.gravity = Gravity.CENTER;
+                layoutParams.setMargins(16, 0, 16, 0);
+
+                openButton.setLayoutParams(layoutParams);
+                removeDownloadButton.setLayoutParams(layoutParams);
+                cancelButton.setLayoutParams(layoutParams);
+            });
+
+// Show the AlertDialog
+            alertDialog.show();
         } else {
 
             // Start the download
