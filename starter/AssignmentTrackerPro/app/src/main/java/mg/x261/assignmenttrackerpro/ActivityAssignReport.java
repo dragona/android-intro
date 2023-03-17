@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -90,6 +91,8 @@ public class ActivityAssignReport extends AppCompatActivity {
 
     RadioGroup optionsRadioGroup;
 
+    BottomNavigationView bottomNavigationView;
+
 
 
 
@@ -104,7 +107,9 @@ public class ActivityAssignReport extends AppCompatActivity {
         setContentView(R.layout.layout_activity_assignment);
         setTitle("Assign Report");
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_view);
+        bottomNavigationView = findViewById(R.id.bottom_navigation_view);
+        setBottomNavigationEnabled(bottomNavigationView, false); // wait for the report recyclerView to be populated first
+
         LinearLayout reportLayout = findViewById(R.id.main_content);
         RelativeLayout assignmentLayout = findViewById(R.id.layout_assignment);
         FrameLayout agoraLayout = findViewById(R.id.layout_agora);
@@ -204,8 +209,13 @@ public class ActivityAssignReport extends AppCompatActivity {
             @Override
             public void onRefresh() {
                 // Load new data when user refreshes
-                loadRecyclerViewData(selectedAssignmentId);
-                swipeRefreshLayout.setRefreshing(false);
+                loadRecyclerViewData(selectedAssignmentId, new DataLoadCallback() {
+                    @Override
+                    public void onDataLoaded() {
+                        swipeRefreshLayout.setRefreshing(false);
+                        setBottomNavigationEnabled(bottomNavigationView, true);
+                    }
+                });
             }
         });
 
@@ -221,6 +231,23 @@ public class ActivityAssignReport extends AppCompatActivity {
             checkNetworkStatus();
         }
     }
+
+
+    /**
+     * Enable or disable click events for each menu item in the BottomNavigationView.
+     *
+     * @param bottomNavigationView The BottomNavigationView instance whose menu items need to be enabled or disabled.
+     * @param enabled              A boolean value indicating whether the menu items should be enabled or disabled.
+     *                             Pass 'true' to enable the menu items and 'false' to disable them.
+     */
+    private void setBottomNavigationEnabled(BottomNavigationView bottomNavigationView, boolean enabled) {
+        Menu menu = bottomNavigationView.getMenu();
+        for (int i = 0; i < menu.size(); i++) {
+            menu.getItem(i).setEnabled(enabled);
+        }
+    }
+
+
 
     private void showAssignmentLayout() {
         Log.d("TAG", "showAssignmentLayout() called");
@@ -308,7 +335,12 @@ public class ActivityAssignReport extends AppCompatActivity {
         mProgressBar = findViewById(R.id.progressBar);
         mProgressBar.setVisibility(View.GONE);
         loadSpinnerData();
-        loadRecyclerViewData(selectedAssignmentId);
+        loadRecyclerViewData(selectedAssignmentId, new DataLoadCallback() {
+            @Override
+            public void onDataLoaded() {
+                setBottomNavigationEnabled(bottomNavigationView, true);
+            }
+        });
     }
 
     /**
@@ -316,7 +348,7 @@ public class ActivityAssignReport extends AppCompatActivity {
      *
      * @param selectedAssignmentId A string representing the ID of the selected assignment.
      */
-    private void loadRecyclerViewData(String selectedAssignmentId) {
+    private void loadRecyclerViewData(String selectedAssignmentId, DataLoadCallback callback) {
 
         mProgressBar.setVisibility(View.VISIBLE);
         resetRadioToAll();
@@ -340,6 +372,10 @@ public class ActivityAssignReport extends AppCompatActivity {
                             // Show main content layout
                             findViewById(R.id.main_content).setVisibility(View.VISIBLE);
                             findViewById(R.id.network_failure).setVisibility(View.GONE);
+                            // Call the callback's onDataLoaded method after populating the RecyclerView
+                            if (callback != null) {
+                                callback.onDataLoaded();
+                            }
                         } catch (JSONException e) {
                             mProgressBar.setVisibility(View.GONE);
                             Log.e("JSON", "Error parsing JSON data", e);
@@ -441,7 +477,12 @@ public class ActivityAssignReport extends AppCompatActivity {
                     selectedAssignmentId = selectedOption.substring(selectedOption.indexOf("Assign ") + 7, selectedOption.indexOf(" - "));
                 }
 
-                loadRecyclerViewData(selectedAssignmentId);
+                loadRecyclerViewData(selectedAssignmentId, new DataLoadCallback() {
+                    @Override
+                    public void onDataLoaded() {
+                        setBottomNavigationEnabled(bottomNavigationView, true);
+                    }
+                });
 
             }
 
