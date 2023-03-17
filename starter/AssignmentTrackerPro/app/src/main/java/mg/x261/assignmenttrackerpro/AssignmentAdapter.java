@@ -31,6 +31,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.RecyclerView;
 import android.Manifest;
+import android.widget.Toast;
 
 import java.io.File;
 import java.util.List;
@@ -90,31 +91,18 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
 
     }
 
-    private void downloadFile(ViewHolder holder, Assignment assignment) {
-        // Get download URL
-        //String downloadUrl = assignment.getUrl();
-        String downloadUrl = "https://studio.mg/submission2023/assignments/Assignment_001.pdf"; //TODO: need to be dynamic
 
-        // Create request for android download manager
-        DownloadManager downloadManager = (DownloadManager) holder.itemView.getContext().getSystemService(Context.DOWNLOAD_SERVICE);
-        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(downloadUrl));
+    private void openFile(ViewHolder holder, File file) {
+        Intent openFileIntent = new Intent(Intent.ACTION_VIEW);
+        Uri fileUri = FileProvider.getUriForFile(holder.itemView.getContext(), holder.itemView.getContext().getPackageName() + ".provider", file);
+        openFileIntent.setDataAndType(fileUri, "application/pdf"); // Later: Replace "application/pdf" with the appropriate MIME type if not PDF
+        openFileIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        Log.d("OPEN_PATH", "Open Path: " + file.getAbsolutePath());
+        holder.itemView.getContext().startActivity(Intent.createChooser(openFileIntent, "Open file with"));
+    }
 
-        // Restrict the types of networks over which this download may proceed.
-        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
-
-        // Set whether this download may proceed over a roaming connection.
-        request.setAllowedOverRoaming(false);
-
-        // Set the title of this download, to be displayed in notifications (if enabled).
-        request.setTitle(assignment.getFilename());
-
-        // Set a description of this download, to be displayed in notifications (if enabled)
-        request.setDescription("Downloading " + assignment.getFilename());
-
-        // Set the local destination for the downloaded file to the Downloads folder
-        File file = new File(holder.itemView.getContext().getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), assignment.getFilename());
-        request.setDestinationUri(Uri.fromFile(file));
-        Log.d("DOWNLOAD_PATH", "Download Path: " + file.getAbsolutePath());
+    private void startDownload(ViewHolder holder, Assignment assignment, DownloadManager downloadManager, DownloadManager.Request request, File file) {
+        long downloadReference = downloadManager.enqueue(request);
 
         // Create and show progress dialog
         ProgressDialog progressDialog = new ProgressDialog(holder.itemView.getContext());
@@ -122,9 +110,6 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
         progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progressDialog.setCancelable(false);
         progressDialog.show();
-
-        // Start the download
-        long downloadReference = downloadManager.enqueue(request);
 
         // Monitor download progress
         new Thread(() -> {
@@ -151,7 +136,7 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
                                     // Open the downloaded file using an appropriate application
                                     Intent openFileIntent = new Intent(Intent.ACTION_VIEW);
                                     Uri fileUri = FileProvider.getUriForFile(holder.itemView.getContext(), holder.itemView.getContext().getPackageName() + ".provider", file);
-                                    openFileIntent.setDataAndType(fileUri, "application/pdf"); // TODO: Replace "application/pdf" with the appropriate MIME type if not PDF
+                                    openFileIntent.setDataAndType(fileUri, "application/pdf"); // Later: Replace "application/pdf" with the appropriate MIME type if not PDF
                                     openFileIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                                     Log.d("OPEN_PATH", "Open Path: " + file.getAbsolutePath());
                                     holder.itemView.getContext().startActivity(Intent.createChooser(openFileIntent, "Open file with"));
@@ -184,6 +169,63 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
                 cursor.close();
             }
         }).start();
+    }
+    private void downloadFile(ViewHolder holder, Assignment assignment) {
+        // Get download URL
+        //String downloadUrl = assignment.getUrl();
+        String downloadUrl = "https://studio.mg/submission2023/assignments/Assignment_001.pdf"; //TODO: need to be dynamic
+
+        // Create request for android download manager
+        DownloadManager downloadManager = (DownloadManager) holder.itemView.getContext().getSystemService(Context.DOWNLOAD_SERVICE);
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(downloadUrl));
+
+        // Restrict the types of networks over which this download may proceed.
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
+
+        // Set whether this download may proceed over a roaming connection.
+        request.setAllowedOverRoaming(false);
+
+        // Set the title of this download, to be displayed in notifications (if enabled).
+        request.setTitle(assignment.getFilename());
+
+        // Set a description of this download, to be displayed in notifications (if enabled)
+        request.setDescription("Downloading " + assignment.getFilename());
+
+        // Set the local destination for the downloaded file to the Downloads folder
+        File file = new File(holder.itemView.getContext().getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), assignment.getFilename());
+        request.setDestinationUri(Uri.fromFile(file));
+        Log.d("DOWNLOAD_PATH", "Download Path: " + file.getAbsolutePath());
+
+        /**
+         * check if the file is already available before starting the download.
+         * If the file is available, you can ask the user whether they want to open the existing
+         * file or remove it and proceed with downloading a new copy.
+          */
+        if (file.exists()) {
+            // Ask the user whether to open the existing file or remove and proceed with downloading
+            AlertDialog.Builder builder = new AlertDialog.Builder(holder.itemView.getContext());
+            builder.setTitle("File Already Exists");
+            builder.setMessage("The file " + assignment.getFilename() + " already exists. Do you want to open it or remove it and download a new copy?");
+
+            builder.setNegativeButton("Remove and Download", (dialog, which) -> {
+                // Remove the existing file and start the download
+                if (file.delete()) {
+                    startDownload(holder, assignment, downloadManager, request, file);
+                } else {
+                    Toast.makeText(holder.itemView.getContext(), "Error removing existing file. Please try again.", Toast.LENGTH_SHORT).show();
+                }
+            });
+            builder.setPositiveButton("Open", (dialog, which) -> {
+                // Open the existing file using an appropriate application
+                openFile(holder, file);
+            });
+            builder.setNeutralButton("Cancel", null);
+            builder.show();
+        } else {
+
+            // Start the download
+            startDownload(holder, assignment, downloadManager, request, file);
+        }
     }
 
 
