@@ -79,7 +79,7 @@ Follow the steps in this tutorial to create the Agora Bulletin Board app from sc
 
 2. **Update the Gradle build files.**
     - Add necessary dependencies in the app-level build.gradle file.
-    - 
+   
    <details>
      <summary>Read more</summary>
    
@@ -898,8 +898,6 @@ If we break it down, we have:
 
 
 9. **Test the application.**
-    - Run the application on an emulator or a physical device.
-    - Test the functionality of fetching messages, submitting questions, and refreshing the data.
 
 <details>
   <summary>Read more</summary>
@@ -923,9 +921,6 @@ To test the application, follow these steps:
 
 
 10. **Optimize and refine the application.**
-    - Optimize the user interface and user experience.
-    - Improve error handling and edge case scenarios.
-    - Test the application on different devices and screen sizes.
 
 <details>
   <summary>Read more</summary>
@@ -954,9 +949,6 @@ To optimize and refine the application, consider the following steps:
 
 
 11. **Prepare the application for release.**
-    - Generate a signed APK or App Bundle.
-    - Prepare store listing and promotional materials.
-    - Publish the application on the Google Play Store.
 
 <details>
   <summary>Read more</summary>
