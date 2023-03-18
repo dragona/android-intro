@@ -19,7 +19,7 @@
 
     <!--  Report layout  -->
     <LinearLayout
-        android:id="@+id/main_content"
+        android:id="@+id/main_report_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottom_navigation_view"
@@ -180,7 +180,7 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:id="@+id/layout_assignment"
+        android:id="@+id/assignment_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottom_navigation_view"
@@ -196,20 +196,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="All Assignments" />
-        <androidx.recyclerview.widget.RecyclerView
+        <FrameLayout
             android:layout_below="@+id/tv_assignment_header"
-            android:id="@+id/recyclerViewAssignments"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="16dp"
-            android:scrollbars="horizontal" />
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewAssignments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:scrollbars="horizontal" />
+
+            <ProgressBar
+                android:id="@+id/progressBarAssignmentLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
 
 
     </RelativeLayout>
 
     <FrameLayout
-        android:id="@+id/layout_agora"
+        android:id="@+id/agora_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottom_navigation_view"

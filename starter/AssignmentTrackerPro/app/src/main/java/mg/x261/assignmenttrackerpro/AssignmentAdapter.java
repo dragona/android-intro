@@ -259,10 +259,15 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
 // Show the AlertDialog
             alertDialog.show();
         } else {
-
-            // Start the download
-            startDownload(holder, assignment, downloadManager, request, file);
+            // TODO: check if the internet is available
+            if (new NetworkHelper().isNetworkAvailable(holder.itemView.getContext())) {
+                // Start the download
+                startDownload(holder, assignment, downloadManager, request, file);
+            } else {
+                Toast.makeText(holder.itemView.getContext(), "No internet connection. Please check your network settings and try again.", Toast.LENGTH_SHORT).show();
+            }
         }
+
     }
 
 

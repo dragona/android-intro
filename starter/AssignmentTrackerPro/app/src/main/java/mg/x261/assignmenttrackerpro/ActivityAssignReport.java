@@ -12,12 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.app.DownloadManager;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Rect;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -40,6 +37,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -57,7 +55,9 @@ import java.lang.reflect.Type;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.android.material.textfield.TextInputEditText;
@@ -77,6 +77,7 @@ public class ActivityAssignReport extends AppCompatActivity {
     private static final int MY_PERMISSIONS_REQUEST_NETWORK_STATE = 123;
 
     private ProgressBar mProgressBar;
+    ProgressBar mProgressBarAssignment;
     SwipeRefreshLayout swipeRefreshLayout;
 
     String selectedAssignmentId = "001";
@@ -95,6 +96,7 @@ public class ActivityAssignReport extends AppCompatActivity {
     RadioGroup optionsRadioGroup;
 
     BottomNavigationView bottomNavigationView;
+    int currentLayout = 0; // 0: reportLayout, 1: assignmentLayout, 2: agoraLayout
 
 
 
@@ -113,9 +115,9 @@ public class ActivityAssignReport extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
         setBottomNavigationEnabled(bottomNavigationView, false); // wait for the report recyclerView to be populated first
 
-        LinearLayout reportLayout = findViewById(R.id.main_content);
-        RelativeLayout assignmentLayout = findViewById(R.id.layout_assignment);
-        FrameLayout agoraLayout = findViewById(R.id.layout_agora);
+        LinearLayout reportLayout = findViewById(R.id.main_report_layout);
+        RelativeLayout assignmentLayout = findViewById(R.id.assignment_layout);
+        FrameLayout agoraLayout = findViewById(R.id.agora_layout);
 
         // Initialize views
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
@@ -125,11 +127,9 @@ public class ActivityAssignReport extends AppCompatActivity {
         assignmentRecyclerView = findViewById(R.id.recyclerViewAssignments);
         assignmentRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
+        mProgressBarAssignment = findViewById(R.id.progressBarAssignmentLoading);
+        mProgressBarAssignment.setVisibility(View.GONE);
 
-        assignmentAdapter = new AssignmentAdapter(assignmentList);
-        assignmentRecyclerView.setAdapter(assignmentAdapter);
-        assignmentRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        assignmentDataLoaded = false; // Set the flag to false when the Activity is created
 
 
         // Set the report layout as the default
@@ -137,31 +137,34 @@ public class ActivityAssignReport extends AppCompatActivity {
         assignmentLayout.setVisibility(View.GONE);
         agoraLayout.setVisibility(View.GONE);
 
-        // Set the listener for bottom navigation items
+
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.navigation_assignment_tracker:
                     reportLayout.setVisibility(View.VISIBLE);
                     assignmentLayout.setVisibility(View.GONE);
                     agoraLayout.setVisibility(View.GONE);
+                    currentLayout = 0;
                     break;
                 case R.id.navigation_assignment_details:
                     reportLayout.setVisibility(View.GONE);
                     assignmentLayout.setVisibility(View.VISIBLE);
                     agoraLayout.setVisibility(View.GONE);
+                    currentLayout = 1;
 
                     showAssignmentLayout();
                     break;
-
                 case R.id.navigation_agora:
                     reportLayout.setVisibility(View.GONE);
                     assignmentLayout.setVisibility(View.GONE);
                     agoraLayout.setVisibility(View.VISIBLE);
+                    currentLayout = 2;
                     break;
                 default:
                     reportLayout.setVisibility(View.VISIBLE);
                     assignmentLayout.setVisibility(View.GONE);
                     agoraLayout.setVisibility(View.GONE);
+                    currentLayout = 0;
                     break;
             }
             return true;
@@ -271,28 +274,71 @@ public class ActivityAssignReport extends AppCompatActivity {
 
 
     private void showAssignmentLayout() {
+
+
+        assignmentAdapter = new AssignmentAdapter(assignmentList);
+        assignmentRecyclerView.setAdapter(assignmentAdapter);
+        assignmentRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        assignmentDataLoaded = false; // Set the flag to false when the Activity is created
+
         Log.d("TAG", "showAssignmentLayout() called");
 
+
+
         if (!assignmentDataLoaded) {
+            if (!new NetworkHelper().isNetworkAvailable(this)) {
+                findViewById(R.id.assignment_layout).setVisibility(View.GONE);
+                findViewById(R.id.network_failure).setVisibility(View.VISIBLE);
+                setBottomNavigationEnabled(bottomNavigationView, false);
+                return;
+            } else {
+                findViewById(R.id.assignment_layout).setVisibility(View.VISIBLE);
+                findViewById(R.id.network_failure).setVisibility(View.GONE);
+                setBottomNavigationEnabled(bottomNavigationView, true);
+            }
+
+            mProgressBarAssignment.setVisibility(View.VISIBLE);
             // Clear the assignmentList before downloading new data
             assignmentList.clear();
 
             String url = mApiManager.getAssignmentFilesApiUrl();
-            JsonArrayRequest assignmentRequest = new JsonArrayRequest(url, response -> {
-                Gson gson = new Gson();
-                Type listType = new TypeToken<List<Assignment>>(){}.getType();
-                assignmentList.addAll(gson.fromJson(response.toString(), listType));
-                Log.d("TAG", "assignmentList size: " + assignmentList.size());
-                assignmentAdapter.notifyDataSetChanged();
-                Log.d("TAG", "notifyDataSetChanged() called");
-            }, error -> {
-                Toast.makeText(this, "Error downloading assignments", Toast.LENGTH_SHORT).show();
-            });
+            JsonArrayRequest assignmentRequest = new JsonArrayRequest(
+                    Request.Method.GET,
+                    url,
+                    null,
+                    response -> {
+                        Gson gson = new Gson();
+                        Type listType = new TypeToken<List<Assignment>>(){}.getType();
+                        assignmentList.addAll(gson.fromJson(response.toString(), listType));
+                        Log.d("TAG", "assignmentList size: " + assignmentList.size());
+                        assignmentAdapter.notifyDataSetChanged();
+                        Log.d("TAG", "notifyDataSetChanged() called");
+                        assignmentDataLoaded = true; // Set the flag to true after loading data
+                        mProgressBarAssignment.setVisibility(View.GONE);
+                    },
+                    error -> {
+                        Toast.makeText(this, "Error downloading assignments", Toast.LENGTH_SHORT).show();
+                        mProgressBarAssignment.setVisibility(View.GONE);
+                    }
+
+            ) {
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> headers = new HashMap<>();
+                    headers.put("Cache-Control", "no-cache");
+                    return headers;
+                }
+            };
 
             Volley.newRequestQueue(this).add(assignmentRequest);
-
             assignmentDataLoaded = true; // Set the flag to true after loading data
+            mProgressBarAssignment.setVisibility(View.GONE);
         }
+
+
+
+
+
     }
 
 
@@ -329,39 +375,70 @@ public class ActivityAssignReport extends AppCompatActivity {
      * The checkNetworkStatus method checks whether the device is connected to the internet and displays an error message
      * if it is not.
      */
+    /**
+     * This method checks the network status and initiates an API request to load data into the views.
+     * If the device is connected to the internet, the appropriate view is shown and the API request is made.
+     * If the device is not connected to the internet, an error message is displayed and the network failure layout is shown.
+     */
     private void checkNetworkStatus() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting();
         if (isConnected) {
             // Make API request
-            makeApiRequest();
+            // 0: reportLayout, 1: assignmentLayout, 2: agoraLayout
+            View viewToShow;
+            switch (currentLayout) {
+                case 0:
+                    viewToShow = findViewById(R.id.main_report_layout);
+                    break;
+                case 1:
+                    viewToShow = findViewById(R.id.assignment_layout);
+                    break;
+                case 2:
+                    viewToShow = findViewById(R.id.agora_layout);
+                    break;
+                default:
+                    viewToShow = findViewById(R.id.main_report_layout);
+                    break;
+            }
+            makeApiRequest(viewToShow);
+
         } else {
             // Display error message
             Snackbar.make(findViewById(android.R.id.content), "No internet connection. Please check your network settings and try again.", Snackbar.LENGTH_LONG).show();
             // Show network failure layout
-            findViewById(R.id.main_content).setVisibility(View.GONE);
+            findViewById(R.id.main_report_layout).setVisibility(View.GONE);
             findViewById(R.id.network_failure).setVisibility(View.VISIBLE);
         }
     }
 
     /**
-     * The makeApiRequest method initiates an API request to load data into the views.
+     * This method initiates an API request to load data into the views based on the input view.
+     * If the input view is the main report layout, the main content layout is shown and the data is loaded into the views.
+     * If the input view is the assignment layout, the assignment layout is shown.
+     *
+     * @param viewToShow the view to show after the API request is made
      */
-    private void makeApiRequest() {
+    private void makeApiRequest(View viewToShow) {
         // Show main content layout
-        findViewById(R.id.main_content).setVisibility(View.VISIBLE);
-        findViewById(R.id.network_failure).setVisibility(View.GONE);
-        Log.d("TAG", "request initiated");
-        mProgressBar = findViewById(R.id.progressBar);
-        mProgressBar.setVisibility(View.GONE);
-        loadSpinnerData();
-        loadRecyclerViewData(selectedAssignmentId, new DataLoadCallback() {
-            @Override
-            public void onDataLoaded() {
-                setBottomNavigationEnabled(bottomNavigationView, true);
-            }
-        });
+        if (viewToShow == findViewById(R.id.main_report_layout)){
+            findViewById(R.id.main_report_layout).setVisibility(View.VISIBLE);
+            findViewById(R.id.network_failure).setVisibility(View.GONE);
+            Log.d("TAG", "request initiated");
+            mProgressBar = findViewById(R.id.progressBar);
+            mProgressBar.setVisibility(View.GONE);
+            loadSpinnerData();
+            loadRecyclerViewData(selectedAssignmentId, new DataLoadCallback() {
+                @Override
+                public void onDataLoaded() {
+                    setBottomNavigationEnabled(bottomNavigationView, true);
+                }
+            });
+        } else if (findViewById(R.id.assignment_layout) == viewToShow) {
+            // Show assignment layout
+            showAssignmentLayout();
+        }
     }
 
     /**
@@ -391,7 +468,7 @@ public class ActivityAssignReport extends AppCompatActivity {
                             mReportAdapter.setReportList(reportList);
                             setLastUpdateDate();
                             // Show main content layout
-                            findViewById(R.id.main_content).setVisibility(View.VISIBLE);
+                            findViewById(R.id.main_report_layout).setVisibility(View.VISIBLE);
                             findViewById(R.id.network_failure).setVisibility(View.GONE);
                             // Call the callback's onDataLoaded method after populating the RecyclerView
                             if (callback != null) {
@@ -402,7 +479,7 @@ public class ActivityAssignReport extends AppCompatActivity {
                             Log.e("JSON", "Error parsing JSON data", e);
                             Snackbar.make(findViewById(android.R.id.content), "There was an error loading the data. Please try again later.", Snackbar.LENGTH_LONG).show();
                             // Show network failure layout
-                            findViewById(R.id.main_content).setVisibility(View.GONE);
+                            findViewById(R.id.main_report_layout).setVisibility(View.GONE);
                             findViewById(R.id.network_failure).setVisibility(View.VISIBLE);
 
                         }
@@ -416,7 +493,7 @@ public class ActivityAssignReport extends AppCompatActivity {
                         Snackbar.make(findViewById(android.R.id.content), "There was an error retrieving the data. Please try again later.", Snackbar.LENGTH_LONG).show();
                         mProgressBar.setVisibility(View.GONE);
                         // Show network failure layout
-                        findViewById(R.id.main_content).setVisibility(View.GONE);
+                        findViewById(R.id.main_report_layout).setVisibility(View.GONE);
                         findViewById(R.id.network_failure).setVisibility(View.VISIBLE);
 
                     }
@@ -479,7 +556,7 @@ public class ActivityAssignReport extends AppCompatActivity {
                         Log.e("Volley", "Error retrieving assignment options", error);
                         Snackbar.make(findViewById(android.R.id.content), "Error retrieving assignment options. Please try again later.", Snackbar.LENGTH_LONG).show();
                         // Show network failure layout
-                        findViewById(R.id.main_content).setVisibility(View.GONE);
+                        findViewById(R.id.main_report_layout).setVisibility(View.GONE);
                         findViewById(R.id.network_failure).setVisibility(View.VISIBLE);
                     }
                 });
