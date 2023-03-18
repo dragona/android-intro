@@ -34,10 +34,12 @@ The app will use RecyclerView for displaying messages and interact with a server
 
 </details>
 
+
+### Limitations and Improvements
+
 <details>
      <summary>Read more</summary>
 
-### Limitations and Improvements
 
 1. **Real-time updates:**
     - The current implementation requires manual refreshing to fetch new messages. Implementing real-time updates using technologies like WebSockets or Firebase Realtime Database would improve the user experience.
@@ -64,6 +66,10 @@ The app will use RecyclerView for displaying messages and interact with a server
     - Consider adding more features to the app, such as support for rich media, message reactions, or a search functionality to help users find specific messages more easily.
 
 </details>
+
+
+Follow the steps in this tutorial to create the Agora Bulletin Board app from scratch. This guide covers everything from setting up the project, designing the user interface, implementing the logic, and preparing the app for release.
+
 
 1. **Set up a new Android Studio project.**
     - Choose the "Empty Activity" template.
