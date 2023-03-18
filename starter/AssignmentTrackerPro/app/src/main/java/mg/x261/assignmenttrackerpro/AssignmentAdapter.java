@@ -110,7 +110,20 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
         progressDialog.setMessage("Downloading " + assignment.getFilename());
         progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progressDialog.setCancelable(false);
+
+        // Add a cancel button to the dialog
+        progressDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Cancel the download
+                downloadManager.remove(downloadReference); // Cancel the download
+                progressDialog.dismiss();
+                Toast.makeText(holder.itemView.getContext(), "Download cancelled", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         progressDialog.show();
+
 
         // Monitor download progress
         new Thread(() -> {
@@ -153,7 +166,7 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
                                 // Update the appearance of the "Open" button
                                 Button positiveButton = alertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
                                 positiveButton.setBackgroundResource(R.color.white);
-                                positiveButton.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.purple_500));
+                                positiveButton.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.button_gray));
                                 positiveButton.setLayoutParams(new LinearLayout.LayoutParams(
                                         LinearLayout.LayoutParams.WRAP_CONTENT,
                                         LinearLayout.LayoutParams.WRAP_CONTENT
@@ -173,8 +186,9 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
     }
     private void downloadFile(ViewHolder holder, Assignment assignment) {
         // Get download URL
-        //String downloadUrl = assignment.getUrl();
-        String downloadUrl = "https://studio.mg/submission2023/assignments/Assignment_001.pdf"; //TODO: need to be dynamic
+        String downloadUrl = assignment.getUrl();
+        Log.d("DOWNLOAD SOURCE", "Download URL for file " + assignment.getFilename() + ": " + downloadUrl);
+
 
         // Create request for android download manager
         DownloadManager downloadManager = (DownloadManager) holder.itemView.getContext().getSystemService(Context.DOWNLOAD_SERVICE);
@@ -211,7 +225,12 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.Vi
             builder.setNegativeButton("Remove and Download", (dialog, which) -> {
                 // Remove the existing file and start the download
                 if (file.delete()) {
-                    startDownload(holder, assignment, downloadManager, request, file);
+                    if (new NetworkHelper().isNetworkAvailable(holder.itemView.getContext())) {
+                        // Start the download
+                        startDownload(holder, assignment, downloadManager, request, file);
+                    } else {
+                        Toast.makeText(holder.itemView.getContext(), "No internet connection. Please check your network settings and try again.", Toast.LENGTH_SHORT).show();
+                    }
                 } else {
                     Toast.makeText(holder.itemView.getContext(), "Error removing existing file. Please try again.", Toast.LENGTH_SHORT).show();
                 }
