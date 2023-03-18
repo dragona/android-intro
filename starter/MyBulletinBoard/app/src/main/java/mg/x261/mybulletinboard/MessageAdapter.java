@@ -1,12 +1,14 @@
 package mg.x261.mybulletinboard;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.SimpleDateFormat;
@@ -16,10 +18,12 @@ import java.util.List;
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
     private List<Message> messageList;
     private LayoutInflater layoutInflater;
+    private  static String userId;
 
-    public MessageAdapter(List<Message> messageList, Context context) {
+    public MessageAdapter(List<Message> messageList, Context context, String userId) {
         this.messageList = messageList;
         this.layoutInflater = LayoutInflater.from(context);
+        this.userId = userId;
     }
 
     @NonNull
@@ -44,17 +48,27 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         TextView textViewNewsTitle;
         TextView textViewNewsContent;
         TextView textViewTimestamp;
+        CardView cardView;
 
         public MessageViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewNewsTitle = itemView.findViewById(R.id.tv_news_title);
             textViewNewsContent = itemView.findViewById(R.id.tv_news_content);
             textViewTimestamp = itemView.findViewById(R.id.tv_timestamp);
+            cardView = itemView.findViewById(R.id.card_view);
         }
 
 
         void bind(Message message) {
             String deviceId = message.getDeviceId();
+
+            // Change the color of the card to light grey if the device ID is the same as the user ID
+            if (userId.equals(deviceId)) {
+                cardView.setCardBackgroundColor(Color.parseColor("#D3D3D3")); // Light grey color
+            } else {
+                cardView.setCardBackgroundColor(Color.WHITE); // Reset to white color for other cards
+            }
+
             if (deviceId.length() > 4) {
                 String shortenedDeviceId = deviceId.substring(0,2) + "###" + deviceId.substring(deviceId.length() - 3);
                 textViewNewsTitle.setText(shortenedDeviceId);

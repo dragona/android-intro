@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="sequentially">
+    <objectAnimator
+        android:duration="500"
+        android:propertyName="rotation"
+        android:valueTo="360"
+        android:valueType="floatType"
+        android:interpolator="@android:anim/accelerate_interpolator" />
+</set>

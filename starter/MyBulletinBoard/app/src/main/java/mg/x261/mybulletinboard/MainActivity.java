@@ -6,6 +6,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -15,6 +16,7 @@ import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
     private List<Message> messageList;
     private MessageAdapter messageAdapter;
     String deviceId;
+    private ImageButton btnRefreshData;
+
 
     String URL_POST_DATA = "https://studio.mg/api-bulletin-board/post_data.php";
     String URL_GET_DATA = "https://studio.mg/api-bulletin-board/get_data.php";
@@ -59,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Initialize the messageList and messageAdapter before making the request
         messageList = new ArrayList<>();
-        messageAdapter = new MessageAdapter(messageList, this);
+        messageAdapter = new MessageAdapter(messageList, this, getDeviceId());
 
 
         // Initialize your RecyclerView and its adapter
@@ -87,6 +91,19 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(MainActivity.this, "Please enter a message", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+
+        btnRefreshData = findViewById(R.id.btn_refresh_data);
+        btnRefreshData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadDataFromServer();
+                ObjectAnimator animator = ObjectAnimator.ofFloat(btnRefreshData, "rotation", 0f, 360f);
+                animator.setDuration(500);
+                animator.setInterpolator(new AccelerateInterpolator());
+                animator.start();
             }
         });
     }
