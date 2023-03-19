@@ -205,6 +205,7 @@ public class ActivityAssignReport extends AppCompatActivity {
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
+                setBottomNavigationEnabled(bottomNavigationView, false);
                 // Load new data when user refreshes
                 loadRecyclerViewData(selectedAssignmentId, new DataLoadCallback() {
                     @Override
@@ -428,6 +429,7 @@ public class ActivityAssignReport extends AppCompatActivity {
             Log.d("TAG", "request initiated");
             mProgressBar = findViewById(R.id.progressBar);
             mProgressBar.setVisibility(View.GONE);
+            setBottomNavigationEnabled(bottomNavigationView, false);
             loadSpinnerData();
             loadRecyclerViewData(selectedAssignmentId, new DataLoadCallback() {
                 @Override
@@ -569,6 +571,7 @@ public class ActivityAssignReport extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 mProgressBar.setVisibility(View.VISIBLE);
+                setBottomNavigationEnabled(bottomNavigationView, false);
 
                 if (position > 0) {
                     String selectedOption = (String) parent.getItemAtPosition(position);
