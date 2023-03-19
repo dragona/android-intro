@@ -102,9 +102,10 @@ public class ActivityAssignReport extends AppCompatActivity {
 
 
     /**
-     * Called when the activity is created. Initializes the views and listeners and checks network status.
-     *
-     * @param savedInstanceState A Bundle containing the activity's previously saved state, or null if there was no saved state.
+     * This method initializes the activity and sets up all the views.
+     * It also sets up the listeners for the bottom navigation view and the radio group for filtering reports.
+     * Additionally, it sets up the listener for the swipe refresh layout and the agora feature.
+     * If the network state permission is not granted, it requests it. Otherwise, it checks the network status.
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,6 +113,7 @@ public class ActivityAssignReport extends AppCompatActivity {
         setContentView(R.layout.layout_activity_assignment);
         setTitle("Assign Report");
 
+        // Set up views and layout
         bottomNavigationView = findViewById(R.id.bottom_navigation_view);
         setBottomNavigationEnabled(bottomNavigationView, false); // wait for the report recyclerView to be populated first
 
@@ -130,14 +132,12 @@ public class ActivityAssignReport extends AppCompatActivity {
         mProgressBarAssignment = findViewById(R.id.progressBarAssignmentLoading);
         mProgressBarAssignment.setVisibility(View.GONE);
 
-
-
         // Set the report layout as the default
         reportLayout.setVisibility(View.VISIBLE);
         assignmentLayout.setVisibility(View.GONE);
         agoraLayout.setVisibility(View.GONE);
 
-
+        // Set up bottom navigation view listener
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.navigation_assignment_tracker:
@@ -178,7 +178,6 @@ public class ActivityAssignReport extends AppCompatActivity {
         optionsRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-
                 switch (checkedId) {
                     case R.id.show_all:
                         // Handle selection of "All" radio button
@@ -527,24 +526,32 @@ public class ActivityAssignReport extends AppCompatActivity {
         mRequestQueue = Volley.newRequestQueue(this);
         String apiUrl = mApiManager.getAssignmentApiUrl();
 
+        // This code block sends a GET request to an API to retrieve a list of assignments, creates a list of assignment options,
+        // and updates the Spinner adapter with the new options. It also handles possible errors that may occur during the process.
+
         // Make request to get assignments
         JsonObjectRequest assignmentRequest = new JsonObjectRequest(Request.Method.GET, apiUrl, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
+                            // Parse JSON data to get the assignments
                             JSONArray assignments = response.getJSONArray("assignments");
+                            // Create list of assignment options to display in the Spinner
                             List<String> options = new ArrayList<>();
                             for (int i = 0; i < assignments.length(); i++) {
                                 JSONObject assignment = assignments.getJSONObject(i);
                                 options.add("Assign " + assignment.getString("id") + " - " + assignment.getString("name"));
                             }
+                            // Update the Spinner adapter with the new options
                             adapter.clear();
                             adapter.addAll(options);
                             adapter.notifyDataSetChanged();
+                            // Hide the progress bar
                             mProgressBar.setVisibility(View.GONE);
 
                         } catch (JSONException e) {
+                            // Handle errors while parsing JSON data
                             Log.e("JSON", "Error parsing JSON data", e);
                             mProgressBar.setVisibility(View.GONE);
 
@@ -554,8 +561,10 @@ public class ActivityAssignReport extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        // Handle errors in retrieving assignment options
                         mProgressBar.setVisibility(View.GONE);
                         Log.e("Volley", "Error retrieving assignment options", error);
+                        // Show error message to the user
                         Snackbar.make(findViewById(android.R.id.content), "Error retrieving assignment options. Please try again later.", Snackbar.LENGTH_LONG).show();
                         // Show network failure layout
                         findViewById(R.id.main_report_layout).setVisibility(View.GONE);
@@ -564,9 +573,19 @@ public class ActivityAssignReport extends AppCompatActivity {
                 });
         // Disable caching
         assignmentRequest.setShouldCache(false);
+        // Add the request to the Volley request queue
         mRequestQueue.add(assignmentRequest);
 
+
         // Set listener for spinner item selection
+        /*
+         * Set an item selection listener to the spinner.
+         * When an item is selected, the progress bar is displayed and the bottom navigation view is disabled.
+         * If the selected position is greater than 0, then the selected option is retrieved from the spinner and
+         * the selected assignment ID is extracted from the option string.
+         * The RecyclerView data is then loaded based on the selected assignment ID.
+         * When the data is loaded, the bottom navigation view is enabled again.
+         */
         mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -591,6 +610,7 @@ public class ActivityAssignReport extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+
     }
 
 
