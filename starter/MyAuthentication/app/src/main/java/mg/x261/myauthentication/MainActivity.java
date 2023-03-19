@@ -1,5 +1,12 @@
 package mg.x261.myauthentication;
 
+/**
+ * This class represents the main activity of an Android application that handles user authentication by generating a passcode for a student.
+ * The application saves the student ID and email in SharedPreferences and sends a POST request to the server to generate a passcode.
+ * The server responds with a JSON object containing a generated passcode and its expiration date, which is then displayed to the user.
+ * If the server response indicates that the user is already activated, the application starts a new activity called "MainActivityLogged".
+ * The code also obtains the Android ID of the device, which is sent along with the POST request parameters.
+ */
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,6 +38,10 @@ import java.util.Map;
 import android.provider.Settings;
 
 
+
+/**
+ * This class represents the main activity of an Android application that handles user authentication by generating a passcode for a student.
+ */
 public class MainActivity extends AppCompatActivity {
 
     private EditText studentIdEditText;
@@ -39,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
 
+
+    /**
+     * Initializes the activity and sets up UI elements, event listeners, and SharedPreferences.
+     * @param savedInstanceState a Bundle object containing the activity's previously saved state, if any
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,25 +79,39 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        /**
+         * Generates a passcode for the given student ID and email by sending a POST request to the server.
+         * Parses the server response and displays the generated passcode and its expiration date or starts a new activity if the user is already activated.
+         * @param studentId the student ID entered by the user
+         * @param email the email address entered by the user
+         */
         generatePasscodeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String studentId = studentIdEditText.getText().toString();
-                String email = emailEditText.getText().toString();
+                String studentId = studentIdEditText.getText().toString().trim();
+                String email = emailEditText.getText().toString().trim();
 
-                // save studentId and email in SharedPreferences
-                SharedPreferences sharedPreferences = getSharedPreferences("my_prefs", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("student_id", studentId);
-                editor.putString("email", email);
-                editor.apply();
+                // Check if the input fields are not empty
+                if (studentId.isEmpty() || email.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Student ID and email cannot be empty.", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Save studentId and email in SharedPreferences
+                    SharedPreferences sharedPreferences = getSharedPreferences("my_prefs", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("student_id", studentId);
+                    editor.putString("email", email);
+                    editor.apply();
 
-                generatePasscode(studentId, email);
+                    generatePasscode(studentId, email);
+                }
             }
-
         });
     }
 
+    /**
+     * Retrieves and returns the Android ID of the device.
+     * @return the Android ID of the device
+     */
     private void generatePasscode(String studentId, String email) {
         // show progress dialog
         progressDialog = new ProgressDialog(MainActivity.this);

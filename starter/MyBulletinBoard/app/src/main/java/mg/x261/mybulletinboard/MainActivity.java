@@ -1,5 +1,12 @@
 package mg.x261.mybulletinboard;
 
+
+/**
+ *         This class represents the MainActivity for the MyBulletinBoard app, which allows users to post and view messages
+ *         on a bulletin board. The app uses Volley to make HTTP requests to a PHP script on a remote server, which stores and
+ *         retrieves the messages from a MySQL database.
+ */
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -18,8 +25,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
