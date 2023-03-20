@@ -1,3 +1,20 @@
 <resources>
+    <!-- App name -->
     <string name="app_name">MyAuthentication</string>
+
+    <!-- Server URL -->
+    <string name="server_url">https://studio.mg/submission2023/app-access-validation.php</string>
+
+    <!-- Common words/phrases -->
+    <string name="ok">OK</string>
+    <string name="error_response">There was an error retrieving the data from the server.</string>
+    <string name="error_parsing_response">There was an error parsing the data received from the server.</string>
+    <string name="enter_student_id_and_email">Please enter your student ID and email address.</string>
+
+    <!-- Error messages -->
+    <string name="student_id_email_cannot_be_empty">Please fill out both the student ID and email address fields.</string>
+
+    <!-- Success messages -->
+    <string name="passcode_generated">Passcode generated successfully.</string>
+    <string name="passcode_expiration">Your passcode and expiration date are: </string>
 </resources>
