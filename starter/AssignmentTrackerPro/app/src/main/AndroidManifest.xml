@@ -30,6 +30,7 @@
         </provider>
 
         <activity
+            android:screenOrientation="portrait"
             android:name=".ActivityAssignReport"
             android:exported="true">
             <intent-filter>

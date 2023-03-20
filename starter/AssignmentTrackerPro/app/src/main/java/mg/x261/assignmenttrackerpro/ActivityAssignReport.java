@@ -123,6 +123,9 @@ public class ActivityAssignReport extends AppCompatActivity {
 
         // Initialize views
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
+        swipeRefreshLayout.setColorSchemeResources(R.color.button_gray, R.color.black);
+
+
         mRecyclerView = findViewById(R.id.reportRecyclerView);
         optionsRadioGroup = findViewById(R.id.optionsRadioGroup);
 
@@ -209,8 +212,15 @@ public class ActivityAssignReport extends AppCompatActivity {
                 loadRecyclerViewData(selectedAssignmentId, new DataLoadCallback() {
                     @Override
                     public void onDataLoaded() {
-                        swipeRefreshLayout.setRefreshing(false);
-                        setBottomNavigationEnabled(bottomNavigationView, true);
+                        try {
+                            //setBottomNavigationEnabled(bottomNavigationView, true);
+                            Log.d("TAG", "Inside swipeRefreshLayout Try ");
+                        } finally {
+                            // To ensure the the spinner is always dismissed
+                            Log.d("TAG", "Inside swipeRefreshLayout Finally ");
+                            swipeRefreshLayout.setRefreshing(false);
+                            setBottomNavigationEnabled(bottomNavigationView, true);
+                        }
                     }
                 });
             }
@@ -492,6 +502,7 @@ public class ActivityAssignReport extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         Log.e("Volley", "Error retrieving report data", error);
                         Snackbar.make(findViewById(android.R.id.content), "There was an error retrieving the data. Please try again later.", Snackbar.LENGTH_LONG).show();
+                        swipeRefreshLayout.setRefreshing(false); // ensure that the spinner is always dismissed
                         mProgressBar.setVisibility(View.GONE);
                         // Show network failure layout
                         findViewById(R.id.main_report_layout).setVisibility(View.GONE);
