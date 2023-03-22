@@ -17,4 +17,17 @@
     <!-- Success messages -->
     <string name="passcode_generated">Passcode generated successfully.</string>
     <string name="passcode_expiration">Your passcode and expiration date are: </string>
+
+    <!-- Dialog messages -->
+    <string name="passcode_validation">Enter your passcode to activate your account:</string>
+    <string name="enter_passcode_title">Enter Passcode</string>
+    <string name="enter_passcode_hint">Enter passcode here</string>
+    <string name="validate_button_text">Validate</string>
+    <string name="passcode_incorrect">Passcode is not correct</string>
+    <string name="cancel">Cancel</string>
+    <string name="account_activation_failed">The activation of the account failed.</string>
+    <string name="logged_in_status">You are logged in :)</string>
+    <string name="not_logged_in_text">--- your are not logged in ---</string>
+
+
 </resources>

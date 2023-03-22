@@ -10,7 +10,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/logo_report" />
 
     <EditText
         android:id="@+id/student_id_edit_text"
@@ -41,5 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:visibility="gone" />
+
+
 
 </LinearLayout>

@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp">
 
     <ImageView
+        android:id="@+id/logo_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/logo_report" />
 
     <EditText
         android:id="@+id/student_id_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_image"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
         android:hint="Student ID"
         android:singleLine="true" />
 
@@ -24,6 +27,10 @@
         android:id="@+id/email_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/student_id_edit_text"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:singleLine="true" />
@@ -32,14 +39,45 @@
         android:id="@+id/generate_passcode_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
+        android:layout_below="@id/email_edit_text"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="Submit" />
 
     <ProgressBar
         android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp"
         android:visibility="gone" />
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_image"
+        android:layout_centerInParent="true"
+        android:layout_margin="24dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvMessageNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/activation_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activate account" />
+    </LinearLayout>
+
+
+</RelativeLayout>
